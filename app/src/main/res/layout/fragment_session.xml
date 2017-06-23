@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.gdgnantes.devfest.android.widget.ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/spacer_medium"
+            android:orientation="vertical"
+            android:paddingBottom="88dp"
+            android:paddingLeft="@dimen/spacing_medium"
+            android:paddingRight="@dimen/spacing_medium"
+            android:paddingTop="@dimen/spacing_medium"
+            android:showDividers="middle">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:textColor="@color/text_primary"
+                android:lineSpacingMultiplier="0.8"
+                android:textSize="@dimen/font_size_huge" />
+
+            <TextView
+                android:id="@+id/information"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:lineSpacingMultiplier="1.2"
+                android:textSize="@dimen/font_size_medium"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:lineSpacingMultiplier="1.2"
+                android:textSize="@dimen/font_size_medium" />
+
+            <com.gdgnantes.devfest.android.widget.FlowLayout
+                android:id="@+id/tags_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:spacingHorizontal="@dimen/spacing_small"
+                app:spacingVertical="@dimen/spacing_small">
+
+                <!-- Tags will be added here at runtime -->
+
+            </com.gdgnantes.devfest.android.widget.FlowLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/divider_medium" />
+
+            <LinearLayout
+                android:id="@+id/speakers_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/spacer_medium"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <!-- Speakers will be added here at runtime -->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.gdgnantes.devfest.android.widget.ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="@dimen/spacing_medium"
+        android:src="@drawable/ic_action_bookmark" />
+
+</android.support.design.widget.CoordinatorLayout>

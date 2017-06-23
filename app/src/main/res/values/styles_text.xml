@@ -1,0 +1,38 @@
+<resources>
+
+    <style name="TextAppearance">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHighlight">?attr/colorControlHighlight</item>
+        <item name="android:textColorHint">@color/text_secondary</item>
+        <item name="android:textColorLink">@color/text_accent</item>
+        <item name="android:textSize">@dimen/font_size_medium</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.ListItem" />
+
+    <style name="TextAppearance.ListItem.Title">
+        <item name="android:textSize">@dimen/font_size_large</item>
+        <item name="android:fontFamily">@font/poppins_semi_bold</item>
+    </style>
+
+    <style name="TextAppearance.ListItem.Subtitle">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TextAppearance.Tab">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColorHighlight">@color/text_white_50p</item>
+        <item name="android:textColor">@color/text_white_50p</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.Toolbar" />
+
+    <style name="TextAppearance.Toolbar.Title">
+        <item name="android:fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:textSize">@dimen/font_size_large</item>
+        <item name="android:textColor">@color/text_white</item>
+    </style>
+
+</resources>

@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name">DevFestNantes</string>
+    <string name="filter">Filter</string>
+    <string name="share">Share</string>
+    <string name="agenda">Agenda</string>
+    <string name="about">About</string>
+
+    <string name="openSourceLicenses">Open source licenses</string>
+    <string name="sessionDetails">Session details</string>
+
+    <string name="share_title">Join me at DevFest Nantes!</string>
+    <string name="share_text">Check out the \"%1$s\" session at DevFest Nantes #DevFestNantes.</string>
+
+    <string name="about_moto">Be a Coder. Be a Hero!</string>
+    <string name="about_design_and_develop">Design &amp; development</string>
+    <string name="about_me">Cyril Mottier</string>
+
+    <string name="session_info">%1$s, %2$s - %3$s\nSalle %4$s</string>
+    <string name="session_subtitle">%1$s at %2$s</string>
+
+</resources>

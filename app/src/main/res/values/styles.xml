@@ -1,0 +1,19 @@
+<resources>
+
+    <style name="Widget" />
+
+    <style name="Widget.ActionBar" parent="Widget.AppCompat.ActionBar.Solid">
+        <item name="titleTextStyle">@style/TextAppearance.Toolbar.Title</item>
+    </style>
+
+    <style name="Widget.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.Toolbar.Title</item>
+    </style>
+
+    <style name="ListItem">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:padding">@dimen/spacing_medium</item>
+    </style>
+
+</resources>

@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.gdgnantes.devfest.android"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+}
+
+dependencies {
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+
+    implementation "android.arch.lifecycle:extensions:$archLibVersion"
+    implementation "android.arch.lifecycle:runtime:$archLibVersion"
+
+    implementation "com.android.support:appcompat-v7:$supportLibVersion"
+    implementation "com.android.support:design:$supportLibVersion"
+    implementation "com.android.support:recyclerview-v7:$supportLibVersion"
+    implementation "com.android.support:support-annotations:$supportLibVersion"
+    implementation "com.android.support:support-v4:$supportLibVersion"
+
+    implementation 'com.google.code.gson:gson:2.8.0'
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlinVersion"
+
+
+    kapt "android.arch.lifecycle:compiler:$archLibVersion"
+
+
+    testCompile 'junit:junit:4.12'
+}

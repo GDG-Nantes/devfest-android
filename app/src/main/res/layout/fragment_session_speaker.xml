@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="@dimen/grid_medium"
+        android:layout_height="@dimen/grid_medium"
+        android:layout_marginRight="@dimen/spacing_medium" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/thumbnail"
+        android:lineSpacingMultiplier="1.2"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/font_size_large"
+        tools:text="Cyril Mottier" />
+
+    <TextView
+        android:id="@+id/company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_toRightOf="@id/thumbnail"
+        android:lineSpacingMultiplier="1.2"
+        tools:text="DevFest Nantes" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/company"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_toRightOf="@id/thumbnail"
+        android:lineSpacingMultiplier="1.2"
+        tools:text="Lorem ipsum amet dolor et." />
+
+</RelativeLayout>

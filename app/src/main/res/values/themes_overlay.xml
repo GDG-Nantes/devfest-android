@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="ThemeOverlay.DevFestNantes.Toolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlNormal">@color/text_white</item>
+    </style>
+
+</resources>
