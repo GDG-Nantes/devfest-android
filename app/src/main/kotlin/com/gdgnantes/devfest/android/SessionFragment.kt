@@ -57,7 +57,7 @@ class SessionFragment : BaseFragment() {
             Snackbar.make(view.findViewById<View>(R.id.root), "Not implemented yet…", Snackbar.LENGTH_SHORT).show()
         }
 
-        view.findViewById<ScrollView>(R.id.scroll_view).onScrollChangeListener = { v, oldTop, top ->
+        view.findViewById<ScrollView>(R.id.scroll_view).onScrollChangeListener = { _, _, _ ->
             val titleView = view.findViewById<View>(R.id.title)
             titleView.getDrawingRect(tempRect)
             view.findViewById<ViewGroup>(R.id.root).offsetDescendantRectToMyCoords(titleView, tempRect)
