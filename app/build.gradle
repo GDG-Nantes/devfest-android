@@ -1,6 +1,9 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(rootProject.file("keystore.properties")))
+
 android {
     compileSdkVersion 26
     buildToolsVersion "25.0.2"
@@ -14,10 +17,26 @@ android {
 
         vectorDrawables.useSupportLibrary = true
     }
-    buildTypes {
+    signingConfigs {
+        debug {
+            storeFile file('../distribution/signing/debug.keystore')
+        }
         release {
+            storeFile file('../distribution/signing/release.keystore')
+            storePassword keystoreProperties['storePassword']
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            shrinkResources false
         }
     }
     sourceSets {
