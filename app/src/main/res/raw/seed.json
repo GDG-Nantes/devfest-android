@@ -32,11 +32,11 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tortor ipsum, lacinia eget vulputate sed, luctus vel lacus. Nunc venenatis justo blandit ex condimentum, sed interdum lectus laoreet. Nunc aliquet nibh faucibus congue tristique. Suspendisse sagittis mauris sapien, et maximus arcu molestie elementum. Phasellus mattis tortor nisi, tincidunt molestie odio dignissim elementum. Pellentesque suscipit lorem nisl. Integer auctor ligula et sagittis euismod. Suspendisse potenti. Donec venenatis dui in fermentum luctus. Maecenas tristique tincidunt luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque facilisis imperdiet tempus. In hac habitasse platea dictumst. Phasellus vel porttitor est. Quisque in lorem id velit feugiat cursus non a eros. Donec sit amet orci ultrices magna aliquet venenatis.",
       "start_timestamp": "2017-10-19T01:30:00.000+02:00",
       "end_timestamp": "2017-10-19T02:30:00.000+02:00",
-      "speakers": [
+      "speakers_ids": [
         "romain_guy",
         "chet_haase"
       ],
-      "room": "titan"
+      "room_id": "titan"
     },
     {
       "id": "00",
@@ -44,11 +44,11 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tortor ipsum, lacinia eget vulputate sed, luctus vel lacus. Nunc venenatis justo blandit ex condimentum, sed interdum lectus laoreet. Nunc aliquet nibh faucibus congue tristique. Suspendisse sagittis mauris sapien, et maximus arcu molestie elementum. Phasellus mattis tortor nisi, tincidunt molestie odio dignissim elementum. Pellentesque suscipit lorem nisl. Integer auctor ligula et sagittis euismod. Suspendisse potenti. Donec venenatis dui in fermentum luctus. Maecenas tristique tincidunt luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque facilisis imperdiet tempus. In hac habitasse platea dictumst. Phasellus vel porttitor est. Quisque in lorem id velit feugiat cursus non a eros. Donec sit amet orci ultrices magna aliquet venenatis.",
       "start_timestamp": "2017-10-21T00:30:00.000+02:00",
       "end_timestamp": "2017-10-21T01:30:00.000+02:00",
-      "speakers": [
+      "speakers_ids": [
         "romain_guy",
         "chet_haase"
       ],
-      "room": "titan"
+      "room_id": "titan"
     },
     {
       "id": "1",
@@ -56,11 +56,11 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tortor ipsum, lacinia eget vulputate sed, luctus vel lacus. Nunc venenatis justo blandit ex condimentum, sed interdum lectus laoreet. Nunc aliquet nibh faucibus congue tristique. Suspendisse sagittis mauris sapien, et maximus arcu molestie elementum. Phasellus mattis tortor nisi, tincidunt molestie odio dignissim elementum. Pellentesque suscipit lorem nisl. Integer auctor ligula et sagittis euismod. Suspendisse potenti. Donec venenatis dui in fermentum luctus. Maecenas tristique tincidunt luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque facilisis imperdiet tempus. In hac habitasse platea dictumst. Phasellus vel porttitor est. Quisque in lorem id velit feugiat cursus non a eros. Donec sit amet orci ultrices magna aliquet venenatis.",
       "start_timestamp": "2017-10-19T09:00:00.000+02:00",
       "end_timestamp": "2017-10-19T10:00:00.000+02:00",
-      "speakers": [
+      "speakers_ids": [
         "romain_guy",
         "chet_haase"
       ],
-      "room": "titan"
+      "room_id": "titan"
     },
     {
       "id": "2",
@@ -68,10 +68,10 @@
       "description": "In luctus accumsan velit nec lacinia. Proin sodales nisl ac sem dictum, id fermentum risus tincidunt. Sed in enim ullamcorper, vulputate enim sed, sollicitudin erat. Ut eu fringilla nisi. Nulla vehicula facilisis tincidunt. Integer et scelerisque est. Duis ullamcorper ligula sit amet sollicitudin auctor. Etiam malesuada ligula sit amet velit lacinia auctor in id nunc. Duis eget mi sem.\n\nNulla dictum congue egestas. Sed at purus sit amet mauris sodales dictum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam vitae laoreet libero. Sed vestibulum odio eu turpis volutpat suscipit. Ut odio nisi, pellentesque sed commodo vel, auctor at ante. Phasellus porta elit lorem, non efficitur arcu mollis fermentum. Aenean venenatis nulla mauris, sit amet volutpat ex pretium eget. Morbi in elit non odio posuere convallis in vitae risus.",
       "start_timestamp": "2017-10-20T09:00:00.000+02:00",
       "end_timestamp": "2017-10-20T10:00:00.000+02:00",
-      "speakers": [
+      "speakers_ids": [
         "rachel_andrew"
       ],
-      "room": "belem"
+      "room_id": "belem"
     },
     {
       "id": "3",
@@ -79,10 +79,10 @@
       "description": "Duis eu nibh diam. Etiam posuere facilisis nulla, ut feugiat ligula viverra ut. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi. Ut elementum ligula ac commodo mollis. In mattis congue mi, nec mollis nunc interdum a. Vivamus molestie fringilla est eu pretium. Mauris interdum sed augue eu egestas. Donec consectetur sem in tellus suscipit eleifend. Aliquam tincidunt tincidunt fermentum. Mauris at vehicula est, egestas eleifend sem. Quisque aliquet cursus nisi et finibus. Nunc tristique, orci nec commodo pharetra, quam metus feugiat metus, et pulvinar ex lorem in libero.\n\nPhasellus at cursus tortor. Duis ac dolor ligula. Nam volutpat, elit quis aliquet pulvinar, libero orci rhoncus enim, scelerisque malesuada dui justo et augue. Proin tincidunt pretium ipsum, at condimentum leo laoreet at. Sed id congue libero. Proin nec sapien vel leo semper laoreet ut eget nisi. Ut eget laoreet orci, sed blandit elit.",
       "start_timestamp": "2017-10-20T19:00:00.000+02:00",
       "end_timestamp": "2017-10-20T20:00:00.000+02:00",
-      "speakers": [
+      "speakers_ids": [
         "patrick_chanezon"
       ],
-      "room": "tour_bretagne"
+      "room_id": "tour_bretagne"
     }
   ],
   "speakers": [

@@ -14,17 +14,17 @@ data class Session(
         val id: String,
         val description: String,
         val endTimestamp: Date,
-        val room: String,
+        val roomId: String,
         val startTimestamp: Date,
         val title: String,
 
-        val speakers: List<String> = emptyList())
+        val speakersIds: List<String> = emptyList())
 
 fun Session.toContentValues() = ContentValues().apply {
     put(ScheduleContract.Sessions.SESSION_ID, id)
     put(ScheduleContract.Sessions.SESSION_DESCRIPTION, description)
     put(ScheduleContract.Sessions.SESSION_END_TIMESTAMP, endTimestamp.timeAsSeconds)
-    put(ScheduleContract.Sessions.SESSION_ROOM_ID, room)
+    put(ScheduleContract.Sessions.SESSION_ROOM_ID, roomId)
     put(ScheduleContract.Sessions.SESSION_START_TIMESTAMP, startTimestamp.timeAsSeconds)
     put(ScheduleContract.Sessions.SESSION_TITLE, title)
 }
@@ -33,7 +33,7 @@ fun Cursor.toSession() = Session(
         id = getStringOrThrow(ScheduleContract.Sessions.SESSION_ID),
         description = getStringOrThrow(ScheduleContract.Sessions.SESSION_DESCRIPTION),
         endTimestamp = Date(TimeUnit.SECONDS.toMillis(getLong(getColumnIndexOrThrow(ScheduleContract.Sessions.SESSION_END_TIMESTAMP)))),
-        room = getStringOrThrow(ScheduleContract.Sessions.SESSION_ROOM_ID),
+        roomId = getStringOrThrow(ScheduleContract.Sessions.SESSION_ROOM_ID),
         startTimestamp = Date(TimeUnit.SECONDS.toMillis(getLong(getColumnIndexOrThrow(ScheduleContract.Sessions.SESSION_START_TIMESTAMP)))),
         title = getStringOrThrow(ScheduleContract.Sessions.SESSION_TITLE)
 )
