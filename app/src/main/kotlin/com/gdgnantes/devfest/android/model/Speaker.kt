@@ -1,5 +1,6 @@
 package com.gdgnantes.devfest.android.model
 
+import android.content.ContentValues
 import android.database.Cursor
 import android.support.annotation.Keep
 import com.gdgnantes.devfest.android.database.getStringOrThrow
@@ -17,14 +18,22 @@ data class Speaker(
         val photoUrl: String?,
         val tags: List<String>?)
 
-fun Cursor.toSpeaker(): Speaker {
-    return Speaker(
-            id = getStringOrThrow(ScheduleContract.Speakers.SPEAKER_ID),
-            bio = getStringOrThrow(ScheduleContract.Speakers.SPEAKER_BIO),
-            company = getStringOrThrow(ScheduleContract.Speakers.SPEAKER_COMPANY),
-            country = getStringOrThrow(ScheduleContract.Speakers.SPEAKER_COUNTRY),
-            name = getStringOrThrow(ScheduleContract.Speakers.SPEAKER_NAME),
-            photoUrl = getStringOrThrow(ScheduleContract.Speakers.SPEAKER_PHOTO_URL),
-            tags = JsonConverters.main.fromJson(getStringOrThrow(ScheduleContract.Speakers.SPEAKER_TAGS))
-    )
+fun Speaker.toContentValues() = ContentValues().apply {
+    put(ScheduleContract.Speakers.SPEAKER_ID, id)
+    put(ScheduleContract.Speakers.SPEAKER_BIO, bio)
+    put(ScheduleContract.Speakers.SPEAKER_COMPANY, company)
+    put(ScheduleContract.Speakers.SPEAKER_COUNTRY, country)
+    put(ScheduleContract.Speakers.SPEAKER_NAME, name)
+    put(ScheduleContract.Speakers.SPEAKER_PHOTO_URL, photoUrl)
+    put(ScheduleContract.Speakers.SPEAKER_TAGS, JsonConverters.main.toJson(tags))
 }
+
+fun Cursor.toSpeaker() = Speaker(
+        id = getStringOrThrow(ScheduleContract.Speakers.SPEAKER_ID),
+        bio = getStringOrThrow(ScheduleContract.Speakers.SPEAKER_BIO),
+        company = getStringOrThrow(ScheduleContract.Speakers.SPEAKER_COMPANY),
+        country = getStringOrThrow(ScheduleContract.Speakers.SPEAKER_COUNTRY),
+        name = getStringOrThrow(ScheduleContract.Speakers.SPEAKER_NAME),
+        photoUrl = getStringOrThrow(ScheduleContract.Speakers.SPEAKER_PHOTO_URL),
+        tags = JsonConverters.main.fromJson(getStringOrThrow(ScheduleContract.Speakers.SPEAKER_TAGS))
+)
