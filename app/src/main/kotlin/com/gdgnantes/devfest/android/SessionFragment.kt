@@ -98,15 +98,14 @@ class SessionFragment : BaseFragment() {
             it.speakers.flatMap { it.tags ?: emptyList() }
                     .distinct()
                     .forEach {
-                        val tagView = layoutInflater.inflate<TextView>(R.layout.fragment_session_tag, tagsContainer, false)
+                        val tagView = tagsContainer.inflate<TextView>(R.layout.fragment_session_tag)
                         tagView.text = it
                         tagView.setBackgroundColor(Tags.colorForTag(it))
-                        tagsContainer.addView(tagView)
                     }
 
             val speakersContainer: ViewGroup = view.findViewById(R.id.speakers_container)
             it.speakers.forEach {
-                val speakerView = layoutInflater.inflate(R.layout.fragment_session_speaker, speakersContainer, false)
+                val speakerView = speakersContainer.inflate<View>(R.layout.fragment_session_speaker)
                 speakerView.findViewById<TextView>(R.id.name).text = it.name
                 speakerView.findViewById<TextView>(R.id.company).text = it.company
                 speakerView.findViewById<TextView>(R.id.description).text = it.bio
@@ -116,8 +115,6 @@ class SessionFragment : BaseFragment() {
                         .fit()
                         .transform(RoundedTransformation())
                         .into(speakerView.findViewById<ImageView>(R.id.thumbnail))
-
-                speakersContainer.addView(speakerView)
             }
 
         })
