@@ -15,6 +15,12 @@ enum class SocialNetwork(
     Website("website", R.drawable.notification_icon_background, R.string.app_name),
     GitHub("github", R.drawable.notification_icon_background, R.string.app_name);
 
+    companion object {
+        fun get(apiValue: String): SocialNetwork? {
+            return values().firstOrNull { apiValue == it.apiValue }
+        }
+    }
+
     fun getIcon(context: Context): Drawable = ContextCompat.getDrawable(context, icon)
 
     fun getNetworkName(context: Context): String = context.getString(networkName)

@@ -1,7 +1,8 @@
 package com.gdgnantes.devfest.android.model
 
-import com.google.gson.annotations.SerializedName
+import android.support.annotation.Keep
 
-data class SocialLink(
-        @SerializedName("social_network") val socialNetwork: SocialNetwork,
-        @SerializedName("link") val link: String)
+@Keep
+class SocialLink(
+        @JvmField val network: SocialNetwork? = null,
+        @JvmField val url: String? = null)
