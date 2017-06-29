@@ -10,11 +10,11 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DevFestNantes">
+        android:theme="@style/PreviewTheme.DevFestNantes">
 
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.DevFestNantes.NoActionBar">
+            android:theme="@style/PreviewTheme.DevFestNantes.Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -25,7 +25,7 @@
             android:name=".AboutActivity"
             android:label="@string/about"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.DevFestNantes.About" />
+            android:theme="@style/PreviewTheme.DevFestNantes.About" />
 
         <activity
             android:name=".LicensesActivity"
