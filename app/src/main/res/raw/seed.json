@@ -98,18 +98,18 @@
         "HTML5",
         "CSS"
       ],
-      "socials": [
+      "social_links": [
         {
-          "link_type": "github",
-          "link": "https://github.com/rachelandrew"
+          "network": "github",
+          "url": "https://github.com/rachelandrew"
         },
         {
-          "link_type": "twitter",
-          "link": "https://twitter.com/rachelandrew"
+          "network": "twitter",
+          "url": "https://twitter.com/rachelandrew"
         },
         {
-          "link_type": "website",
-          "link": "https://rachelandrew.co.uk/"
+          "network": "website",
+          "url": "https://rachelandrew.co.uk/"
         }
       ]
     },
@@ -124,14 +124,14 @@
       "tags": [
         "Android"
       ],
-      "socials": [
+      "social_links": [
         {
-          "link_type": "google_plus",
-          "link": "https://google.com/+RomainGuy"
+          "network": "google_plus",
+          "url": "https://google.com/+RomainGuy"
         },
         {
-          "link_type": "twitter",
-          "link": "https://twitter.com/romainguy"
+          "network": "twitter",
+          "url": "https://twitter.com/romainguy"
         }
       ]
     },
@@ -146,18 +146,18 @@
       "tags": [
         "Android"
       ],
-      "socials": [
+      "social_links": [
         {
-          "link_type": "google_plus",
-          "link": "https://google.com/+ChetHaase"
+          "network": "google_plus",
+          "url": "https://google.com/+ChetHaase"
         },
         {
-          "link_type": "twitter",
-          "link": "https://twitter.com/chethaase"
+          "network": "twitter",
+          "url": "https://twitter.com/chethaase"
         },
         {
-          "link_type": "website",
-          "link": "https://medium.com/@chethaase"
+          "network": "website",
+          "url": "https://medium.com/@chethaase"
         }
       ]
     },
@@ -172,10 +172,10 @@
       "tags": [
         "Docker"
       ],
-      "socials": [
+      "social_links": [
         {
-          "link_type": "twitter",
-          "link": "https://twitter.com/chanezon"
+          "network": "twitter",
+          "url": "https://twitter.com/chanezon"
         }
       ]
     }
