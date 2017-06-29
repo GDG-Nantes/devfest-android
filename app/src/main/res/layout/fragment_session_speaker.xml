@@ -18,7 +18,7 @@
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@id/thumbnail"
         android:lineSpacingMultiplier="1.2"
-        android:textColor="@color/colorPrimary"
+        android:textColor="?colorAccent"
         android:textSize="@dimen/font_size_large"
         tools:text="Cyril Mottier" />
 
@@ -29,6 +29,7 @@
         android:layout_below="@id/name"
         android:layout_toRightOf="@id/thumbnail"
         android:lineSpacingMultiplier="1.2"
+        android:textColor="?android:textColorPrimary"
         tools:text="DevFest Nantes" />
 
     <TextView
@@ -39,6 +40,7 @@
         android:layout_marginTop="@dimen/spacing_small"
         android:layout_toRightOf="@id/thumbnail"
         android:lineSpacingMultiplier="1.2"
+        android:textColor="?android:textColorPrimary"
         tools:text="Lorem ipsum amet dolor et." />
 
 </RelativeLayout>

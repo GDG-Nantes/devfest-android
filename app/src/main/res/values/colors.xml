@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="colorPrimary">#D93A2D</color>
-    <color name="colorPrimaryDark">#AE2E24</color>
-    <color name="colorAccent">#D93A2D</color>
+    <!-- -->
+    <!-- App palette -->
+    <!-- -->
 
-    <color name="text_primary">#333333</color>
-    <color name="text_secondary">#999999</color>
-    <color name="text_accent">@color/colorAccent</color>
+    <color name="candy">#d93a2d</color>
+    <color name="cherry">#ae2e24</color>
 
-    <color name="text_white">#ffffff</color>
-    <color name="text_white_50p">#77ffffff</color>
+    <color name="porcelain">#fafafa</color>
+    <color name="white">#ffffff</color>
+    <color name="white_50p">#77ffffff</color>
 
-    <color name="divider">#e7e7e7</color>
+    <color name="gray_gull">#e7e7e7</color>
 
-    <color name="text_primary_dark">#ffffff</color>
+    <color name="falcon">#333333</color>
+    <color name="stratus">#999999</color>
 
 </resources>

@@ -25,7 +25,7 @@
             android:name=".AboutActivity"
             android:label="@string/about"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.DevFestNantes.NoActionBar" />
+            android:theme="@style/Theme.DevFestNantes.About" />
 
         <activity
             android:name=".LicensesActivity"
