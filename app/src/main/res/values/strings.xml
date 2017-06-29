@@ -19,4 +19,9 @@
     <string name="session_info">%1$s, %2$s - %3$s\nSalle %4$s</string>
     <string name="session_subtitle">%1$s at %2$s</string>
 
+    <string name="network_twitter">Twitter</string>
+    <string name="network_google_plus">Google+</string>
+    <string name="network_website">Website</string>
+    <string name="network_github">GitHub</string>
+
 </resources>
