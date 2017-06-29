@@ -50,6 +50,7 @@ public final class ScheduleContract {
         String SPEAKER_COUNTRY = "speaker_country";
         String SPEAKER_NAME = "speaker_name";
         String SPEAKER_PHOTO_URL = "speaker_photo_url";
+        String SPEAKER_SOCIAL_LINKS = "speaker_social_links";
         String SPEAKER_TAGS = "speaker_tags";
     }
 
