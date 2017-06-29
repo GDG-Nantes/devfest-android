@@ -14,8 +14,8 @@ class AboutActivity : BaseActivity() {
                 = Intent(context, AboutActivity::class.java)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreate(inState: Bundle?) {
+        super.onCreate(inState)
         if (supportFragmentManager.findFragmentByTag(FRAGMENT_ABOUT) == null) {
             supportFragmentManager.beginTransaction()
                     .add(android.R.id.content, AboutFragment.newInstance(), FRAGMENT_ABOUT)

@@ -16,8 +16,8 @@ class SessionActivity : BaseActivity() {
                 = Intent(context, SessionActivity::class.java).putExtra(EXTRA_SESSION_ID, sessionId)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreate(inState: Bundle?) {
+        super.onCreate(inState)
         if (supportFragmentManager.findFragmentByTag(FRAGMENT_SESSION_DETAIL) == null) {
             val sessionId: String = intent.getStringExtra(EXTRA_SESSION_ID)
             supportFragmentManager.beginTransaction()

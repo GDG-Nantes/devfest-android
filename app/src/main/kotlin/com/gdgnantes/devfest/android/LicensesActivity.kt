@@ -14,8 +14,8 @@ class LicensesActivity : BaseActivity() {
                 = Intent(context, LicensesActivity::class.java)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreate(inState: Bundle?) {
+        super.onCreate(inState)
         if (supportFragmentManager.findFragmentByTag(FRAGMENT_LICENSES) == null) {
             supportFragmentManager.beginTransaction()
                     .add(android.R.id.content, LicensesFragment.newInstance(), FRAGMENT_LICENSES)

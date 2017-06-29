@@ -29,8 +29,8 @@ class MainActivity : BaseActivity() {
     private lateinit var adapter: PagesAdapter
     private lateinit var sharedPreferences: SharedPreferences
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreate(inState: Bundle?) {
+        super.onCreate(inState)
 
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
