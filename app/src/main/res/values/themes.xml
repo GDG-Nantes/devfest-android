@@ -18,7 +18,7 @@
         <item name="toolbarStyle">@style/Widget.Toolbar</item>
     </style>
 
-    <style name="Theme.DevFestNantes.NoActionBar">
+    <style name="Theme.DevFestNantes.Home">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
