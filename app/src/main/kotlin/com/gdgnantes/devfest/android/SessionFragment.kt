@@ -2,17 +2,21 @@ package com.gdgnantes.devfest.android
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
 import android.graphics.Rect
+import android.net.Uri
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v4.app.ShareCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.*
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import com.gdgnantes.devfest.android.app.BaseFragment
 import com.gdgnantes.devfest.android.format.text.DateTimeFormatter
 import com.gdgnantes.devfest.android.graphics.RoundedTransformation
+import com.gdgnantes.devfest.android.model.SocialNetwork
 import com.gdgnantes.devfest.android.util.Tags
 import com.gdgnantes.devfest.android.view.inflate
 import com.gdgnantes.devfest.android.viewmodel.SessionViewModel
@@ -115,6 +119,17 @@ class SessionFragment : BaseFragment() {
                         .fit()
                         .transform(RoundedTransformation())
                         .into(speakerView.findViewById<ImageView>(R.id.thumbnail))
+
+                val socialLinksView = speakerView.findViewById<ViewGroup>(R.id.social_links_container)
+                it.socialLinks?.forEach { socialLink ->
+                    val socialLinkView = socialLinksView.inflate<ImageButton>(R.layout.fragment_session_speaker_social_link)
+                    socialLinkView.setImageDrawable(SocialNetwork.getIcon(socialLink.network, context))
+                    socialLinkView.contentDescription = SocialNetwork.getName(socialLink.network, context)
+                    socialLinkView.setOnClickListener {
+                        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(socialLink.url))
+                                .addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT))
+                    }
+                }
             }
 
         })
