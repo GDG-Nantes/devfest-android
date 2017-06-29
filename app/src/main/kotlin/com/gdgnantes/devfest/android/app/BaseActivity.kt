@@ -16,21 +16,5 @@ abstract class BaseActivity : AppCompatActivity(), LifecycleRegistryOwner {
 
     override fun getLifecycle(): LifecycleRegistry = registry
 
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        when (item.itemId) {
-//            android.R.id.home -> {
-//                val upIntent = NavUtils.getParentActivityIntent(this)
-//                if (NavUtils.shouldUpRecreateTask(this, upIntent)) {
-//                    TaskStackBuilder.create(this)
-//                            .addNextIntentWithParentStack(upIntent)
-//                            .startActivities()
-//                } else {
-//                    NavUtils.navigateUpTo(this, upIntent)
-//                }
-//                return true
-//            }
-//            else -> return super.onOptionsItemSelected(item)
-//        }
-//    }
 
 }
