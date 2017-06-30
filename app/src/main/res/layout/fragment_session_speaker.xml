@@ -51,6 +51,7 @@
         android:layout_below="@id/description"
         android:layout_marginTop="@dimen/spacing_small"
         android:layout_toRightOf="@id/thumbnail"
+        android:visibility="gone"
         app:spacingHorizontal="@dimen/spacing_small"
         app:spacingVertical="@dimen/spacing_small">
 

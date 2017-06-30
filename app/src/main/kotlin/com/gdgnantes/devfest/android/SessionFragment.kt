@@ -22,6 +22,7 @@ import com.gdgnantes.devfest.android.util.Tags
 import com.gdgnantes.devfest.android.view.inflate
 import com.gdgnantes.devfest.android.viewmodel.SessionViewModel
 import com.gdgnantes.devfest.android.widget.ScrollView
+import com.gdgnantes.devfest.android.widget.applyText
 import com.squareup.picasso.Picasso
 
 
@@ -139,9 +140,9 @@ class SessionFragment : BaseFragment() {
         speakersContainer.removeAllViews()
         speakers.forEach {
             val speakerView = speakersContainer.inflate<View>(R.layout.fragment_session_speaker)
-            speakerView.findViewById<TextView>(R.id.name).text = it.name
-            speakerView.findViewById<TextView>(R.id.company).text = it.company
-            speakerView.findViewById<TextView>(R.id.description).text = it.bio
+            speakerView.findViewById<TextView>(R.id.name).applyText(it.name)
+            speakerView.findViewById<TextView>(R.id.company).applyText(it.company)
+            speakerView.findViewById<TextView>(R.id.description).applyText(it.bio)
 
             Picasso.with(context)
                     .load(it.photoUrl)
@@ -163,6 +164,8 @@ class SessionFragment : BaseFragment() {
                 startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(socialLink.url))
                         .addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT))
             }
+
+            socialLinksView.visibility = View.VISIBLE
         }
     }
 
