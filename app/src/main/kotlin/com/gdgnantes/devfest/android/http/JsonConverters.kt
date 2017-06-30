@@ -13,10 +13,10 @@ object JsonConverters {
     val main: Gson = GsonBuilder()
             .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
             .setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ")
-            .registerTypeAdapter(SocialNetwork::class.java, SocialNetworkAdapter().nullSafe())
+            .registerTypeAdapter(SocialNetwork::class.java, SocialNetworkTypeAdapter().nullSafe())
             .create()
 
-    class SocialNetworkAdapter : TypeAdapter<SocialNetwork>() {
+    private class SocialNetworkTypeAdapter : TypeAdapter<SocialNetwork>() {
         override fun write(writer: JsonWriter, socialNetwork: SocialNetwork) {
             writer.value(socialNetwork.apiValue)
         }
