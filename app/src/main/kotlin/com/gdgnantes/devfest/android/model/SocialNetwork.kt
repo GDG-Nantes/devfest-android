@@ -28,12 +28,23 @@ enum class SocialNetwork(
             R.string.network_github);
 
     companion object {
+        private const val DEFAULT_ICON = R.drawable.ic_network_web
+        private const val DEFAULT_NAME = R.string.network_website
+
         fun get(apiValue: String): SocialNetwork? {
             return values().firstOrNull { apiValue == it.apiValue }
         }
+
+        fun getIcon(self: SocialNetwork?, context: Context): Drawable {
+            return AppCompatResources.getDrawable(context, self?.icon ?: SocialNetwork.DEFAULT_ICON)!!
+        }
+
+        fun getName(self: SocialNetwork?, context: Context): String {
+            return context.getString(self?.networkName ?: SocialNetwork.DEFAULT_NAME)
+        }
     }
 
-    fun getIcon(context: Context): Drawable = AppCompatResources.getDrawable(context, icon)!!
-
-    fun getNetworkName(context: Context): String = context.getString(networkName)
 }
+
+
+
