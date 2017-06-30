@@ -1,6 +1,7 @@
 package com.gdgnantes.devfest.android.util
 
 import java.util.*
+import java.util.concurrent.TimeUnit
 
 inline val Date.timeAsSeconds: Long
-    get() = time / 1000
+    get() = TimeUnit.MILLISECONDS.toSeconds(time)
