@@ -136,6 +136,7 @@ class SessionFragment : BaseFragment() {
 
     private fun displaySpeakers(speakers: List<Speaker>, sessionView: View) {
         val speakersContainer: ViewGroup = sessionView.findViewById(R.id.speakers_container)
+        speakersContainer.removeAllViews()
         speakers.forEach {
             val speakerView = speakersContainer.inflate<View>(R.layout.fragment_session_speaker)
             speakerView.findViewById<TextView>(R.id.name).text = it.name
