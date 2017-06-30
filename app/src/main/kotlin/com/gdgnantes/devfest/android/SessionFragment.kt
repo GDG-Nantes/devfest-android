@@ -17,6 +17,7 @@ import com.gdgnantes.devfest.android.app.BaseFragment
 import com.gdgnantes.devfest.android.format.text.DateTimeFormatter
 import com.gdgnantes.devfest.android.graphics.RoundedTransformation
 import com.gdgnantes.devfest.android.model.SocialNetwork
+import com.gdgnantes.devfest.android.model.Speaker
 import com.gdgnantes.devfest.android.util.Tags
 import com.gdgnantes.devfest.android.view.inflate
 import com.gdgnantes.devfest.android.viewmodel.SessionViewModel
@@ -85,53 +86,8 @@ class SessionFragment : BaseFragment() {
         super.onActivityCreated(savedInstanceState)
         val data = ViewModelProviders.of(this).get(SessionViewModel::class.java)
         data.getSession(sessionId).observe(this, Observer {
-
             title = it!!.session.title
-
-            val view = view!!
-
-            view.findViewById<TextView>(R.id.title).text = it.session.title
-            view.findViewById<TextView>(R.id.information).text = getString(R.string.session_info,
-                    DateTimeFormatter.formatEEEEMMMMd(it.session.startTimestamp),
-                    DateTimeFormatter.formatHHmm(it.session.startTimestamp),
-                    DateTimeFormatter.formatHHmm(it.session.endTimestamp),
-                    it.room.name)
-            view.findViewById<TextView>(R.id.description).text = it.session.description
-
-            val tagsContainer = view.findViewById<ViewGroup>(R.id.tags_container)
-            it.speakers.flatMap { it.tags ?: emptyList() }
-                    .distinct()
-                    .forEach {
-                        val tagView = tagsContainer.inflate<TextView>(R.layout.fragment_session_tag)
-                        tagView.text = it
-                        tagView.setBackgroundColor(Tags.colorForTag(it))
-                    }
-
-            val speakersContainer: ViewGroup = view.findViewById(R.id.speakers_container)
-            it.speakers.forEach {
-                val speakerView = speakersContainer.inflate<View>(R.layout.fragment_session_speaker)
-                speakerView.findViewById<TextView>(R.id.name).text = it.name
-                speakerView.findViewById<TextView>(R.id.company).text = it.company
-                speakerView.findViewById<TextView>(R.id.description).text = it.bio
-
-                Picasso.with(context)
-                        .load(it.photoUrl)
-                        .fit()
-                        .transform(RoundedTransformation())
-                        .into(speakerView.findViewById<ImageView>(R.id.thumbnail))
-
-                val socialLinksView = speakerView.findViewById<ViewGroup>(R.id.social_links_container)
-                it.socialLinks?.forEach { socialLink ->
-                    val socialLinkView = socialLinksView.inflate<ImageButton>(R.layout.fragment_session_speaker_social_link)
-                    socialLinkView.setImageDrawable(SocialNetwork.getIcon(socialLink.network, context))
-                    socialLinkView.contentDescription = SocialNetwork.getName(socialLink.network, context)
-                    socialLinkView.setOnClickListener {
-                        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(socialLink.url))
-                                .addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT))
-                    }
-                }
-            }
-
+            displaySession(it, view!!)
         })
     }
 
@@ -155,6 +111,58 @@ class SessionFragment : BaseFragment() {
             return true
         }
         return false
+    }
+
+    private fun displaySession(model: SessionViewModel.Data, view: View) {
+        view.findViewById<TextView>(R.id.title).text = model.session.title
+        view.findViewById<TextView>(R.id.information).text = getString(R.string.session_info,
+                DateTimeFormatter.formatEEEEMMMMd(model.session.startTimestamp),
+                DateTimeFormatter.formatHHmm(model.session.startTimestamp),
+                DateTimeFormatter.formatHHmm(model.session.endTimestamp),
+                model.room.name)
+        view.findViewById<TextView>(R.id.description).text = model.session.description
+
+        val tagsContainer = view.findViewById<ViewGroup>(R.id.tags_container)
+        model.speakers.flatMap { it.tags ?: emptyList() }
+                .distinct()
+                .forEach {
+                    val tagView = tagsContainer.inflate<TextView>(R.layout.fragment_session_tag)
+                    tagView.text = it
+                    tagView.setBackgroundColor(Tags.colorForTag(it))
+                }
+
+        displaySpeakers(model.speakers, view)
+    }
+
+    private fun displaySpeakers(speakers: List<Speaker>, sessionView: View) {
+        val speakersContainer: ViewGroup = sessionView.findViewById(R.id.speakers_container)
+        speakers.forEach {
+            val speakerView = speakersContainer.inflate<View>(R.layout.fragment_session_speaker)
+            speakerView.findViewById<TextView>(R.id.name).text = it.name
+            speakerView.findViewById<TextView>(R.id.company).text = it.company
+            speakerView.findViewById<TextView>(R.id.description).text = it.bio
+
+            Picasso.with(context)
+                    .load(it.photoUrl)
+                    .fit()
+                    .transform(RoundedTransformation())
+                    .into(speakerView.findViewById<ImageView>(R.id.thumbnail))
+
+            displayNetworkLinks(it, speakerView)
+        }
+    }
+
+    private fun displayNetworkLinks(speaker: Speaker, speakerView: View) {
+        val socialLinksView = speakerView.findViewById<ViewGroup>(R.id.social_links_container)
+        speaker.socialLinks?.forEach { socialLink ->
+            val socialLinkView = socialLinksView.inflate<ImageButton>(R.layout.fragment_session_speaker_social_link)
+            socialLinkView.setImageDrawable(SocialNetwork.getIcon(socialLink.network, context))
+            socialLinkView.contentDescription = SocialNetwork.getName(socialLink.network, context)
+            socialLinkView.setOnClickListener {
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(socialLink.url))
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT))
+            }
+        }
     }
 
 }
