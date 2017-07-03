@@ -6,7 +6,7 @@ import android.content.Intent
 import android.graphics.Rect
 import android.net.Uri
 import android.os.Bundle
-import android.support.design.widget.Snackbar
+import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.ShareCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.*
@@ -40,6 +40,7 @@ class SessionFragment : BaseFragment() {
     private val tempRect = Rect()
 
     private lateinit var sessionId: String
+    private lateinit var bookmarkButton: FloatingActionButton
 
     private var title: String? = null
     private var displayingTitle: Boolean = false
@@ -59,9 +60,8 @@ class SessionFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<View>(R.id.btn_bookmark).setOnClickListener {
-            Snackbar.make(view.findViewById<View>(R.id.root), "Not implemented yet…", Snackbar.LENGTH_SHORT).show()
-        }
+        bookmarkButton = view.findViewById<FloatingActionButton>(R.id.btn_bookmark)
+        bookmarkButton.setOnClickListener { toggleFavorite() }
 
         view.findViewById<ScrollView>(R.id.scroll_view).onScrollChangeListener = { _, _, _ ->
             val titleView = view.findViewById<View>(R.id.title)
@@ -81,6 +81,8 @@ class SessionFragment : BaseFragment() {
                 }
             }
         }
+
+        updateBookmark()
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -166,6 +168,25 @@ class SessionFragment : BaseFragment() {
             }
 
             socialLinksView.visibility = View.VISIBLE
+        }
+    }
+
+    private fun toggleFavorite() {
+        val favoriteManager = BookmarkManager.from(context)
+        if (favoriteManager.isBookmarked(sessionId)) {
+            favoriteManager.unbookmark(sessionId)
+        } else {
+            favoriteManager.bookmark(sessionId)
+        }
+        updateBookmark()
+    }
+
+    private fun updateBookmark() {
+        val favoriteManager = BookmarkManager.from(context)
+        if (favoriteManager.isBookmarked(sessionId)) {
+            bookmarkButton.setImageResource(R.drawable.ic_action_unbookmark)
+        } else {
+            bookmarkButton.setImageResource(R.drawable.ic_action_bookmark)
         }
     }
 
