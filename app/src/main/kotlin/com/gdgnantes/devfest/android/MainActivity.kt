@@ -1,7 +1,5 @@
 package com.gdgnantes.devfest.android
 
-import android.content.Context
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.TabLayout
@@ -12,6 +10,7 @@ import android.util.SparseArray
 import android.view.Menu
 import android.view.MenuItem
 import com.gdgnantes.devfest.android.app.BaseActivity
+import com.gdgnantes.devfest.android.app.PreferencesManager
 import com.gdgnantes.devfest.android.format.text.DateTimeFormatter
 import com.gdgnantes.devfest.android.support.app.FragmentStatePagerAdapter
 import java.text.SimpleDateFormat
@@ -19,15 +18,8 @@ import java.util.*
 
 class MainActivity : BaseActivity() {
 
-    companion object {
-        const val PREFS_NAME = "main"
-
-        const val PREFS_SELECTED_TAB = "prefs:selectedTab"
-    }
-
     private lateinit var viewPager: ViewPager
     private lateinit var adapter: PagesAdapter
-    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(inState: Bundle?) {
         super.onCreate(inState)
@@ -37,7 +29,6 @@ class MainActivity : BaseActivity() {
         setTitle(R.string.agenda)
 
         adapter = PagesAdapter(supportFragmentManager)
-        sharedPreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
 
         viewPager = findViewById<ViewPager>(R.id.view_pager)
         viewPager.adapter = adapter
@@ -47,9 +38,9 @@ class MainActivity : BaseActivity() {
         tabLayout.setupWithViewPager(viewPager)
         tabLayout.addOnTabSelectedListener(onTabSelectedListener)
 
-        val selectedTabTag = sharedPreferences.getString(PREFS_SELECTED_TAB, null)
-        if (selectedTabTag != null) {
-            val indexOfTab = AppConfig.EVENT_DATES.indexOf(selectedTabTag)
+        val selectedTab = PreferencesManager.from(this).selectedTab
+        if (selectedTab != null) {
+            val indexOfTab = AppConfig.EVENT_DATES.indexOf(selectedTab)
             if (tabLayout.selectedTabPosition != indexOfTab) {
                 tabLayout.getTabAt(indexOfTab)?.select()
             }
@@ -109,9 +100,7 @@ class MainActivity : BaseActivity() {
 
         override fun onTabSelected(tab: TabLayout.Tab) {
             viewPager.setCurrentItem(tab.position, true)
-            sharedPreferences.edit()
-                    .putString(PREFS_SELECTED_TAB, AppConfig.EVENT_DATES[tab.position])
-                    .apply()
+            PreferencesManager.from(this@MainActivity).selectedTab = AppConfig.EVENT_DATES[tab.position]
         }
 
         override fun onTabReselected(tab: TabLayout.Tab) {
