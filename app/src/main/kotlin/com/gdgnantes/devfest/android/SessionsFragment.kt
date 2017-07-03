@@ -14,7 +14,6 @@ import com.gdgnantes.devfest.android.app.BaseFragment
 import com.gdgnantes.devfest.android.format.text.DateTimeFormatter
 import com.gdgnantes.devfest.android.view.bind
 import com.gdgnantes.devfest.android.viewmodel.SessionsViewModel
-import kotlin.LazyThreadSafetyMode.NONE
 
 
 class SessionsFragment : BaseFragment() {
@@ -38,6 +37,9 @@ class SessionsFragment : BaseFragment() {
         val model = ViewModelProviders.of(this).get(SessionsViewModel::class.java)
         model.getSessions(date).observe(this, Observer {
             adapter.sessions = it!!
+        })
+        BookmarkManager.from(context).getLiveData().observe(this, Observer {
+            adapter.notifyDataSetChanged()
         })
     }
 
@@ -66,10 +68,13 @@ class SessionsFragment : BaseFragment() {
 
         val title: TextView by view.bind<TextView>(R.id.title)
         val subtitle: TextView by view.bind<TextView>(R.id.subtitle)
+        val favoriteIndicator: View by view.bind<View>(R.id.favorite_indicator)
     }
 
     private inner class SessionsAdapter(
             val context: Context) : RecyclerView.Adapter<SessionViewHolder>() {
+
+        private val favoritesManager = BookmarkManager.from(context)
 
         var sessions: List<SessionsViewModel.Data> = emptyList()
             set(sessions) {
@@ -79,8 +84,14 @@ class SessionsFragment : BaseFragment() {
 
         override fun onBindViewHolder(holder: SessionViewHolder?, position: Int) {
             val session = sessions.get(position)
+
             holder!!.title.text = session.session.title
             holder.subtitle.text = getString(R.string.session_subtitle, session.room.name, DateTimeFormatter.formatHHmm(session.session.startTimestamp))
+            if (favoritesManager.isBookmarked(session.session.id)) {
+                holder.favoriteIndicator.visibility = View.VISIBLE
+            } else {
+                holder.favoriteIndicator.visibility = View.GONE
+            }
         }
 
         override fun getItemCount(): Int = sessions.size
