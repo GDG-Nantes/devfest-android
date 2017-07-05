@@ -26,11 +26,13 @@ class PreferencesManager private constructor(context: Context) {
         private interface Keys {
             companion object {
                 const val SELECTED_TAB = "prefs.selectedTab"
+                const val BOOKMARKS = "prefs.bookmarks"
             }
         }
     }
 
     var selectedTab: String? by openHelper.sharedPreferences.string(Keys.SELECTED_TAB)
+    var bookmarks: Set<String> by openHelper.sharedPreferences.stringSet(Keys.BOOKMARKS)
 
     private class PreferencesOpenHelper(context: Context) : SharedPreferencesOpenHelper(context, NAME, VERSION) {
 
@@ -70,6 +72,17 @@ private fun SharedPreferences.string(name: String, defaultValue: String? = null)
 
     override fun setValue(thisRef: Any, property: KProperty<*>, value: String?) {
         edit().putString(name, value).apply()
+    }
+}
+
+private fun SharedPreferences.stringSet(name: String, defaultValue: Set<String> = emptySet())
+        = object : ReadWriteProperty<Any, Set<String>> {
+    override fun getValue(thisRef: Any, property: KProperty<*>): Set<String> {
+        return getStringSet(name, defaultValue)
+    }
+
+    override fun setValue(thisRef: Any, property: KProperty<*>, value: Set<String>) {
+        edit().putStringSet(name, value).apply()
     }
 }
 
