@@ -39,7 +39,7 @@
 
         <provider
             android:name="com.gdgnantes.devfest.android.provider.ScheduleProvider"
-            android:authorities="com.gdgnantes.devfest.android.provider.schedule"
+            android:authorities="${applicationId}.provider.schedule"
             android:exported="false" />
 
         <meta-data
