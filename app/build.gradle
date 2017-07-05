@@ -13,8 +13,10 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        manifestPlaceholders = ['host': 'devfest.gdgnantes.com']
         vectorDrawables.useSupportLibrary = true
     }
     signingConfigs {

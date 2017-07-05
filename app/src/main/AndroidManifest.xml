@@ -19,6 +19,17 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="${host}"
+                    android:path="/sessions"
+                    android:scheme="https" />
+            </intent-filter>
         </activity>
 
         <activity
@@ -35,7 +46,21 @@
         <activity
             android:name=".SessionActivity"
             android:label="@string/sessionDetails"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="${host}"
+                    android:pathPrefix="/sessions/"
+                    android:scheme="https" />
+            </intent-filter>
+
+        </activity>
 
         <provider
             android:name="com.gdgnantes.devfest.android.provider.ScheduleProvider"
