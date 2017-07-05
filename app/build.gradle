@@ -6,7 +6,7 @@ keystoreProperties.load(new FileInputStream(rootProject.file("keystore.propertie
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "25.0.2"
+    buildToolsVersion "25.0.3"
     defaultConfig {
         applicationId "com.gdgnantes.devfest.android"
         minSdkVersion 21
