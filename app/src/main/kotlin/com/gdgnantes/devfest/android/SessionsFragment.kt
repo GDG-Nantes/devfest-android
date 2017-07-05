@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.gdgnantes.devfest.android.app.BaseFragment
 import com.gdgnantes.devfest.android.format.text.DateTimeFormatter
+import com.gdgnantes.devfest.android.view.bind
 import com.gdgnantes.devfest.android.viewmodel.SessionsViewModel
 import kotlin.LazyThreadSafetyMode.NONE
 
@@ -63,8 +64,8 @@ class SessionsFragment : BaseFragment() {
             view.setOnClickListener(onItemClickListener)
         }
 
-        val title: TextView by lazy(NONE) { view.findViewById<TextView>(R.id.title) }
-        val subtitle: TextView by lazy(NONE) { view.findViewById<TextView>(R.id.subtitle) }
+        val title: TextView by view.bind<TextView>(R.id.title)
+        val subtitle: TextView by view.bind<TextView>(R.id.subtitle)
     }
 
     private inner class SessionsAdapter(
