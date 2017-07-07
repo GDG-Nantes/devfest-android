@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.gdgnantes.devfest.android.app.BaseActivity
+import com.gdgnantes.devfest.android.app.PREFIX_EXTRA
 
 class SessionActivity : BaseActivity() {
 
