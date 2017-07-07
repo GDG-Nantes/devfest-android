@@ -4,14 +4,9 @@ import android.arch.lifecycle.LifecycleRegistry
 import android.arch.lifecycle.LifecycleRegistryOwner
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.gdgnantes.devfest.android.BuildConfig
 import com.gdgnantes.devfest.android.util.ThemeUtils
 
 abstract class BaseActivity : AppCompatActivity(), LifecycleRegistryOwner {
-
-    companion object {
-        const val PREFIX_EXTRA = "${BuildConfig.APPLICATION_ID}.extra."
-    }
 
     private val registry = LifecycleRegistry(this)
 
