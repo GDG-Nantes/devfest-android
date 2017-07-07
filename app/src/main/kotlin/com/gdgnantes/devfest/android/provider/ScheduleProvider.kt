@@ -11,6 +11,7 @@ import android.net.Uri
 import android.util.Log
 import com.gdgnantes.devfest.android.content.SQLiteContentProvider
 import com.gdgnantes.devfest.android.database.SelectionBuilder
+import com.gdgnantes.devfest.android.net.getIntQueryParameter
 
 
 class ScheduleProvider : SQLiteContentProvider() {
@@ -34,6 +35,8 @@ class ScheduleProvider : SQLiteContentProvider() {
 
         private const val SPEAKERS = SESSIONS_SPEAKERS + 100
         private const val SPEAKERS_ID = SPEAKERS + 1
+
+        private val allowedUriParameters = setOf(ScheduleContract.Extras.COUNT_LIMIT)
 
         private val uriMatcher: UriMatcher = UriMatcher(UriMatcher.NO_MATCH)
 
@@ -66,6 +69,8 @@ class ScheduleProvider : SQLiteContentProvider() {
                     ", selectionArgs=" + selectionArgs?.contentToString() +
                     ", sortOrder=" + sortOrder + ")")
         }
+
+        validateUriQueryParameters(uri)
 
         val qb = SQLiteQueryBuilder()
         val db = openHelper.readableDatabase
@@ -157,14 +162,25 @@ class ScheduleProvider : SQLiteContentProvider() {
     private fun query(uri: Uri, db: SQLiteDatabase, qb: SQLiteQueryBuilder, projection: Array<String>?,
                       selection: String?, selectionArgs: Array<String>?, sortOrder: String?, groupBy: String? = null,
                       having: String? = null, limit: String? = null): Cursor {
+
+        var actualLimit = limit
+
+        if (limit.isNullOrEmpty()) {
+            // Let's try to extract the limit from the Uri (if available)
+            val potentialLimit = uri.getIntQueryParameter(ScheduleContract.Extras.COUNT_LIMIT, -1)
+            if (potentialLimit > 0) {
+                actualLimit = potentialLimit.toString()
+            }
+        }
+
         qb.setStrict(true)
 
         if (DEBUG_LOG_QUERIES) {
-            Log.i(TAG, "${qb.buildQuery(projection, selection, groupBy, having, sortOrder, limit)} " +
+            Log.i(TAG, "${qb.buildQuery(projection, selection, groupBy, having, sortOrder, actualLimit)} " +
                     "with args: ${selectionArgs?.contentToString()}")
         }
 
-        val c = qb.query(db, projection, selection, selectionArgs, null, null, sortOrder, limit)
+        val c = qb.query(db, projection, selection, selectionArgs, groupBy, having, sortOrder, actualLimit)
         if (c != null) {
             val resolver = context?.contentResolver
             if (resolver != null) {
@@ -244,6 +260,14 @@ class ScheduleProvider : SQLiteContentProvider() {
 
     private fun postNotifyChange() {
         postNotifyChange(ScheduleContract.CONTENT_URI)
+    }
+
+    private fun validateUriQueryParameters(uri: Uri) {
+        uri.queryParameterNames?.let {
+            it.firstOrNull { it !in allowedUriParameters }?.let {
+                throw IllegalArgumentException("Invalid URI parameter: " + it)
+            }
+        }
     }
 
 }

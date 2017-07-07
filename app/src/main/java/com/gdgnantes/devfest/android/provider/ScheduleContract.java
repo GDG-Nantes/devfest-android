@@ -54,6 +54,10 @@ public final class ScheduleContract {
         String SPEAKER_TAGS = "speaker_tags";
     }
 
+    public interface Extras {
+        String COUNT_LIMIT = "count_limit";
+    }
+
     public static final class Rooms implements RoomColumns {
 
         public static final Uri CONTENT_URI = ScheduleContract.CONTENT_URI.buildUpon()
