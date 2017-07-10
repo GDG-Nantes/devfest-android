@@ -20,11 +20,24 @@ class SessionActivity : BaseActivity() {
     override fun onCreate(inState: Bundle?) {
         super.onCreate(inState)
         if (supportFragmentManager.findFragmentByTag(FRAGMENT_SESSION_DETAIL) == null) {
-            val sessionId: String = intent.getStringExtra(EXTRA_SESSION_ID)
+            val sessionId: String = getSessionId()
             supportFragmentManager.beginTransaction()
                     .add(android.R.id.content, SessionFragment.newInstance(sessionId), FRAGMENT_SESSION_DETAIL)
                     .commit()
         }
+    }
+
+    private fun getSessionId(): String {
+        intent.data?.let {
+            if (it.scheme in AppConfig.SCHEMES && it.authority in AppConfig.AUTHORITIES) {
+                it.pathSegments?.let {
+                    if (it.size == 2 && it[0] == AppConfig.PATH_SESSIONS) {
+                        return it[1]
+                    }
+                }
+            }
+        }
+        return intent.getStringExtra(EXTRA_SESSION_ID)
     }
 
 }
