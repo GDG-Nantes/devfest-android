@@ -123,10 +123,10 @@ class SessionFragment : BaseFragment() {
                 DateTimeFormatter.formatHHmm(model.session.startTimestamp),
                 DateTimeFormatter.formatHHmm(model.session.endTimestamp),
                 model.room.name)
-        view.findViewById<TextView>(R.id.description).text = model.session.description
+        view.findViewById<TextView>(R.id.description).applyText(model.session.description)
 
         val tagsContainer = view.findViewById<ViewGroup>(R.id.tags_container)
-        model.speakers.flatMap { it.tags ?: emptyList() }
+        model.speakers.flatMap { it.tags }
                 .distinct()
                 .forEach {
                     val tagView = tagsContainer.inflate<TextView>(R.layout.fragment_session_tag)
@@ -158,17 +158,18 @@ class SessionFragment : BaseFragment() {
 
     private fun displayNetworkLinks(speaker: Speaker, speakerView: View) {
         val socialLinksView = speakerView.findViewById<ViewGroup>(R.id.social_links_container)
-        speaker.socialLinks?.forEach { socialLink ->
-            val socialLinkView = socialLinksView.inflate<ImageButton>(R.layout.fragment_session_speaker_social_link)
-            socialLinkView.setImageDrawable(SocialNetwork.getIcon(socialLink.network, context))
-            socialLinkView.contentDescription = SocialNetwork.getName(socialLink.network, context)
-            socialLinkView.setOnClickListener {
-                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(socialLink.url))
-                        .addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT))
-            }
+        speaker.socialLinks.filter { it.url != null }
+                .forEach { socialLink ->
+                    val socialLinkView = socialLinksView.inflate<ImageButton>(R.layout.fragment_session_speaker_social_link)
+                    socialLinkView.setImageDrawable(SocialNetwork.getIcon(socialLink.network, context))
+                    socialLinkView.contentDescription = SocialNetwork.getName(socialLink.network, context)
+                    socialLinkView.setOnClickListener {
+                        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(socialLink.url))
+                                .addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT))
+                    }
 
-            socialLinksView.visibility = View.VISIBLE
-        }
+                    socialLinksView.visibility = View.VISIBLE
+                }
     }
 
     private fun toggleFavorite() {

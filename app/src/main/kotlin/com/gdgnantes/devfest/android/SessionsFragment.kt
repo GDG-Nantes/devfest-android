@@ -36,7 +36,7 @@ class SessionsFragment : BaseFragment() {
         val date = arguments.getString(ARG_DATE)
         val model = ViewModelProviders.of(this).get(SessionsViewModel::class.java)
         model.getSessions(date).observe(this, Observer {
-            adapter.sessions = it!!
+            adapter.items = it!!
         })
         BookmarkManager.from(context).getLiveData().observe(this, Observer {
             adapter.notifyDataSetChanged()
@@ -76,25 +76,25 @@ class SessionsFragment : BaseFragment() {
 
         private val favoritesManager = BookmarkManager.from(context)
 
-        var sessions: List<SessionsViewModel.Data> = emptyList()
-            set(sessions) {
-                field = sessions
+        var items: List<SessionsViewModel.Data> = emptyList()
+            set(items) {
+                field = items
                 notifyDataSetChanged()
             }
 
-        override fun onBindViewHolder(holder: SessionViewHolder?, position: Int) {
-            val session = sessions.get(position)
+        override fun onBindViewHolder(holder: SessionViewHolder, position: Int) {
+            val item = items[position]
 
-            holder!!.title.text = session.session.title
-            holder.subtitle.text = getString(R.string.session_subtitle, session.room.name, DateTimeFormatter.formatHHmm(session.session.startTimestamp))
-            if (favoritesManager.isBookmarked(session.session.id)) {
+            holder.title.text = item.session.title
+            holder.subtitle.text = getString(R.string.session_subtitle, item.room.name, DateTimeFormatter.formatHHmm(item.session.startTimestamp))
+            if (favoritesManager.isBookmarked(item.session.id)) {
                 holder.favoriteIndicator.visibility = View.VISIBLE
             } else {
                 holder.favoriteIndicator.visibility = View.GONE
             }
         }
 
-        override fun getItemCount(): Int = sessions.size
+        override fun getItemCount(): Int = items.size
 
         override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): SessionViewHolder {
             return SessionViewHolder(LayoutInflater.from(context).inflate(R.layout.list_item_session, parent, false))
@@ -104,7 +104,7 @@ class SessionsFragment : BaseFragment() {
     val onItemClickListener = View.OnClickListener { view ->
         val position = recyclerView.getChildAdapterPosition(view)
         if (position != -1) {
-            startActivity(SessionActivity.newIntent(context, adapter.sessions[position].session.id))
+            startActivity(SessionActivity.newIntent(context, adapter.items[position].session.id))
         }
     }
 

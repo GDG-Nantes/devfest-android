@@ -15,17 +15,17 @@ data class Speaker(
         val company: String?,
         val name: String?,
         val photoUrl: String?,
-        val tags: List<String>?,
-        val socialLinks: List<SocialLink>?)
+        val socialLinks: List<SocialLink>,
+        val tags: List<String>)
 
 fun Speaker.toContentValues() = ContentValues().apply {
-    put(ScheduleContract.Speakers.SPEAKER_ID, id)
+    put(ScheduleContract.Speakers.SPEAKER_ID, id!!)
     put(ScheduleContract.Speakers.SPEAKER_BIO, bio)
     put(ScheduleContract.Speakers.SPEAKER_COMPANY, company)
     put(ScheduleContract.Speakers.SPEAKER_NAME, name)
     put(ScheduleContract.Speakers.SPEAKER_PHOTO_URL, photoUrl)
-    put(ScheduleContract.Speakers.SPEAKER_SOCIAL_LINKS, JsonConverters.main.toJson(socialLinks))
-    put(ScheduleContract.Speakers.SPEAKER_TAGS, JsonConverters.main.toJson(tags))
+    put(ScheduleContract.Speakers.SPEAKER_SOCIAL_LINKS, JsonConverters.main.toJson(socialLinks!!))
+    put(ScheduleContract.Speakers.SPEAKER_TAGS, JsonConverters.main.toJson(tags!!))
 }
 
 fun Cursor.toSpeaker() = Speaker(

@@ -44,19 +44,19 @@ internal class ScheduleSeed(val context: Context) {
     }
 
     private fun insertRooms(database: SQLiteDatabase, schedule: Schedule) {
-        schedule.rooms?.forEach {
+        schedule.rooms.forEach {
             database.insert(ScheduleDatabase.Tables.ROOMS, null, it.toContentValues())
         }
     }
 
     private fun insertSpeakers(database: SQLiteDatabase, schedule: Schedule) {
-        schedule.speakers?.forEach {
+        schedule.speakers.forEach {
             database.insert(ScheduleDatabase.Tables.SPEAKERS, null, it.toContentValues())
         }
     }
 
     private fun insertSessions(database: SQLiteDatabase, schedule: Schedule) {
-        schedule.sessions?.forEach { session ->
+        schedule.sessions.forEach { session ->
             database.insert(ScheduleDatabase.Tables.SESSIONS, null, session.toContentValues())
 
             session.speakersIds.forEach { speakerId ->

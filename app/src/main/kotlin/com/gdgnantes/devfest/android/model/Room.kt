@@ -12,8 +12,8 @@ data class Room(
         val name: String)
 
 fun Room.toContentValues() = ContentValues().apply {
-    put(ScheduleContract.Rooms.ROOM_ID, id)
-    put(ScheduleContract.Rooms.ROOM_NAME, name)
+    put(ScheduleContract.Rooms.ROOM_ID, id!!)
+    put(ScheduleContract.Rooms.ROOM_NAME, name!!)
 }
 
 fun Cursor.toRoom() = Room(
