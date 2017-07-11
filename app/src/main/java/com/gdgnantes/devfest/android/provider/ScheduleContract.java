@@ -47,7 +47,6 @@ public final class ScheduleContract {
         String SPEAKER_ID = "speaker_id";
         String SPEAKER_BIO = "speaker_bio";
         String SPEAKER_COMPANY = "speaker_company";
-        String SPEAKER_COUNTRY = "speaker_country";
         String SPEAKER_NAME = "speaker_name";
         String SPEAKER_PHOTO_URL = "speaker_photo_url";
         String SPEAKER_SOCIAL_LINKS = "speaker_social_links";

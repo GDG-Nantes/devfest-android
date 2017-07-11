@@ -55,7 +55,6 @@ internal class ScheduleDatabase(private val context: Context) :
                 "${ScheduleContract.Speakers.SPEAKER_ID} TEXT NOT NULL, " +
                 "${ScheduleContract.Speakers.SPEAKER_BIO} TEXT, " +
                 "${ScheduleContract.Speakers.SPEAKER_COMPANY} TEXT, " +
-                "${ScheduleContract.Speakers.SPEAKER_COUNTRY} TEXT, " +
                 "${ScheduleContract.Speakers.SPEAKER_NAME} TEXT, " +
                 "${ScheduleContract.Speakers.SPEAKER_PHOTO_URL} TEXT, " +
                 "${ScheduleContract.Speakers.SPEAKER_SOCIAL_LINKS} TEXT, " +
