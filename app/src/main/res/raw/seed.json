@@ -34,7 +34,8 @@
       "end_timestamp": "2017-10-19T13:30:00.000+02:00",
       "speakers_ids": [
         "chet_haase"
-      ]
+      ],
+      "type": "break"
     },
     {
       "id": "0",
@@ -46,7 +47,9 @@
         "romain_guy",
         "chet_haase"
       ],
-      "room_id": "titan"
+      "room_id": "titan",
+      "language": "fr",
+      "type": "talk"
     },
     {
       "id": "00",
@@ -58,7 +61,9 @@
         "romain_guy",
         "chet_haase"
       ],
-      "room_id": "titan"
+      "room_id": "titan",
+      "language": "fr",
+      "type": "talk"
     },
     {
       "id": "1",
@@ -70,7 +75,10 @@
         "romain_guy",
         "chet_haase"
       ],
-      "room_id": "titan"
+      "room_id": "titan",
+      "language": "en",
+      "track": "mobile",
+      "type": "talk"
     },
     {
       "id": "2",
@@ -81,7 +89,10 @@
       "speakers_ids": [
         "rachel_andrew"
       ],
-      "room_id": "belem"
+      "room_id": "belem",
+      "language": "en",
+      "track": "web",
+      "type": "talk"
     },
     {
       "id": "3",
@@ -92,7 +103,10 @@
       "speakers_ids": [
         "patrick_chanezon"
       ],
-      "room_id": "tour_bretagne"
+      "room_id": "tour_bretagne",
+      "language": "fr",
+      "track": "cloud",
+      "type": "talk"
     }
   ],
   "speakers": [

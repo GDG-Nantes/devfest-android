@@ -130,6 +130,17 @@ class SessionFragment : BaseFragment() {
 
         view.findViewById<TextView>(R.id.description).applyText(model.session.description)
 
+        with(view.findViewById<TextView>(R.id.track)) {
+            if (model.session.track != null) {
+                visibility = View.VISIBLE
+                text = model.session.track.getName(context)
+                setTextColor(model.session.track.foregroundColor)
+                setBackgroundColor(model.session.track.backgroundColor)
+            } else {
+                visibility = View.GONE
+            }
+        }
+
         displaySpeakers(model.speakers, view)
     }
 
