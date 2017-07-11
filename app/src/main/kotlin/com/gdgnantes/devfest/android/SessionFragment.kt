@@ -18,7 +18,6 @@ import com.gdgnantes.devfest.android.format.text.DateTimeFormatter
 import com.gdgnantes.devfest.android.graphics.RoundedTransformation
 import com.gdgnantes.devfest.android.model.SocialNetwork
 import com.gdgnantes.devfest.android.model.Speaker
-import com.gdgnantes.devfest.android.util.Tags
 import com.gdgnantes.devfest.android.view.inflate
 import com.gdgnantes.devfest.android.viewmodel.SessionViewModel
 import com.gdgnantes.devfest.android.widget.ScrollView
@@ -130,15 +129,6 @@ class SessionFragment : BaseFragment() {
         view.findViewById<TextView>(R.id.information).text = informationParts.joinToString("\n")
 
         view.findViewById<TextView>(R.id.description).applyText(model.session.description)
-
-        val tagsContainer = view.findViewById<ViewGroup>(R.id.tags_container)
-        model.speakers.flatMap { it.tags }
-                .distinct()
-                .forEach {
-                    val tagView = tagsContainer.inflate<TextView>(R.layout.fragment_session_tag)
-                    tagView.text = it
-                    tagView.setBackgroundColor(Tags.colorForTag(it))
-                }
 
         displaySpeakers(model.speakers, view)
     }
