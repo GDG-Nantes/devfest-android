@@ -8,7 +8,6 @@ import com.gdgnantes.devfest.android.database.getStringOrThrow
 import com.gdgnantes.devfest.android.provider.ScheduleContract
 import com.gdgnantes.devfest.android.util.timeAsSeconds
 import java.util.*
-import java.util.concurrent.TimeUnit
 
 @Keep
 data class Session(
@@ -31,10 +30,10 @@ fun Session.toContentValues() = ContentValues().apply {
 }
 
 fun Cursor.toSession() = Session(
-        id = getStringOrThrow(ScheduleContract.Sessions.SESSION_ID),
-        description = getStringOrThrow(ScheduleContract.Sessions.SESSION_DESCRIPTION),
+        id = getStringOrThrow(ScheduleContract.Sessions.SESSION_ID)!!,
+        description = getStringOrThrow(ScheduleContract.Sessions.SESSION_DESCRIPTION)!!,
         endTimestamp = getDateOrThrow(ScheduleContract.Sessions.SESSION_END_TIMESTAMP)!!,
-        roomId = getStringOrThrow(ScheduleContract.Sessions.SESSION_ROOM_ID),
+        roomId = getStringOrThrow(ScheduleContract.Sessions.SESSION_ROOM_ID)!!,
         startTimestamp = getDateOrThrow(ScheduleContract.Sessions.SESSION_START_TIMESTAMP)!!,
-        title = getStringOrThrow(ScheduleContract.Sessions.SESSION_TITLE)
+        title = getStringOrThrow(ScheduleContract.Sessions.SESSION_TITLE)!!
 )

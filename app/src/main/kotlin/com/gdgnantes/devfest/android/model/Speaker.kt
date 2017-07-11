@@ -31,7 +31,7 @@ fun Speaker.toContentValues() = ContentValues().apply {
 }
 
 fun Cursor.toSpeaker() = Speaker(
-        id = getStringOrThrow(ScheduleContract.Speakers.SPEAKER_ID),
+        id = getStringOrThrow(ScheduleContract.Speakers.SPEAKER_ID)!!,
         bio = getStringOrThrow(ScheduleContract.Speakers.SPEAKER_BIO),
         company = getStringOrThrow(ScheduleContract.Speakers.SPEAKER_COMPANY),
         country = getStringOrThrow(ScheduleContract.Speakers.SPEAKER_COUNTRY),

@@ -17,6 +17,6 @@ fun Room.toContentValues() = ContentValues().apply {
 }
 
 fun Cursor.toRoom() = Room(
-        id = getStringOrThrow(ScheduleContract.Rooms.ROOM_ID),
-        name = getStringOrThrow(ScheduleContract.Rooms.ROOM_NAME)
+        id = getStringOrThrow(ScheduleContract.Rooms.ROOM_ID)!!,
+        name = getStringOrThrow(ScheduleContract.Rooms.ROOM_NAME)!!
 )

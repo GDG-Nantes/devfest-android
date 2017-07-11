@@ -4,7 +4,7 @@ import android.database.Cursor
 import java.util.*
 import java.util.concurrent.TimeUnit
 
-fun Cursor.getStringOrThrow(columnName: String): String {
+fun Cursor.getStringOrThrow(columnName: String): String? {
     return getString(getColumnIndexOrThrow(columnName))
 }
 
