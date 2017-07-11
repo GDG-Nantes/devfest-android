@@ -6,31 +6,31 @@ import java.util.concurrent.atomic.AtomicBoolean
 
 abstract class ComputableLiveData<T> : MutableLiveData<T>() {
 
-    private val mInvalid = AtomicBoolean(true)
-    private val mComputing = AtomicBoolean(false)
+    private val invalid = AtomicBoolean(true)
+    private val computing = AtomicBoolean(false)
 
     override fun onActive() {
         super.onActive()
-        TaskExecutor.executeOnDiskIO(mRefreshRunnable)
+        TaskExecutor.executeOnDiskIO(refreshRunnable)
     }
 
     fun invalidate() {
-        TaskExecutor.executeOnMainThread(mInvalidationRunnable)
+        TaskExecutor.executeOnMainThread(invalidationRunnable)
     }
 
     @WorkerThread
     protected abstract fun compute(): T
 
-    private val mRefreshRunnable: Runnable = Runnable {
+    private val refreshRunnable: Runnable = Runnable {
         var computed: Boolean
         do {
             computed = false
             // compute can happen only in 1 thread but no reason to lock others.
-            if (mComputing.compareAndSet(false, true)) {
+            if (computing.compareAndSet(false, true)) {
                 // as long as it is invalid, keep computing.
                 try {
                     var value: T? = null
-                    while (mInvalid.compareAndSet(true, false)) {
+                    while (invalid.compareAndSet(true, false)) {
                         computed = true
                         value = compute()
                     }
@@ -39,7 +39,7 @@ abstract class ComputableLiveData<T> : MutableLiveData<T>() {
                     }
                 } finally {
                     // release compute lock
-                    mComputing.set(false)
+                    computing.set(false)
                 }
             }
             // check invalid after releasing compute lock to avoid the following scenario.
@@ -49,14 +49,14 @@ abstract class ComputableLiveData<T> : MutableLiveData<T>() {
             // Thread B runs, fails to acquire compute lock and skips
             // Thread A releases compute lock
             // We've left invalid in set state. The check below recovers.
-        } while (computed && mInvalid.get())
+        } while (computed && invalid.get())
     }
 
-    private val mInvalidationRunnable: Runnable = Runnable {
+    private val invalidationRunnable: Runnable = Runnable {
         val isActive = hasActiveObservers()
-        if (mInvalid.compareAndSet(false, true)) {
+        if (invalid.compareAndSet(false, true)) {
             if (isActive) {
-                TaskExecutor.executeOnDiskIO(mRefreshRunnable)
+                TaskExecutor.executeOnDiskIO(refreshRunnable)
             }
         }
     }
