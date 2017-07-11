@@ -58,7 +58,6 @@ internal class ScheduleDatabase(private val context: Context) :
                 "${ScheduleContract.Speakers.SPEAKER_NAME} TEXT, " +
                 "${ScheduleContract.Speakers.SPEAKER_PHOTO_URL} TEXT, " +
                 "${ScheduleContract.Speakers.SPEAKER_SOCIAL_LINKS} TEXT, " +
-                "${ScheduleContract.Speakers.SPEAKER_TAGS} TEXT, " +
                 "UNIQUE (${ScheduleContract.Speakers.SPEAKER_ID}) ON CONFLICT REPLACE)")
 
         ScheduleSeed(context).seed(db)
