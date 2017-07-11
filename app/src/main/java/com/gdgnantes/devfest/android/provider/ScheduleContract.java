@@ -33,9 +33,12 @@ public final class ScheduleContract {
         String SESSION_ID = "session_id";
         String SESSION_DESCRIPTION = "session_description";
         String SESSION_END_TIMESTAMP = "session_end_timestamp";
+        String SESSION_LANGUAGE = "session_language";
         String SESSION_ROOM_ID = "session_room_id";
         String SESSION_START_TIMESTAMP = "session_start_timestamp";
         String SESSION_TITLE = "session_title";
+        String SESSION_TRACK = "session_track";
+        String SESSION_TYPE = "session_type";
     }
 
     private interface SessionsSpeakersColumns {

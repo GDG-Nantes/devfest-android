@@ -38,9 +38,12 @@ internal class ScheduleDatabase(private val context: Context) :
                 "${ScheduleContract.Sessions.SESSION_ID} TEXT NOT NULL, " +
                 "${ScheduleContract.Sessions.SESSION_DESCRIPTION} TEXT, " +
                 "${ScheduleContract.Sessions.SESSION_END_TIMESTAMP} INTEGER, " +
+                "${ScheduleContract.Sessions.SESSION_LANGUAGE} TEXT, " +
                 "${ScheduleContract.Sessions.SESSION_ROOM_ID} TEXT, " +
                 "${ScheduleContract.Sessions.SESSION_START_TIMESTAMP} INTEGER, " +
                 "${ScheduleContract.Sessions.SESSION_TITLE} TEXT, " +
+                "${ScheduleContract.Sessions.SESSION_TRACK} TEXT, " +
+                "${ScheduleContract.Sessions.SESSION_TYPE} TEXT, " +
                 "UNIQUE (${ScheduleContract.Sessions.SESSION_ID}) ON CONFLICT REPLACE)")
 
         db.execSQL("CREATE TABLE ${Tables.SESSIONS_SPEAKERS} (" +

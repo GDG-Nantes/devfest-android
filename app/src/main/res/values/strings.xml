@@ -27,4 +27,15 @@
     <string name="network_website">Website</string>
     <string name="network_github">GitHub</string>
 
+    <string name="track_cloud">Cloud</string>
+    <string name="track_discovery">Discovery</string>
+    <string name="track_mobile">Mobile</string>
+    <string name="track_web">Web</string>
+
+    <string name="type_break">Break</string>
+    <string name="type_codelab">Codelab</string>
+    <string name="type_keynote">Keynote</string>
+    <string name="type_quicky">Quicky</string>
+    <string name="type_talk">Talk</string>
+
 </resources>
