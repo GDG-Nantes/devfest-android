@@ -16,6 +16,7 @@ import android.widget.TextView
 import com.gdgnantes.devfest.android.app.BaseFragment
 import com.gdgnantes.devfest.android.format.text.DateTimeFormatter
 import com.gdgnantes.devfest.android.graphics.RoundedTransformation
+import com.gdgnantes.devfest.android.model.Session
 import com.gdgnantes.devfest.android.model.SocialNetwork
 import com.gdgnantes.devfest.android.model.Speaker
 import com.gdgnantes.devfest.android.view.inflate
@@ -140,6 +141,8 @@ class SessionFragment : BaseFragment() {
                 visibility = View.GONE
             }
         }
+
+        bookmarkButton.visibility = if (model.session.type == Session.Type.Break) View.GONE else View.VISIBLE
 
         displaySpeakers(model.speakers, view)
     }

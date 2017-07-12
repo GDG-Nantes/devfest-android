@@ -88,6 +88,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
         android:layout_margin="@dimen/spacing_medium"
-        android:src="@drawable/ic_action_bookmark" />
+        android:src="@drawable/ic_action_bookmark"
+        android:visibility="gone"
+        tools:visibility="visible" />
 
 </android.support.design.widget.CoordinatorLayout>
