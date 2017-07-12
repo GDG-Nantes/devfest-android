@@ -77,7 +77,7 @@ class SessionFragment : BaseFragment() {
                 if (displayingTitle) {
                     (activity as AppCompatActivity).supportActionBar?.setTitle(title)
                 } else {
-                    (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.sessionDetails)
+                    (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.session_title)
                 }
             }
         }
