@@ -18,6 +18,8 @@
 
     <string name="session_info_time">%1$s, %2$s - %3$s</string>
     <string name="session_info_room">Room %1$s</string>
+    <string name="session_language_inEnglish">In English</string>
+    <string name="session_language_inFrench">In French</string>
     <string name="session_subtitle">Room %1$s</string>
     <string name="session_title">Session details</string>
 

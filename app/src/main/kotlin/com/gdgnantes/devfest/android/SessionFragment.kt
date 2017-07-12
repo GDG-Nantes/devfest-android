@@ -127,6 +127,10 @@ class SessionFragment : BaseFragment() {
         if (model.room != null) {
             informationParts.add(getString(R.string.session_info_room, model.room.name))
         }
+        when (model.session.language) {
+            "en" -> informationParts.add(getString(R.string.session_language_inEnglish))
+            "fr" -> informationParts.add(getString(R.string.session_language_inFrench))
+        }
         view.findViewById<TextView>(R.id.information).text = informationParts.joinToString("\n")
 
         view.findViewById<TextView>(R.id.description).applyText(model.session.description)
