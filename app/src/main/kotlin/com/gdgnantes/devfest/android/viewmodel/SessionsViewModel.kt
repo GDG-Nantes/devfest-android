@@ -10,7 +10,7 @@ import com.gdgnantes.devfest.android.model.Session
 
 class SessionsViewModel(application: Application) : AndroidViewModel(application) {
 
-    data class Data(val session: Session, val room: Room)
+    data class Data(val session: Session, val room: Room?)
 
     fun getSessions(date: String): LiveData<List<Data>> = SessionsLiveData(getApplication(), date)
 

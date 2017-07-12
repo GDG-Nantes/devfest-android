@@ -14,7 +14,7 @@ class SessionViewModel(application: Application) : AndroidViewModel(application)
 
     data class Data(
             val session: Session,
-            val room: Room,
+            val room: Room?,
             val speakers: List<Speaker>)
 
     fun getSession(sessionId: String): LiveData<Data> = SessionLiveData(getApplication(), sessionId)

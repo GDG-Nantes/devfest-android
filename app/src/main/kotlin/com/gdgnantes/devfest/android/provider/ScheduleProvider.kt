@@ -84,14 +84,14 @@ class ScheduleProvider : SQLiteContentProvider() {
                 qb.appendWhere("${ScheduleContract.Rooms.ROOM_ID} = '${ScheduleContract.Rooms.getId(uri)}'")
             }
             SESSIONS -> {
-                qb.tables = ScheduleDatabase.Tables.SESSIONS_V_ROOMS
+                qb.tables = ScheduleDatabase.Tables.SESSIONS_LJ_ROOMS
             }
             SESSIONS_ID -> {
-                qb.tables = ScheduleDatabase.Tables.SESSIONS_V_ROOMS
+                qb.tables = ScheduleDatabase.Tables.SESSIONS_LJ_ROOMS
                 qb.appendWhere("${ScheduleContract.Sessions.SESSION_ID} = '${ScheduleContract.Sessions.getId(uri)}'")
             }
             SESSIONS_SPEAKERS -> {
-                qb.tables = ScheduleDatabase.Tables.SESSIONS_SPEAKERS_V_SESSIONS_V_SPEAKERS_V_ROOMS
+                qb.tables = ScheduleDatabase.Tables.SESSIONS_SPEAKERS_J_SESSIONS_J_SPEAKERS_LJ_ROOMS
             }
             SPEAKERS -> {
                 qb.tables = ScheduleDatabase.Tables.SPEAKERS

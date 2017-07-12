@@ -28,7 +28,9 @@ class SessionLiveData(private val context: Context,
             while (cursor.moveToNext()) {
                 if (cursor.position == 0) {
                     session = cursor.toSession()
-                    room = cursor.toRoom()
+                    if (session.roomId != null) {
+                        room = cursor.toRoom()
+                    }
                 }
                 speakers.add(cursor.toSpeaker())
             }
@@ -37,7 +39,7 @@ class SessionLiveData(private val context: Context,
 
         return SessionViewModel.Data(
                 session!!,
-                room!!,
+                room,
                 speakers)
     }
 

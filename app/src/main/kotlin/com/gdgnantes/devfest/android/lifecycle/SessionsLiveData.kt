@@ -1,6 +1,7 @@
 package com.gdgnantes.devfest.android.lifecycle
 
 import android.content.Context
+import com.gdgnantes.devfest.android.model.Room
 import com.gdgnantes.devfest.android.model.toRoom
 import com.gdgnantes.devfest.android.model.toSession
 import com.gdgnantes.devfest.android.provider.ScheduleContract
@@ -26,9 +27,12 @@ class SessionsLiveData(private val context: Context,
         val result = ArrayList<SessionsViewModel.Data>()
         if (cursor != null) {
             while (cursor.moveToNext()) {
-                result.add(SessionsViewModel.Data(
-                        cursor.toSession(),
-                        cursor.toRoom()))
+                val session = cursor.toSession()
+                var room: Room? = null
+                if (session.roomId != null) {
+                    room = cursor.toRoom()
+                }
+                result.add(SessionsViewModel.Data(session, room))
             }
             cursor.close()
         }

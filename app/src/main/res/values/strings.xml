@@ -17,7 +17,10 @@
     <string name="about_me">Cyril Mottier</string>
 
     <string name="session_info">%1$s, %2$s - %3$s\nSalle %4$s</string>
-    <string name="session_subtitle">%1$s at %2$s</string>
+    <string name="session_info_time">%1$s, %2$s - %3$s</string>
+    <string name="session_info_room">Salle %1$s</string>
+
+    <string name="session_subtitle">Salle %1$s</string>
 
     <string name="network_twitter">Twitter</string>
     <string name="network_google_plus">Google+</string>

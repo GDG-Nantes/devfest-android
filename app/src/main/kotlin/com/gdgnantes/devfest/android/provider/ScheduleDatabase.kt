@@ -18,13 +18,13 @@ internal class ScheduleDatabase(private val context: Context) :
         const val SESSIONS_SPEAKERS = "SessionsSpeakers"
         const val SPEAKERS = "Speakers"
 
-        const val SESSIONS_V_ROOMS = "Sessions " +
-                "JOIN Rooms ON session_room_id = room_id"
+        const val SESSIONS_LJ_ROOMS = "Sessions " +
+                "LEFT JOIN Rooms ON session_room_id = room_id"
 
-        const val SESSIONS_SPEAKERS_V_SESSIONS_V_SPEAKERS_V_ROOMS = "SessionsSpeakers " +
+        const val SESSIONS_SPEAKERS_J_SESSIONS_J_SPEAKERS_LJ_ROOMS = "SessionsSpeakers " +
                 "JOIN Sessions ON session_speaker_session_id = session_id " +
                 "JOIN Speakers ON session_speaker_speaker_id = speaker_id " +
-                "JOIN Rooms ON session_room_id = room_id"
+                "LEFT JOIN Rooms ON session_room_id = room_id"
     }
 
     override fun onCreate(db: SQLiteDatabase) {
@@ -38,7 +38,7 @@ internal class ScheduleDatabase(private val context: Context) :
                 "${ScheduleContract.Sessions.SESSION_ID} TEXT NOT NULL, " +
                 "${ScheduleContract.Sessions.SESSION_DESCRIPTION} TEXT, " +
                 "${ScheduleContract.Sessions.SESSION_END_TIMESTAMP} INTEGER, " +
-                "${ScheduleContract.Sessions.SESSION_ROOM_ID} TEXT NOT NULL, " +
+                "${ScheduleContract.Sessions.SESSION_ROOM_ID} TEXT, " +
                 "${ScheduleContract.Sessions.SESSION_START_TIMESTAMP} INTEGER, " +
                 "${ScheduleContract.Sessions.SESSION_TITLE} TEXT, " +
                 "UNIQUE (${ScheduleContract.Sessions.SESSION_ID}) ON CONFLICT REPLACE)")

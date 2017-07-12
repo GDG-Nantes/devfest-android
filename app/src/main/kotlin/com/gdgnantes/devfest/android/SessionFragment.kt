@@ -118,11 +118,17 @@ class SessionFragment : BaseFragment() {
 
     private fun displaySession(model: SessionViewModel.Data, view: View) {
         view.findViewById<TextView>(R.id.title).text = model.session.title
-        view.findViewById<TextView>(R.id.information).text = getString(R.string.session_info,
+
+        val informationParts = ArrayList<String>()
+        informationParts.add(getString(R.string.session_info_time,
                 DateTimeFormatter.formatEEEEMMMMd(model.session.startTimestamp),
                 DateTimeFormatter.formatHHmm(model.session.startTimestamp),
-                DateTimeFormatter.formatHHmm(model.session.endTimestamp),
-                model.room.name)
+                DateTimeFormatter.formatHHmm(model.session.endTimestamp)))
+        if (model.room != null) {
+            informationParts.add(getString(R.string.session_info_room, model.room.name))
+        }
+        view.findViewById<TextView>(R.id.information).text = informationParts.joinToString("\n")
+
         view.findViewById<TextView>(R.id.description).applyText(model.session.description)
 
         val tagsContainer = view.findViewById<ViewGroup>(R.id.tags_container)
