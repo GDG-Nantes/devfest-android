@@ -62,9 +62,12 @@
                 tools:visibility="visible" />
 
             <View
+                android:id="@+id/speakers_top_divider"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/divider_medium" />
+                android:background="@drawable/divider_medium"
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <LinearLayout
                 android:id="@+id/speakers_container"
