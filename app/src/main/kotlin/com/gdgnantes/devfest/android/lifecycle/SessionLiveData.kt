@@ -9,16 +9,15 @@ class SessionLiveData(private val context: Context,
                       private val sessionId: String) : ProviderLiveData<SessionViewModel.Data>(context) {
 
     companion object {
-        const val SELECTION = "${ScheduleContract.SessionsSpeakers.SESSION_SPEAKER_SESSION_ID} = ?"
-        const val ORDER = "${ScheduleContract.SessionsSpeakers.SPEAKER_NAME} ASC"
+        const val ORDER = "${ScheduleContract.Speakers.SPEAKER_NAME} ASC"
     }
 
     override fun compute(): SessionViewModel.Data {
         val cursor = context.contentResolver.query(
-                ScheduleContract.SessionsSpeakers.CONTENT_URI,
+                ScheduleContract.Sessions.buildUriWithSpeakers(sessionId),
                 null,
-                SELECTION,
-                arrayOf(sessionId),
+                null,
+                null,
                 ORDER)
 
         var session: Session? = null
@@ -32,7 +31,9 @@ class SessionLiveData(private val context: Context,
                         room = cursor.toRoom()
                     }
                 }
-                speakers.add(cursor.toSpeaker())
+                if (!cursor.isNull(cursor.getColumnIndexOrThrow(ScheduleContract.Speakers.SPEAKER_ID))) {
+                    speakers.add(cursor.toSpeaker())
+                }
             }
             cursor.close()
         }

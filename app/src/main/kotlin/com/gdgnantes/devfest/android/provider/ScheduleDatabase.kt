@@ -21,6 +21,11 @@ internal class ScheduleDatabase(private val context: Context) :
         const val SESSIONS_LJ_ROOMS = "Sessions " +
                 "LEFT JOIN Rooms ON session_room_id = room_id"
 
+        const val SESSIONS_LJ_ROOMS_LJ_SESSIONS_SPEAKERS_J_SPEAKERS = "Sessions " +
+                "LEFT JOIN Rooms ON session_room_id = room_id " +
+                "LEFT JOIN SessionsSpeakers ON session_speaker_session_id = session_id " +
+                "LEFT JOIN Speakers ON session_speaker_speaker_id = speaker_id"
+
         const val SESSIONS_SPEAKERS_J_SESSIONS_J_SPEAKERS_LJ_ROOMS = "SessionsSpeakers " +
                 "JOIN Sessions ON session_speaker_session_id = session_id " +
                 "JOIN Speakers ON session_speaker_speaker_id = speaker_id " +

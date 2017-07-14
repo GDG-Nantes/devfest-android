@@ -23,6 +23,7 @@ public final class ScheduleContract {
     private static final String PATH_SESSIONS = "sessions";
     private static final String PATH_SESSIONS_SPEAKERS = "sessions_speakers";
     private static final String PATH_SPEAKERS = "speakers";
+    private static final String PATH_WITH_SPEAKERS = "with_speakers";
 
     private interface RoomColumns {
         String ROOM_ID = "room_id";
@@ -91,6 +92,12 @@ public final class ScheduleContract {
             return buildItemUri(CONTENT_URI, sessionId);
         }
 
+        public static Uri buildUriWithSpeakers(String sessionId) {
+            return buildUri(sessionId).buildUpon()
+                    .appendPath(PATH_WITH_SPEAKERS)
+                    .build();
+        }
+
         public static String getId(Uri uri) {
             return getItemUri(uri);
         }
@@ -146,7 +153,7 @@ public final class ScheduleContract {
     }
 
     private static String getItemUri(Uri uri) {
-        return uri.getLastPathSegment();
+        return uri.getPathSegments().get(1);
     }
 
 }

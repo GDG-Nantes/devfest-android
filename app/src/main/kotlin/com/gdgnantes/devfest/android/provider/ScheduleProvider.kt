@@ -30,6 +30,7 @@ class ScheduleProvider : SQLiteContentProvider() {
 
         private const val SESSIONS = ROOMS + 100
         private const val SESSIONS_ID = SESSIONS + 1
+        private const val SESSIONS_ID_WITH_SPEAKERS = SESSIONS + 2
 
         private const val SESSIONS_SPEAKERS = SESSIONS + 100
 
@@ -46,6 +47,7 @@ class ScheduleProvider : SQLiteContentProvider() {
                 addURI(ScheduleContract.AUTHORITY, "rooms/#", ROOMS_ID)
 
                 addURI(ScheduleContract.AUTHORITY, "sessions", SESSIONS)
+                addURI(ScheduleContract.AUTHORITY, "sessions/*/with_speakers", SESSIONS_ID_WITH_SPEAKERS)
                 addURI(ScheduleContract.AUTHORITY, "sessions/*", SESSIONS_ID)
 
                 addURI(ScheduleContract.AUTHORITY, "sessions_speakers", SESSIONS_SPEAKERS)
@@ -88,6 +90,10 @@ class ScheduleProvider : SQLiteContentProvider() {
             }
             SESSIONS_ID -> {
                 qb.tables = ScheduleDatabase.Tables.SESSIONS_LJ_ROOMS
+                qb.appendWhere("${ScheduleContract.Sessions.SESSION_ID} = '${ScheduleContract.Sessions.getId(uri)}'")
+            }
+            SESSIONS_ID_WITH_SPEAKERS -> {
+                qb.tables = ScheduleDatabase.Tables.SESSIONS_LJ_ROOMS_LJ_SESSIONS_SPEAKERS_J_SPEAKERS
                 qb.appendWhere("${ScheduleContract.Sessions.SESSION_ID} = '${ScheduleContract.Sessions.getId(uri)}'")
             }
             SESSIONS_SPEAKERS -> {
