@@ -59,7 +59,7 @@ internal class ScheduleSeed(val context: Context) {
         schedule.sessions.forEach { session ->
             database.insert(ScheduleDatabase.Tables.SESSIONS, null, session.toContentValues())
 
-            session.speakersIds.forEach { speakerId ->
+            session.speakersIds?.forEach { speakerId ->
                 val values = ContentValues().apply {
                     put(ScheduleContract.SessionsSpeakers.SESSION_SPEAKER_SESSION_ID, session.id)
                     put(ScheduleContract.SessionsSpeakers.SESSION_SPEAKER_SPEAKER_ID, speakerId)

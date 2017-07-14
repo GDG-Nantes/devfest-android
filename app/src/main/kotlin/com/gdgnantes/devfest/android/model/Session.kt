@@ -25,7 +25,7 @@ data class Session(
         val track: Track?,
         val type: Type?,
 
-        val speakersIds: List<String> = emptyList()) {
+        val speakersIds: List<String>? = null) {
 
 
     enum class Type(val apiValue: String,
