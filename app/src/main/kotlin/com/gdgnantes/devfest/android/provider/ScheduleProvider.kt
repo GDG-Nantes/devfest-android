@@ -46,12 +46,12 @@ class ScheduleProvider : SQLiteContentProvider() {
                 addURI(ScheduleContract.AUTHORITY, "rooms/#", ROOMS_ID)
 
                 addURI(ScheduleContract.AUTHORITY, "sessions", SESSIONS)
-                addURI(ScheduleContract.AUTHORITY, "sessions/#", SESSIONS_ID)
+                addURI(ScheduleContract.AUTHORITY, "sessions/*", SESSIONS_ID)
 
                 addURI(ScheduleContract.AUTHORITY, "sessions_speakers", SESSIONS_SPEAKERS)
 
                 addURI(ScheduleContract.AUTHORITY, "speakers", SPEAKERS)
-                addURI(ScheduleContract.AUTHORITY, "speakers/#", SPEAKERS_ID)
+                addURI(ScheduleContract.AUTHORITY, "speakers/*", SPEAKERS_ID)
             }
         }
     }
