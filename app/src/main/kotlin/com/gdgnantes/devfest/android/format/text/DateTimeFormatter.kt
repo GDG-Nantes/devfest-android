@@ -17,7 +17,7 @@ object DateTimeFormatter {
 
     private val formatterHHmm: SimpleDateFormat by formatter("HHmm")
     private val formatterMMMMd: SimpleDateFormat by formatter("MMMMd")
-    private val formatterEEEEMMMMd: SimpleDateFormat by formatter("EEEEMMMMdYYYY")
+    private val formatterEEEEMMMMd: SimpleDateFormat by formatter("EEEEMMMMdyyyy")
 
     fun formatHHmm(date: Date): String {
         return formatterHHmm.format(date)
