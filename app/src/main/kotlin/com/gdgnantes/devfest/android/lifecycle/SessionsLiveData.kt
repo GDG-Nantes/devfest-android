@@ -14,6 +14,8 @@ class SessionsLiveData(private val context: Context,
         // TODO Cyril
         // Account for the event timezone or express everything in the users timezone ?
         const val SELECTION = "date(${ScheduleContract.Sessions.SESSION_START_TIMESTAMP}, 'unixepoch') = ?"
+        const val ORDER = "${ScheduleContract.Sessions.SESSION_START_TIMESTAMP} ASC, " +
+                "${ScheduleContract.Sessions.SESSION_ROOM_ID} ASC"
     }
 
     override fun compute(): List<SessionsViewModel.Data> {
@@ -22,7 +24,7 @@ class SessionsLiveData(private val context: Context,
                 null,
                 SELECTION,
                 arrayOf(date),
-                null)
+                ORDER)
 
         val result = ArrayList<SessionsViewModel.Data>()
         if (cursor != null) {
