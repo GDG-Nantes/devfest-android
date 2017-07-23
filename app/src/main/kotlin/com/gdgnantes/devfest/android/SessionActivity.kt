@@ -3,8 +3,11 @@ package com.gdgnantes.devfest.android
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.support.v7.app.ActionBar
+import android.widget.TextSwitcher
 import com.gdgnantes.devfest.android.app.BaseActivity
 import com.gdgnantes.devfest.android.app.PREFIX_EXTRA
+
 
 class SessionActivity : BaseActivity() {
 
@@ -17,14 +20,35 @@ class SessionActivity : BaseActivity() {
                 = Intent(context, SessionActivity::class.java).putExtra(EXTRA_SESSION_ID, sessionId)
     }
 
+    private lateinit var switcher: TextSwitcher
+
     override fun onCreate(inState: Bundle?) {
         super.onCreate(inState)
+
+        supportActionBar?.apply {
+            setCustomView(R.layout.activity_session_toolbar_switcher)
+            switcher = customView as TextSwitcher
+
+            displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM or ActionBar.DISPLAY_HOME_AS_UP
+        }
+
         if (supportFragmentManager.findFragmentByTag(FRAGMENT_SESSION_DETAIL) == null) {
             val sessionId: String = getSessionId()
             supportFragmentManager.beginTransaction()
                     .add(android.R.id.content, SessionFragment.newInstance(sessionId), FRAGMENT_SESSION_DETAIL)
                     .commit()
         }
+
+        switcher.setCurrentText(title)
+    }
+
+    override fun setTitle(titleId: Int) {
+        title = getString(titleId)
+    }
+
+    override fun setTitle(title: CharSequence?) {
+        super.setTitle(title)
+        switcher.setText(title)
     }
 
     private fun getSessionId(): String {
