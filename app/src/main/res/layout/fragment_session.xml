@@ -53,6 +53,7 @@
                 android:id="@+id/track"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingBottom="@dimen/spacing_tiny"
                 android:paddingLeft="@dimen/spacing_small"
                 android:paddingRight="@dimen/spacing_small"
