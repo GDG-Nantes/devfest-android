@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:inAnimation="@android:anim/fade_in"
+    android:outAnimation="@android:anim/fade_out">
+
+    <include layout="@layout/activity_session_toolbar_title" />
+
+    <include layout="@layout/activity_session_toolbar_title" />
+
+</TextSwitcher>
