@@ -1,12 +1,13 @@
 package com.gdgnantes.devfest.android
 
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.design.widget.TabLayout
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.view.ViewPager
+import android.support.v4.widget.DrawerLayout
 import android.util.SparseArray
+import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
 import com.gdgnantes.devfest.android.app.BaseActivity
@@ -18,7 +19,13 @@ import java.util.*
 
 class MainActivity : BaseActivity() {
 
+    companion object {
+        private const val FRAGMENT_FILTERS = "fragment:filters"
+    }
+
+    private lateinit var drawerLayout: DrawerLayout
     private lateinit var viewPager: ViewPager
+
     private lateinit var adapter: PagesAdapter
 
     override fun onCreate(inState: Bundle?) {
@@ -28,12 +35,20 @@ class MainActivity : BaseActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
         setTitle(R.string.agenda)
 
+        if (supportFragmentManager.findFragmentByTag(FRAGMENT_FILTERS) == null) {
+            supportFragmentManager.beginTransaction()
+                    .add(R.id.filters, FiltersFragment.newInstance(), FRAGMENT_FILTERS)
+                    .commit()
+        }
+
         adapter = PagesAdapter(supportFragmentManager)
 
-        viewPager = findViewById<ViewPager>(R.id.view_pager)
+        viewPager = findViewById(R.id.view_pager)
         viewPager.adapter = adapter
         viewPager.pageMargin = resources.getDimensionPixelSize(R.dimen.spacing_medium)
         viewPager.setPageMarginDrawable(R.drawable.spacer_medium_cloud)
+
+        drawerLayout = findViewById(R.id.drawer_layout)
 
         val tabLayout = findViewById<TabLayout>(R.id.tab_layout)
         tabLayout.setupWithViewPager(viewPager)
@@ -56,15 +71,16 @@ class MainActivity : BaseActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.action_filter ->
-                Snackbar.make(findViewById(R.id.root), "Filtering is not implemented yet…", Snackbar.LENGTH_SHORT).show()
-            R.id.action_about ->
-                startActivity(AboutActivity.newIntent(this))
-            R.id.action_show_licenses ->
-                startActivity(LicensesActivity.newIntent(this))
+            R.id.action_filter -> openFilters()
+            R.id.action_about -> startActivity(AboutActivity.newIntent(this))
+            R.id.action_show_licenses -> startActivity(LicensesActivity.newIntent(this))
             else -> return super.onOptionsItemSelected(item)
         }
         return true
+    }
+
+    private fun openFilters() {
+        drawerLayout.openDrawer(Gravity.RIGHT)
     }
 
     private inner class PagesAdapter(private val fm: FragmentManager) : FragmentStatePagerAdapter(fm) {

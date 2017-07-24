@@ -16,6 +16,9 @@
     <string name="about_design_and_develop">Design &amp; development</string>
     <string name="about_me">Cyril Mottier</string>
 
+    <string name="filters_clearAll">Supprimer tout</string>
+    <string name="filters_title">Filtres</string>
+
     <string name="session_info_time">%1$s, %2$s - %3$s</string>
     <string name="session_info_room">Salle %1$s</string>
     <string name="session_language_inEnglish">En anglais</string>

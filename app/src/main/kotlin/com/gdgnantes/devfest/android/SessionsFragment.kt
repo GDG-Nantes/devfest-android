@@ -12,7 +12,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.gdgnantes.devfest.android.app.BaseFragment
 import com.gdgnantes.devfest.android.format.text.DateTimeFormatter
+import com.gdgnantes.devfest.android.model.Session
 import com.gdgnantes.devfest.android.view.bind
+import com.gdgnantes.devfest.android.viewmodel.FiltersViewModel
 import com.gdgnantes.devfest.android.viewmodel.SessionsViewModel
 import java.util.*
 
@@ -42,6 +44,7 @@ class SessionsFragment : BaseFragment() {
         BookmarkManager.from(context).getLiveData().observe(this, Observer {
             adapter.notifyDataSetChanged()
         })
+        ViewModelProviders.of(activity).get(FiltersViewModel::class.java).filters.observe(this, FiltersObserver())
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -62,6 +65,12 @@ class SessionsFragment : BaseFragment() {
         recyclerView.smoothScrollToPosition(0)
     }
 
+    private inner class FiltersObserver : Observer<Set<Session.Track>> {
+        override fun onChanged(filters: Set<Session.Track>?) {
+            adapter.filters = filters ?: emptySet()
+        }
+    }
+
     private inner class SessionViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         init {
             view.setOnClickListener(onItemClickListener)
@@ -79,16 +88,21 @@ class SessionsFragment : BaseFragment() {
         private val favoritesManager = BookmarkManager.from(context)
         private val tmpCalendar = Calendar.getInstance()
 
-        var items: List<SessionsViewModel.Data> = emptyList()
-            set(items) {
-                field = items
-                notifyDataSetChanged()
+        private var _items: List<SessionsViewModel.Data> = emptyList()
+        private var originalItems: List<SessionsViewModel.Data> = emptyList()
+
+        var filters: Set<Session.Track> = emptySet()
+            set(filters) {
+                field = filters
+                updateItems()
             }
 
-        private fun getSectionId(position: Int): Int {
-            tmpCalendar.timeInMillis = items[position].session.startTimestamp.time
-            return tmpCalendar.get(Calendar.HOUR) * 100 + tmpCalendar.get(Calendar.MINUTE)
-        }
+        var items: List<SessionsViewModel.Data>
+            get() = _items
+            set(items) {
+                originalItems = items
+                updateItems()
+            }
 
         override fun onBindViewHolder(holder: SessionViewHolder, position: Int) {
             val item = items[position]
@@ -121,11 +135,25 @@ class SessionsFragment : BaseFragment() {
         override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): SessionViewHolder {
             return SessionViewHolder(LayoutInflater.from(context).inflate(R.layout.list_item_session, parent, false))
         }
+
+        private fun updateItems() {
+            if (filters.isEmpty()) {
+                _items = originalItems
+            } else {
+                _items = originalItems.filter { it.session.track in filters }
+            }
+            notifyDataSetChanged()
+        }
+
+        private fun getSectionId(position: Int): Int {
+            tmpCalendar.timeInMillis = items[position].session.startTimestamp.time
+            return tmpCalendar.get(Calendar.HOUR) * 100 + tmpCalendar.get(Calendar.MINUTE)
+        }
     }
 
     val onItemClickListener = View.OnClickListener { view ->
-        val position = recyclerView.getChildAdapterPosition(view)
-        if (position != -1) {
+        val position = recyclerView.getChildLayoutPosition(view)
+        if (position != RecyclerView.NO_POSITION) {
             startActivity(SessionActivity.newIntent(context, adapter.items[position].session.id))
         }
     }
