@@ -1,41 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/ListItem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:divider="@drawable/spacer_medium"
-    android:orientation="horizontal"
-    android:showDividers="middle">
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cloud"
+        android:clickable="true"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/spacing_small"
+        android:paddingLeft="@dimen/spacing_medium"
+        android:paddingRight="@dimen/spacing_medium"
+        android:paddingTop="@dimen/spacing_small"
+        android:textAppearance="@style/TextAppearance.ListItem.Title"
+        tools:text="17:20" />
 
     <LinearLayout
-        android:layout_width="0dp"
+        style="@style/ListItem"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:divider="@drawable/spacer_medium"
+        android:orientation="horizontal"
+        android:showDividers="middle">
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.ListItem.Title"
-            tools:text="What’s new in Android ds ds dsdsdsjndksjndkjs sdkjii ssjdkjd" />
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/subtitle"
-            android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.ListItem.Title"
+                tools:text="What’s new in Android" />
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.ListItem.Subtitle"
+                tools:text="Tour Bretagne" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/favorite_indicator"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.ListItem.Subtitle"
-            tools:text="Tour Bretagne" />
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_bookmarked" />
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/favorite_indicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:src="@drawable/ic_bookmarked" />
 
 </LinearLayout>

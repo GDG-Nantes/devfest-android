@@ -14,6 +14,7 @@ import com.gdgnantes.devfest.android.app.BaseFragment
 import com.gdgnantes.devfest.android.format.text.DateTimeFormatter
 import com.gdgnantes.devfest.android.view.bind
 import com.gdgnantes.devfest.android.viewmodel.SessionsViewModel
+import java.util.*
 
 
 class SessionsFragment : BaseFragment() {
@@ -66,6 +67,7 @@ class SessionsFragment : BaseFragment() {
             view.setOnClickListener(onItemClickListener)
         }
 
+        val header: TextView by view.bind<TextView>(R.id.header)
         val title: TextView by view.bind<TextView>(R.id.title)
         val subtitle: TextView by view.bind<TextView>(R.id.subtitle)
         val favoriteIndicator: View by view.bind<View>(R.id.favorite_indicator)
@@ -75,6 +77,7 @@ class SessionsFragment : BaseFragment() {
             val context: Context) : RecyclerView.Adapter<SessionViewHolder>() {
 
         private val favoritesManager = BookmarkManager.from(context)
+        private val tmpCalendar = Calendar.getInstance()
 
         var items: List<SessionsViewModel.Data> = emptyList()
             set(items) {
@@ -82,17 +85,29 @@ class SessionsFragment : BaseFragment() {
                 notifyDataSetChanged()
             }
 
+        private fun getSectionId(position: Int): Int {
+            tmpCalendar.timeInMillis = items[position].session.startTimestamp.time
+            return tmpCalendar.get(Calendar.HOUR) * 100 + tmpCalendar.get(Calendar.MINUTE)
+        }
+
         override fun onBindViewHolder(holder: SessionViewHolder, position: Int) {
             val item = items[position]
 
+            if (position == 0 || getSectionId(position) != getSectionId(position - 1)) {
+                holder.header.visibility = View.VISIBLE
+                holder.header.text = DateTimeFormatter.formatHHmm(item.session.startTimestamp)
+            } else {
+                holder.header.visibility = View.GONE
+            }
+
             holder.title.text = item.session.title
 
-            val subtitleParts = ArrayList<String>()
             if (item.room != null) {
-                subtitleParts.add(getString(R.string.session_subtitle, item.room.name))
+                holder.subtitle.text = getString(R.string.session_subtitle, item.room.name)
+                holder.subtitle.visibility = View.VISIBLE
+            } else {
+                holder.subtitle.visibility = View.GONE
             }
-            subtitleParts.add(DateTimeFormatter.formatHHmm(item.session.startTimestamp))
-            holder.subtitle.text = subtitleParts.joinToString(" - ")
 
             if (favoritesManager.isBookmarked(item.session.id)) {
                 holder.favoriteIndicator.visibility = View.VISIBLE
