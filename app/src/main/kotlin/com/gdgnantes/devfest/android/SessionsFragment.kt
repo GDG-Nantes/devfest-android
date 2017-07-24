@@ -102,12 +102,12 @@ class SessionsFragment : BaseFragment() {
 
             holder.title.text = item.session.title
 
-            val subtitleParts = ArrayList<String>()
             if (item.room != null) {
-                subtitleParts.add(getString(R.string.session_subtitle, item.room.name))
+                holder.subtitle.text = getString(R.string.session_subtitle, item.room.name)
+                holder.subtitle.visibility = View.VISIBLE
+            } else {
+                holder.subtitle.visibility = View.GONE
             }
-            subtitleParts.add(DateTimeFormatter.formatHHmm(item.session.startTimestamp))
-            holder.subtitle.text = subtitleParts.joinToString(" - ")
 
             if (favoritesManager.isBookmarked(item.session.id)) {
                 holder.favoriteIndicator.visibility = View.VISIBLE
