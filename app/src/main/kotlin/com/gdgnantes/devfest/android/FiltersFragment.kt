@@ -22,9 +22,10 @@ class FiltersFragment : BaseFragment() {
         fun newInstance(): FiltersFragment = FiltersFragment()
     }
 
+    private lateinit var filtersModel: FiltersViewModel
+
     private var filtersAdapter: FiltersAdapter? = null
     private var recyclerView: RecyclerView? = null
-    private var filtersModel: FiltersViewModel? = null
     private var clearMenuItem: MenuItem? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +45,7 @@ class FiltersFragment : BaseFragment() {
         toolbar.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.action_clear -> {
-                    filtersModel?.clear()
+                    filtersModel.clear()
                     filtersAdapter?.notifyDataSetChanged()
                     updateClearMenuItem()
                     true
@@ -66,7 +67,7 @@ class FiltersFragment : BaseFragment() {
 
     private fun updateClearMenuItem() {
         clearMenuItem?.let {
-            it.isVisible = filtersModel?.hasFilters() ?: false
+            it.isVisible = filtersModel.hasFilters()
         }
     }
 
@@ -95,7 +96,7 @@ class FiltersFragment : BaseFragment() {
                 setTextColor(track.foregroundColor)
                 setBackgroundColor(track.backgroundColor)
             }
-            holder.checkBox.isChecked = filtersModel?.isFilter(track) ?: false
+            holder.checkBox.isChecked = filtersModel.isFilter(track)
         }
     }
 
@@ -103,9 +104,7 @@ class FiltersFragment : BaseFragment() {
         recyclerView?.let { rv ->
             val position = rv.getChildLayoutPosition(view)
             if (position != RecyclerView.NO_POSITION) {
-                filtersModel?.let {
-                    it.toggleFilter(Session.Track.values()[position])
-                }
+                filtersModel.toggleFilter(Session.Track.values()[position])
                 (rv.findViewHolderForLayoutPosition(position) as FiltersHolder).checkBox.toggle()
                 updateClearMenuItem()
             }
