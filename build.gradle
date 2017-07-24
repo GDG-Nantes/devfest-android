@@ -16,6 +16,7 @@ buildscript {
 ext {
     archLibVersion = '1.0.0-alpha5'
     supportLibVersion = '26.0.0-beta2'
+    firebaseVersion = '11.0.2'
 }
 
 allprojects {
