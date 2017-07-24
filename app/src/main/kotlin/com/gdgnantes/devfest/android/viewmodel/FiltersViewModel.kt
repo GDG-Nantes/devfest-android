@@ -28,6 +28,12 @@ class FiltersViewModel(application: Application) : AndroidViewModel(application)
         _filters.value = newFilters
     }
 
+    fun clear() {
+        _filters.value = emptySet()
+    }
+
+    fun hasFilters() = !(_filters.value?.isEmpty() ?: true)
+
     val filters: LiveData<Set<Session.Track>>
         get() = _filters
 

@@ -4,7 +4,9 @@ import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.RecyclerView
+import android.support.v7.widget.Toolbar
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
@@ -23,6 +25,7 @@ class FiltersFragment : BaseFragment() {
     private var filtersAdapter: FiltersAdapter? = null
     private var recyclerView: RecyclerView? = null
     private var filtersModel: FiltersViewModel? = null
+    private var clearMenuItem: MenuItem? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,11 +39,34 @@ class FiltersFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val toolbar = view.findViewById<Toolbar>(R.id.toolbar)
+        toolbar.inflateMenu(R.menu.fragment_filters)
+        toolbar.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.action_clear -> {
+                    filtersModel?.clear()
+                    filtersAdapter?.notifyDataSetChanged()
+                    updateClearMenuItem()
+                    true
+                }
+                else -> false
+            }
+        }
+
+        clearMenuItem = toolbar.menu.findItem(R.id.action_clear)
+        updateClearMenuItem()
+
         filtersAdapter = FiltersAdapter()
 
         recyclerView = view.findViewById<RecyclerView>(android.R.id.list).apply {
             addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
             adapter = filtersAdapter
+        }
+    }
+
+    private fun updateClearMenuItem() {
+        clearMenuItem?.let {
+            it.isVisible = filtersModel?.hasFilters() ?: false
         }
     }
 
@@ -81,6 +107,7 @@ class FiltersFragment : BaseFragment() {
                     it.toggleFilter(Session.Track.values()[position])
                 }
                 (rv.findViewHolderForLayoutPosition(position) as FiltersHolder).checkBox.toggle()
+                updateClearMenuItem()
             }
         }
     }
