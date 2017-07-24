@@ -33,6 +33,7 @@ class MainActivity : BaseActivity() {
         viewPager = findViewById<ViewPager>(R.id.view_pager)
         viewPager.adapter = adapter
         viewPager.pageMargin = resources.getDimensionPixelSize(R.dimen.spacing_medium)
+        viewPager.setPageMarginDrawable(R.drawable.spacer_medium_cloud)
 
         val tabLayout = findViewById<TabLayout>(R.id.tab_layout)
         tabLayout.setupWithViewPager(viewPager)
