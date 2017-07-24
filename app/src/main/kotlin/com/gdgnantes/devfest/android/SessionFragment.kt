@@ -8,7 +8,6 @@ import android.net.Uri
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.ShareCompat
-import android.support.v7.app.AppCompatActivity
 import android.view.*
 import android.widget.ImageButton
 import android.widget.ImageView
@@ -41,6 +40,8 @@ class SessionFragment : BaseFragment() {
 
     private lateinit var sessionId: String
     private lateinit var bookmarkButton: FloatingActionButton
+    private var rootView: ViewGroup? = null
+    private var titleView: TextView? = null
 
     private var title: String? = null
     private var displayingTitle: Boolean = false
@@ -60,26 +61,14 @@ class SessionFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        rootView = view.findViewById(R.id.root)
+        titleView = view.findViewById(R.id.title)
+
         bookmarkButton = view.findViewById<FloatingActionButton>(R.id.btn_bookmark)
         bookmarkButton.setOnClickListener { toggleFavorite() }
 
         view.findViewById<ScrollView>(R.id.scroll_view).onScrollChangeListener = { _, _, _ ->
-            val titleView = view.findViewById<View>(R.id.title)
-            titleView.getDrawingRect(tempRect)
-            view.findViewById<ViewGroup>(R.id.root).offsetDescendantRectToMyCoords(titleView, tempRect)
-
-            val oldDisplayingTitle = displayingTitle
-            val dimension = if (displayingTitle) tempRect.top else tempRect.bottom
-
-            displayingTitle = dimension < 0 && !title.isNullOrEmpty()
-
-            if (oldDisplayingTitle != displayingTitle) {
-                if (displayingTitle) {
-                    (activity as AppCompatActivity).supportActionBar?.setTitle(title)
-                } else {
-                    (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.session_title)
-                }
-            }
+            updateTitle()
         }
 
         updateBookmark()
@@ -204,6 +193,24 @@ class SessionFragment : BaseFragment() {
             bookmarkButton.setImageResource(R.drawable.ic_action_unbookmark)
         } else {
             bookmarkButton.setImageResource(R.drawable.ic_action_bookmark)
+        }
+    }
+
+    private fun updateTitle() {
+        titleView?.getDrawingRect(tempRect)
+        rootView?.offsetDescendantRectToMyCoords(titleView, tempRect)
+
+        val oldDisplayingTitle = displayingTitle
+        val dimension = if (displayingTitle) tempRect.top else tempRect.bottom
+
+        displayingTitle = dimension < 0 && !title.isNullOrEmpty()
+
+        if (oldDisplayingTitle != displayingTitle) {
+            if (displayingTitle) {
+                activity.title = title
+            } else {
+                activity.setTitle(R.string.session_title)
+            }
         }
     }
 
