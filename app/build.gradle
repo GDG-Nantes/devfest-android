@@ -65,6 +65,8 @@ dependencies {
 
     implementation 'com.google.code.gson:gson:2.8.0'
 
+    implementation "com.google.firebase:firebase-crash:$firebaseVersion"
+
     implementation 'com.squareup.picasso:picasso:2.5.2'
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlinVersion"
@@ -75,3 +77,5 @@ dependencies {
 
     testImplementation 'junit:junit:4.12'
 }
+
+apply plugin: 'com.google.gms.google-services'
