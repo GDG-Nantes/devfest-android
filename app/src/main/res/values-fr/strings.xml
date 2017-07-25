@@ -44,4 +44,8 @@
     <string name="type_quicky">Quicky</string>
     <string name="type_talk">Talk</string>
 
+    <string name="reminders_channel_description">Reminders display a notification 5 minutes before the start of one of your bookmarked session.</string>
+    <string name="reminders_channel_name">Bookmarked sessions reminders</string>
+    <string name="reminders_text">Starting at %1$s in room %2$s</string>
+
 </resources>

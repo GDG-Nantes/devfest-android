@@ -2,11 +2,11 @@ package com.gdgnantes.devfest.android
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.ActionBar
 import android.widget.TextSwitcher
 import com.gdgnantes.devfest.android.app.BaseActivity
-import com.gdgnantes.devfest.android.app.PREFIX_EXTRA
 
 
 class SessionActivity : BaseActivity() {
@@ -14,10 +14,8 @@ class SessionActivity : BaseActivity() {
     companion object {
         private val FRAGMENT_SESSION_DETAIL = "fragment:sessionDetails"
 
-        private val EXTRA_SESSION_ID = "$PREFIX_EXTRA.sessionDetails"
-
-        fun newIntent(context: Context, sessionId: String): Intent
-                = Intent(context, SessionActivity::class.java).putExtra(EXTRA_SESSION_ID, sessionId)
+        fun newIntent(context: Context, sessionId: String): Intent = Intent(context, SessionActivity::class.java)
+                .setData(Uri.parse("content://sessions/$sessionId"))
     }
 
     private lateinit var switcher: TextSwitcher
@@ -61,7 +59,7 @@ class SessionActivity : BaseActivity() {
                 }
             }
         }
-        return intent.getStringExtra(EXTRA_SESSION_ID)
+        return intent.data.lastPathSegment
     }
 
 }
