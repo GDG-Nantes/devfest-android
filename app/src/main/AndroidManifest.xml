@@ -3,6 +3,7 @@
     package="com.gdgnantes.devfest.android">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:name=".ScheduleApplication"
@@ -66,6 +67,15 @@
             android:name="com.gdgnantes.devfest.android.provider.ScheduleProvider"
             android:authorities="${applicationId}.provider.schedule"
             android:exported="false" />
+
+        <receiver
+            android:name=".content.RemindersReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
 
         <meta-data
             android:name="preloaded_fonts"

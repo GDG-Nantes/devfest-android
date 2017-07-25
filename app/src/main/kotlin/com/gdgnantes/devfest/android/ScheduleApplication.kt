@@ -7,14 +7,11 @@ import android.os.Build
 import android.support.annotation.RequiresApi
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatDelegate
+import com.gdgnantes.devfest.android.content.RemindersManager
 import com.gdgnantes.devfest.android.util.BuildUtils
 
 
 class ScheduleApplication : Application() {
-
-    companion object {
-        private const val CHANNEL_REMINDERS = "channel:reminders"
-    }
 
     init {
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
@@ -29,7 +26,7 @@ class ScheduleApplication : Application() {
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun createNotificationChannels() {
-        val channel = NotificationChannel(CHANNEL_REMINDERS,
+        val channel = NotificationChannel(RemindersManager.CHANNEL_REMINDERS,
                 getString(R.string.reminders_channel_name),
                 NotificationManager.IMPORTANCE_HIGH).apply {
             description = getString(R.string.reminders_channel_description)
