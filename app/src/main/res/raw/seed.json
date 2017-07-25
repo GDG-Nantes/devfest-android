@@ -7,8 +7,7 @@
       "type": "break",
       "speakers_ids": [],
       "start_timestamp": "2017-10-19T08:00:00+02:00",
-      "end_timestamp": "2017-10-19T09:00:00+02:00",
-      "room_id": "0"
+      "end_timestamp": "2017-10-19T09:00:00+02:00"
     },
     {
       "id": "1",
@@ -28,18 +27,16 @@
       "type": "break",
       "speakers_ids": [],
       "start_timestamp": "2017-10-19T12:00:00+02:00",
-      "end_timestamp": "2017-10-19T14:00:00+02:00",
-      "room_id": "0"
+      "end_timestamp": "2017-10-19T14:00:00+02:00"
     },
     {
       "id": "3",
       "title": "After Party",
-      "description": "Cette année l’After Party est organisée par notre partenaire U GIE IRIS (Système U). <br />Elle aura lieu sur place à la Cité des Congrès (dans la Grande Galerie) à partir de 18h30 le Jeudi 19 Octobre. <br />Retrouvons-nous autour d'un apéro pour discuter des événements de la 1ère journée et faire du networking. A l'affiche, des démos, des découvertes, de la musique...<br />Venez nombreux !!",
+      "description": "Cette année l’After Party est organisée par notre partenaire U GIE IRIS (Système U). Elle aura lieu sur place à la Cité des Congrès (dans la Grande Galerie) à partir de 18h30 le Jeudi 19 Octobre. Retrouvons-nous autour d'un apéro pour discuter des événements de la 1ère journée et faire du networking. A l'affiche, des démos, des découvertes, de la musique...Venez nombreux !!",
       "type": "break",
       "speakers_ids": [],
       "start_timestamp": "2017-10-19T18:30:00+02:00",
-      "end_timestamp": "2017-10-19T23:00:00+02:00",
-      "room_id": "0"
+      "end_timestamp": "2017-10-19T23:00:00+02:00"
     },
     {
       "id": "4",
@@ -48,8 +45,7 @@
       "type": "break",
       "speakers_ids": [],
       "start_timestamp": "2017-10-20T08:30:00+02:00",
-      "end_timestamp": "2017-10-20T09:00:00+02:00",
-      "room_id": "0"
+      "end_timestamp": "2017-10-20T09:00:00+02:00"
     },
     {
       "id": "5",
@@ -59,13 +55,12 @@
       "type": "break",
       "speakers_ids": [],
       "start_timestamp": "2017-10-20T12:10:00+02:00",
-      "end_timestamp": "2017-10-20T14:00:00+02:00",
-      "room_id": "0"
+      "end_timestamp": "2017-10-20T14:00:00+02:00"
     },
     {
       "id": "1540",
       "title": "Vos webapps ont-elles du style ?",
-      "description": "Nous sommes beaucoup à avoir la compétence _HTML/CSS_ sur notre CV mais industrialiser le style finit rapidement en eau de boudin!\n\nEntre la conception de la charte graphique, sa mise en application, en passant par la réutilisation/maintenabilité, je vais vous présenter un ensemble d'outils et de techniques qui vous permettront de répondre complètement et sereinement à l'ensemble de ces défis :\n* Guide de style comme référentiel\n* Pondération des styles\n* CSS modules pour des composants graphiques réellement réutilisables\n* Intégration continue pour une non-régression visuelle",
+      "description": "Nous sommes beaucoup à avoir la compétence HTML/CSS sur notre CV mais industrialiser le style finit rapidement en eau de boudin!\n\nEntre la conception de la charte graphique, sa mise en application, en passant par la réutilisation/maintenabilité, je vais vous présenter un ensemble d'outils et de techniques qui vous permettront de répondre complètement et sereinement à l'ensemble de ces défis :\n* Guide de style comme référentiel\n* Pondération des styles\n* CSS modules pour des composants graphiques réellement réutilisables\n* Intégration continue pour une non-régression visuelle",
       "type": "quicky",
       "track": "web",
       "category": "web",
@@ -96,7 +91,7 @@
     {
       "id": "1595",
       "title": "Mixed Reality for Social Good",
-      "description": "Exciting times for mixed reality enthusiasts. With many AR and VR platforms now available, we're witnessing the birth of a new medium. \n\nIn many ways, this boom is similar to the personal computer revolution of the 70s and 80s. People are wondering: \"Besides games, what are these gadgets good for, anyway?\"\n\nIn this session, we'll see how people are using mixed reality for social good. Then, we'll learn about the Tango and Daydream platforms from Google. We'll use these and other platforms to build our own mixed reality experience.",
+      "description": "Exciting times for mixed reality enthusiasts. With many AR and VR platforms now available, we're witnessing the birth of a new medium.\n\nIn many ways, this boom is similar to the personal computer revolution of the 70s and 80s. People are wondering: \"Besides games, what are these gadgets good for, anyway?\"\n\nIn this session, we'll see how people are using mixed reality for social good. Then, we'll learn about the Tango and Daydream platforms from Google. We'll use these and other platforms to build our own mixed reality experience.",
       "type": "talk",
       "track": "mobile",
       "category": "mobile",
@@ -142,7 +137,7 @@
     {
       "id": "1636",
       "title": "La Marque est morte, vive l'intelligence artificielle",
-      "description": "Le monde a toujours été « Marqué ». \nDu nombre de pois sur les ailes du papillon Monarque au bande du tigre du bengal, ce système de «marques distinctives» a permis d’organiser la complexité de notre monde. Mais vers 2014, les choses se troublent. \nL’idée de Marque évolue avec l’arrivée de dispositifs comme Amazon Echo avec reconnaissance vocale soutenus par un AI incroyablement intelligent.\nLa Marque connaît un changement de paradigme.\nElle n’est plus juste un symbole, un signe. Elle n’est même pas une voix. Elle est devenue une entité intelligente, une personnalité, un algorithme capable d’apprendre.\nComment «Marqué» une intelligence artificielle ?\nQuel type de relation allons-nous avoir maintenant avec la Marque ?\nDeviendrons-nous des consommateurs complètements manipulés par la Marque ? \nLa Marque va-t elle tout simplement devenir notre meilleur ami?",
+      "description": "Le monde a toujours été « Marqué ».\nDu nombre de pois sur les ailes du papillon Monarque au bande du tigre du bengal, ce système de «marques distinctives» a permis d’organiser la complexité de notre monde. Mais vers 2014, les choses se troublent.\nL’idée de Marque évolue avec l’arrivée de dispositifs comme Amazon Echo avec reconnaissance vocale soutenus par un AI incroyablement intelligent.\nLa Marque connaît un changement de paradigme.\nElle n’est plus juste un symbole, un signe. Elle n’est même pas une voix. Elle est devenue une entité intelligente, une personnalité, un algorithme capable d’apprendre.\nComment «Marqué» une intelligence artificielle ?\nQuel type de relation allons-nous avoir maintenant avec la Marque ?\nDeviendrons-nous des consommateurs complètements manipulés par la Marque ?\nLa Marque va-t elle tout simplement devenir notre meilleur ami?",
       "type": "quicky",
       "track": "discovery",
       "category": "discovery",
@@ -157,7 +152,7 @@
     {
       "id": "1641",
       "title": "Des bibliothèques graphiques originales au service de la dataviz sur le web",
-      "description": "Pour développer une visualisation de données, il faut généralement un algorithme (plus ou moins compliqué) d'un côté, et de l'autre *un moteur de rendu*. Et si [d3.js](https://d3js.org) résout aujourd'hui très bien la question des algorithmes, il est très souvent simplement branché sur du SVG.\n\nPourtant, l'écosystème du rendu graphique sur le web est très riche, entre des standards robustes (SVG, Canvas, WebGL...) et des bibliothèques JavaScript très diverses, telles que [Pixi.js](http://www.pixijs.com/) ou encore [three.js](https://threejs.org/).\n\nL'objectif de ma présentation sera de mettre en valeur la mixité de ces solutions, à travers différents exemples de visualisations originales et variées.",
+      "description": "Pour développer une visualisation de données, il faut généralement un algorithme (plus ou moins compliqué) d'un côté, et de l'autre un moteur de rendu. Et si d3.js résout aujourd'hui très bien la question des algorithmes, il est très souvent simplement branché sur du SVG.\n\nPourtant, l'écosystème du rendu graphique sur le web est très riche, entre des standards robustes (SVG, Canvas, WebGL...) et des bibliothèques JavaScript très diverses, telles que Pixi.js ou encore three.js.\n\nL'objectif de ma présentation sera de mettre en valeur la mixité de ces solutions, à travers différents exemples de visualisations originales et variées.",
       "type": "talk",
       "track": "web",
       "category": "web",
@@ -172,7 +167,7 @@
     {
       "id": "1655",
       "title": "Découvrir Android Things, et exterminer les reptiliens",
-      "description": "Que vous y croyez ou non, les reptiliens sont partout, et on n'a jamais été vraiment prêt à pouvoir les affronter.  \nOn **N'ÉTAIT** pas prêt... Mais maintenant qu'*Android Things* est sorti, ils vont moins faire les malins, vous allez voir.  \n\nC'est sûr que, lorsqu'on a enfin réussi à faire des applications pour mobile qui déchirent, ça les dérangeait pas trop, eux... Mais maintenant qu'on peut utiliser la puissance d'Android pour créer des objets physiques, on va moins les entendre.\n\nEnsemble, nous allons découvrir Android Things, et voir comment nous pouvons créer une machine se déplaçant, et permettant de détecter les reptiliens (avec des capteurs tactiles, de température, et du machine learning), mais aussi permettant de les exterminer (d'ailleurs si les orgas pouvaient me prêter un lance flamme, ça ferait une super démo).\n\nComment ? Avec un Raspberry Pi, un Arduino, et en découvrant et utilisant toutes les APIs spécifiques à Android Things : gpio, pwm, i2c, spi, uart, permettant d’interagir avec des composants du monde réel (enfin, \"réel\", vous m'avez compris...).\n\nCe talk est d'utilité publique, et pour tout niveau.  \nSi *ahaha* vous pensez qu'on est *ahah*  dans la conspiration, venez quand même ça peut toujours vous être utile.  \n*ahahah conspiration ahahaha*",
+      "description": "Que vous y croyez ou non, les reptiliens sont partout, et on n'a jamais été vraiment prêt à pouvoir les affronter.\nOn N'ÉTAIT pas prêt... Mais maintenant qu'Android Things est sorti, ils vont moins faire les malins, vous allez voir.\n\nC'est sûr que, lorsqu'on a enfin réussi à faire des applications pour mobile qui déchirent, ça les dérangeait pas trop, eux... Mais maintenant qu'on peut utiliser la puissance d'Android pour créer des objets physiques, on va moins les entendre.\n\nEnsemble, nous allons découvrir Android Things, et voir comment nous pouvons créer une machine se déplaçant, et permettant de détecter les reptiliens (avec des capteurs tactiles, de température, et du machine learning), mais aussi permettant de les exterminer (d'ailleurs si les orgas pouvaient me prêter un lance flamme, ça ferait une super démo).\n\nComment ? Avec un Raspberry Pi, un Arduino, et en découvrant et utilisant toutes les APIs spécifiques à Android Things : gpio, pwm, i2c, spi, uart, permettant d’interagir avec des composants du monde réel (enfin, \"réel\", vous m'avez compris...).\n\nCe talk est d'utilité publique, et pour tout niveau.\nSi ahaha vous pensez qu'on est ahah  dans la conspiration, venez quand même ça peut toujours vous être utile.\nahahah conspiration ahahaha",
       "type": "talk",
       "track": "mobile",
       "category": "mobile",
@@ -187,7 +182,7 @@
     {
       "id": "1689",
       "title": "Automatiser & mutualiser vos modèles de données",
-      "description": "### Le Contexte\n\nVous n'en avez pas marre d'avoir à écrire vos classes modèles à la main ? Surtout si vous faites une application à la fois Android & iOS, avec chacun ses technos et son language, c'est souvent le double de travail !\n\nQue diriez-vous de gagner un temps précieux sur la création et maintenance de votre couche modèle sur vos 2 plateformes ?\n\n### Contenu de ce Quickie\n\nCe Quickie abordera les points suivants :\n\n* concevoir votre modèle commun iOS/Android à l'aide d'un éditeur visuel.\n* Utilisation de l'outil Gyro pour automatiser la génération du code de vos classes, à la fois pour Java, Kotlin, Swift et Objective-C.\n* Avantages d'avoir une seule source commune pour les modèles de toutes vos plateformes.\n* Customization par templates du code produit par gyro, pour le faire correspondre exactement à vos besoins\n\t* que vous utilisiez SQL, GreenDAO, Room, Realm, ou toute autre DAO…\n\t* que vous souhaitiez simplement ajuster les templates existants à votre style de code\n\t* …",
+      "description": "Le Contexte\n\nVous n'en avez pas marre d'avoir à écrire vos classes modèles à la main ? Surtout si vous faites une application à la fois Android & iOS, avec chacun ses technos et son language, c'est souvent le double de travail !\n\nQue diriez-vous de gagner un temps précieux sur la création et maintenance de votre couche modèle sur vos 2 plateformes ?\n\nContenu de ce Quickie\n\nCe Quickie abordera les points suivants :\n\n* concevoir votre modèle commun iOS/Android à l'aide d'un éditeur visuel.\n* Utilisation de l'outil Gyro pour automatiser la génération du code de vos classes, à la fois pour Java, Kotlin, Swift et Objective-C.\n* Avantages d'avoir une seule source commune pour les modèles de toutes vos plateformes.\n* Customization par templates du code produit par gyro, pour le faire correspondre exactement à vos besoins\n\t* que vous utilisiez SQL, GreenDAO, Room, Realm, ou toute autre DAO…\n\t* que vous souhaitiez simplement ajuster les templates existants à votre style de code\n\t* …",
       "type": "quicky",
       "track": "mobile",
       "category": "mobile",
@@ -248,7 +243,7 @@
     {
       "id": "1737",
       "title": "Et si on jouait un peu... Une petite partie des Aventuriers du Rails ?",
-      "description": "Tous le monde connait les jeux de plateau tel que <b>Les aventuriers du Rail</b>, <b>Contagion</b> ou bien <b>Small World</b>. Mais saviez vous qu'il existe une version numérique de ces mêmes jeux jouable en réseau ? \n\nCes jeux, appelés <i>Board Games</i> sont un type bien particulier d'application disponibles sur tous les stores et toutes les plateformes qui demande une conception bien particulière afin d'attirer une communauté et d'être rentable.\n\nNous allons voir les enjeux et les règles qui régissent l'univers impitoyable des <i>Board Games</i> et comment techniquement un jeu de ce type est dévéloppé.",
+      "description": "Tous le monde connait les jeux de plateau tel que Les aventuriers du Rail, Contagion ou bien Small World. Mais saviez vous qu'il existe une version numérique de ces mêmes jeux jouable en réseau ?\n\nCes jeux, appelés Board Games sont un type bien particulier d'application disponibles sur tous les stores et toutes les plateformes qui demande une conception bien particulière afin d'attirer une communauté et d'être rentable.\n\nNous allons voir les enjeux et les règles qui régissent l'univers impitoyable des Board Games et comment techniquement un jeu de ce type est dévéloppé.",
       "type": "talk",
       "track": "discovery",
       "category": "discovery",
@@ -263,7 +258,7 @@
     {
       "id": "1763",
       "title": "Un ChatBot vocal pour Amazon Alexa en 20 min",
-      "description": "Les Chatbots, assistants virtuels ou encore les robots conversationnels sont tous des faces d’une même pièce, si le nom change le principe reste le même ! Certains vous permettre de réserver un restaurant ou de trouver les meilleures offres de voyages, d’autres de commander un taxi à travers l’interface de votre application de messagerie et sans avoir besoin de quitter votre logiciel préféré ni d’ouvrir une nouvelle application.\n\nPas que ça, Amazon a lancé des enceintes connectées interactives capables de répondre aux commandes vocales grace à Amazone Alexa. \n\nDurant ce Hand-on de 20 minutes je ramène l'enceinte intelligente Amazon Echo et on vas développer ensemble un ChatBot vocal pour Amazon Alexa avec Node.js, ensuite on vas la déployer sur AWS Lambda et la rendre plus humain avec la nouvelle plateforme du traitement automatique du langage naturel (NLP) Amazon Lex.",
+      "description": "Les Chatbots, assistants virtuels ou encore les robots conversationnels sont tous des faces d’une même pièce, si le nom change le principe reste le même ! Certains vous permettre de réserver un restaurant ou de trouver les meilleures offres de voyages, d’autres de commander un taxi à travers l’interface de votre application de messagerie et sans avoir besoin de quitter votre logiciel préféré ni d’ouvrir une nouvelle application.\n\nPas que ça, Amazon a lancé des enceintes connectées interactives capables de répondre aux commandes vocales grace à Amazone Alexa.\n\nDurant ce Hand-on de 20 minutes je ramène l'enceinte intelligente Amazon Echo et on vas développer ensemble un ChatBot vocal pour Amazon Alexa avec Node.js, ensuite on vas la déployer sur AWS Lambda et la rendre plus humain avec la nouvelle plateforme du traitement automatique du langage naturel (NLP) Amazon Lex.",
       "type": "quicky",
       "track": "mobile",
       "category": "mobile",
@@ -293,7 +288,7 @@
     {
       "id": "1815",
       "title": "NodeJS Future",
-      "description": "**NodeJS** poursuit son avancé dans tous les écosystèmes.\nL'avènement de **ES6**, **ES7** et bientôt **ES8**  et l'intégration dans les navigateurs des dernières moutures d'ECMASCRIPT pousse vers l'avant NodeJS grâce aux avancées du moteur **V8**\n\nNous verrons ensemble quelles sont les nouvelles fonctionnalités apportées par **NodeJS 8**, et quelles sont les problématiques rencontrées par les équipes de dev NodeJS.\n\nNous verrons aussi l'apport de **N-API** et l'opportunité de tester d'autres moteurs de runtime comme **Chakracore** en une ligne de commande :)  \n\nNous parlerons **d'asynchronisme** ou encore de **modules ESM** dans se talk résolument orienté vers les développeurs backend !\n\nQuelques mots clés encore, car nous parlerons aussi de **TypeScript 2.x**, **NPM 5**, **async_hooks**, **WHATWG URL** ou encore **Promisify()**  \n\nEt nous parlerons aussi de **Michael Jackson**  ...  \nSi si, ça a un rapport avec NodeJS ... :)",
+      "description": "NodeJS poursuit son avancé dans tous les écosystèmes.\nL'avènement de ES6, ES7 et bientôt ES8  et l'intégration dans les navigateurs des dernières moutures d'ECMASCRIPT pousse vers l'avant NodeJS grâce aux avancées du moteur V8\n\nNous verrons ensemble quelles sont les nouvelles fonctionnalités apportées par NodeJS 8, et quelles sont les problématiques rencontrées par les équipes de dev NodeJS.\n\nNous verrons aussi l'apport de N-API et l'opportunité de tester d'autres moteurs de runtime comme Chakracore en une ligne de commande :)\n\nNous parlerons d'asynchronisme ou encore de modules ESM dans se talk résolument orienté vers les développeurs backend !\n\nQuelques mots clés encore, car nous parlerons aussi de TypeScript 2.x, NPM 5, async_hooks, WHATWG URL ou encore Promisify()\n\nEt nous parlerons aussi de Michael Jackson  ...\nSi si, ça a un rapport avec NodeJS ... :)",
       "type": "talk",
       "track": "web",
       "category": "web",
@@ -416,7 +411,7 @@
     {
       "id": "1847",
       "title": "Retours sur l’aventure Capitaine Train",
-      "description": "L’aventure Capitaine Train débute en 2010. L’objectif est simple et clair : offrir une alternative crédible à la vente de billet de train en Europe. Aujourd’hui, Capitaine Train, rachetée en 2016 et renommée entre temps « Trainline », vend plusieurs millions de billets chaque année.\n \nConstruire l’application Android a requis évidemment beaucoup de travail et de rigueur. Durant cette présentation nous détaillerons chacun des aspects qui ont permis à l’app Android Capitaine Train d’apporter régulièrement de nouvelles fonctionnalités, de respecter nos critères de qualité tout en répondant aux attentes des utilisateurs. Nous aborderons notamment l’organisation interne de l’équipe, le recrutement, les processus de développement et de mise en production, l’approche produit, le design, etc.",
+      "description": "L’aventure Capitaine Train débute en 2010. L’objectif est simple et clair : offrir une alternative crédible à la vente de billet de train en Europe. Aujourd’hui, Capitaine Train, rachetée en 2016 et renommée entre temps « Trainline », vend plusieurs millions de billets chaque année.\n\nConstruire l’application Android a requis évidemment beaucoup de travail et de rigueur. Durant cette présentation nous détaillerons chacun des aspects qui ont permis à l’app Android Capitaine Train d’apporter régulièrement de nouvelles fonctionnalités, de respecter nos critères de qualité tout en répondant aux attentes des utilisateurs. Nous aborderons notamment l’organisation interne de l’équipe, le recrutement, les processus de développement et de mise en production, l’approche produit, le design, etc.",
       "type": "talk",
       "track": "discovery",
       "category": "discovery",
@@ -479,7 +474,7 @@
     {
       "id": "1864",
       "title": "Code and Deploy Angular to the Cloud",
-      "description": "Getting started with Angular is now easier than ever ... said no one ever. Yet with the right toolset we too can create magic. When I code with Angular I can deploy to Azure within minutes. \n\nWe'll go through a simple development to production workflow. First we code with a little help from the Angular CLI. Then we build for production - Webpack to the rescue. We then push our code to Github and deploy it on Node to Azure. \n\nMission accomplished, application is now up in the clouds.",
+      "description": "Getting started with Angular is now easier than ever ... said no one ever. Yet with the right toolset we too can create magic. When I code with Angular I can deploy to Azure within minutes.\n\nWe'll go through a simple development to production workflow. First we code with a little help from the Angular CLI. Then we build for production - Webpack to the rescue. We then push our code to Github and deploy it on Node to Azure.\n\nMission accomplished, application is now up in the clouds.",
       "type": "talk",
       "track": "web",
       "category": "web",
@@ -495,7 +490,7 @@
     {
       "id": "1871",
       "title": "Linuxkit : le linux façon ikea",
-      "description": "Cela fait des années que certaines distributions linux permettent de construire son linux “from scratch” mais cela restait une opération compliquée et périlleuse. LinuxKit propose la même chose mais avec une approche beaucoup plus moderne et outillée. Cela devient presque aussi facile que de monter un meuble ikea ! (avec une notice quand même)\n \nLe projet LinuxKit, créé par Docker Inc., a été pensé pour créer un OS aussi minimaliste et maintenable que possible (sans compromis avec la sécurité) et y déployer des conteneurs.\n \nNous allons vous présenter la genèse et les concepts du projet, l’écosystème des outils complémentaires qui vous permettront de composer et construire votre distribution. Puis, nous créerons notre première distribution en live !",
+      "description": "Cela fait des années que certaines distributions linux permettent de construire son linux “from scratch” mais cela restait une opération compliquée et périlleuse. LinuxKit propose la même chose mais avec une approche beaucoup plus moderne et outillée. Cela devient presque aussi facile que de monter un meuble ikea ! (avec une notice quand même)\n\nLe projet LinuxKit, créé par Docker Inc., a été pensé pour créer un OS aussi minimaliste et maintenable que possible (sans compromis avec la sécurité) et y déployer des conteneurs.\n\nNous allons vous présenter la genèse et les concepts du projet, l’écosystème des outils complémentaires qui vous permettront de composer et construire votre distribution. Puis, nous créerons notre première distribution en live !",
       "type": "talk",
       "track": "cloud",
       "category": "cloud",
@@ -511,7 +506,7 @@
     {
       "id": "1874",
       "title": "Trader les crypto monnaies",
-      "description": "Les crypto monnaies sont un phénomène de société encore peu connu. Cependant, les récentes levées de fond de plusieurs centaines de millions d'euros démontrent l'intérêt grandissant du public. Nombreux sont ceux qui essaient de trader ces nouveaux actifs. \nMais, la masse d'information à traiter est importante. Et les centaines de crypto monnaies disponibles sur plusieurs places boursières rendent difficile la possibilité de saisir le maximum d'opportunités. Je vous propose au cours de cette présentation de comprendre comment faciliter votre trading à l'aide de la collecte d'information sur le web et l'algotrading...",
+      "description": "Les crypto monnaies sont un phénomène de société encore peu connu. Cependant, les récentes levées de fond de plusieurs centaines de millions d'euros démontrent l'intérêt grandissant du public. Nombreux sont ceux qui essaient de trader ces nouveaux actifs.\nMais, la masse d'information à traiter est importante. Et les centaines de crypto monnaies disponibles sur plusieurs places boursières rendent difficile la possibilité de saisir le maximum d'opportunités. Je vous propose au cours de cette présentation de comprendre comment faciliter votre trading à l'aide de la collecte d'information sur le web et l'algotrading...",
       "type": "quicky",
       "track": "cloud",
       "category": "cloud",
@@ -526,7 +521,7 @@
     {
       "id": "1892",
       "title": "Documentation as Code (expliqué à mon père)",
-      "description": "En tant que codeurs, nous profitons tous les jours de la puissance de nos outils (IDE, versioning, build, intégration, déploiement). Nous mettons également l’accent sur la qualité avec un ensemble de bonnes pratiques (tests, DRY, KISS). Néanmoins, lorsqu’il s’agit de s’occuper de la documentation, nous sommes encore nombreux à utiliser des outils de \"bureautique traditionnelle\" (Word, Sharepoint, client email). \n\n\"Au menu de cette session, je vous propose d’aborder le langage AsciiDoc ainsi que l’outil asciidoctor (et son ecosystème). Nous verrons quels avantages ils apportent et quelles \"pratiques de codeur\" appliquer pour améliorer les différentes étapes de la vie d’une documentation : rédaction, collaboration et publication.\"",
+      "description": "En tant que codeurs, nous profitons tous les jours de la puissance de nos outils (IDE, versioning, build, intégration, déploiement). Nous mettons également l’accent sur la qualité avec un ensemble de bonnes pratiques (tests, DRY, KISS). Néanmoins, lorsqu’il s’agit de s’occuper de la documentation, nous sommes encore nombreux à utiliser des outils de \"bureautique traditionnelle\" (Word, Sharepoint, client email).\n\n\"Au menu de cette session, je vous propose d’aborder le langage AsciiDoc ainsi que l’outil asciidoctor (et son ecosystème). Nous verrons quels avantages ils apportent et quelles \"pratiques de codeur\" appliquer pour améliorer les différentes étapes de la vie d’une documentation : rédaction, collaboration et publication.\"",
       "type": "talk",
       "track": "discovery",
       "category": "discovery",
@@ -727,7 +722,7 @@
     {
       "id": "1970",
       "title": "Développez vos propres supers-pouvoirs dans une réalité mixte... et avec des Hololens",
-      "description": "**Envie de jouer d'égal à égal avec Superman ou d'autres super-héros ?**\n\nVenez découvrir l'essentiel des **prérequis et techniques de développement** de projets en réalité mixte (Holographique) sous Hololens.\n\nNous utiliserons ``Unity 3D``, ``Visual Studio 2017``, du ``C#`` et quelques services du cloud si besoin d'intelligence artificielle.\n\nVous pourrez ainsi défier les **Marvel** dans votre réalité \"parallèle\", juste le temps d'un lab.",
+      "description": "Envie de jouer d'égal à égal avec Superman ou d'autres super-héros ?\n\nVenez découvrir l'essentiel des prérequis et techniques de développement de projets en réalité mixte (Holographique) sous Hololens.\n\nNous utiliserons `Unity 3D, Visual Studio 2017, du C#` et quelques services du cloud si besoin d'intelligence artificielle.\n\nVous pourrez ainsi défier les Marvel dans votre réalité \"parallèle\", juste le temps d'un lab.",
       "type": "codelab",
       "track": "mobile",
       "category": "mobile",
@@ -758,7 +753,7 @@
     {
       "id": "2017",
       "title": "Ethdroid, le nouveau super pouvoir du mobile !",
-      "description": "Ethdroid 2.0 est un nouveau super-héro dont le pouvoir est de connecter votre *device* Android préféré au monde décentralisé.\n\nJe vous propose de venir découvrir cette librairie Android qui va, à coups sûrs, faciliter le développement de vos **ÐApps Ethereum**.\n\nNous verrons ensemble qu'il devient ultra simple de connecter une application Android à une blockchain publique et encore plus d'interagir avec les nombreux ***smart-contracts*** déjà déployés.\n\nPréparez-vous à une arrivée de la **transparence** dans vos apps mobiles ! \n\n*Prenez un peu d'avance sur [ethmobile.io/ethdroid](http://ethmobile.io/ethdroid)*",
+      "description": "Ethdroid 2.0 est un nouveau super-héro dont le pouvoir est de connecter votre device Android préféré au monde décentralisé.\n\nJe vous propose de venir découvrir cette librairie Android qui va, à coups sûrs, faciliter le développement de vos ÐApps Ethereum.\n\nNous verrons ensemble qu'il devient ultra simple de connecter une application Android à une blockchain publique et encore plus d'interagir avec les nombreux smart-contracts déjà déployés.\n\nPréparez-vous à une arrivée de la transparence dans vos apps mobiles !\n\nPrenez un peu d'avance sur ethmobile.io/ethdroid",
       "type": "quicky",
       "track": "mobile",
       "category": "mobile",
@@ -879,7 +874,7 @@
     {
       "id": "2051",
       "title": "Robot collaboratif IIWA : REX d'un développeur Java SI de son expérience dans l'industrie 4.0",
-      "description": "En tant que développeur Java orienté système d'information j'ai eu la chance de travailler 6 mois avec la société Kuka sur le premier **robot collaboratif industriel, l'IIWA**.\n\n![IIWA](https://upload.wikimedia.org/wikipedia/commons/b/b0/KUKA_LBR_iiwa.jpg) \n\nCe retour d’expérience aura pour but d'expliquer :\n- les principes fondamentaux des **cinématiques robot** (asservissement par position et par effort, etc.)\n- les problématiques des développeurs roboticiens et la démystification de la **programmation robotique en Java**\n- les **enjeux de l'industrie 4.0** qui cherche à se rapprocher des pratiques des Systèmes d'Information \n\n**Alors partons à la rencontre de ce secteur qui aujourd'hui à besoin de notre expérience et pourtant a beaucoup à nous apprendre**.",
+      "description": "En tant que développeur Java orienté système d'information j'ai eu la chance de travailler 6 mois avec la société Kuka sur le premier robot collaboratif industriel, l'IIWA.\n\nCe retour d’expérience aura pour but d'expliquer :\n- les principes fondamentaux des cinématiques robot (asservissement par position et par effort, etc.)\n- les problématiques des développeurs roboticiens et la démystification de la programmation robotique en Java\n- les enjeux de l'industrie 4.0 qui cherche à se rapprocher des pratiques des Systèmes d'Information\n\nAlors partons à la rencontre de ce secteur qui aujourd'hui à besoin de notre expérience et pourtant a beaucoup à nous apprendre.",
       "type": "talk",
       "track": "discovery",
       "category": "discovery",
@@ -955,7 +950,7 @@
     {
       "id": "2080",
       "title": "L'UX a sauvé mon DevOps",
-      "description": "Elle s’appelle UX, lui s’appelle Devops.  \nIls sont amoureux mais sont au coeur de disputes entre deux familles rivales tels les Capulet et les Montaigu.  \nElle partage beaucoup de points communs avec lui :\n   - Ils ne voient jamais un projet dans son intégralité.\n   - Les deux sont des concepts émergeants des années 2010 au sein de l’IT.\n   - Ils sont tous les deux au centre des équipes et servent de liant entre les développeurs.\nMais malgré tout, tout les sépare !  \n  \nCependant, les choses ont changé et les meurs ont évolué.  \n  \nUn jour, alors que notre Devops tentait en vain de convaincre sa hiérarchie, de désespoir, il se tourna vers UX et pria pour son assistance.  Ce qu’il vit alors l’enchanta et il compris … Ses faiblesses étaient ses forces et il pouvait lui apporter autant.  \nSon idéation était semblable à son automatisation.  \nQuand il lui parlait de Scale, elle comprenait même si ce n’était pas la même chose (analytics scale) et leurs objectifs étaient beaucoup trop semblables pour que ce soit une coincidence …  \n  \nVenez voir l’histoire d’amour la plus improbable des ces 10 dernières années !",
+      "description": "Elle s’appelle UX, lui s’appelle Devops.\nIls sont amoureux mais sont au coeur de disputes entre deux familles rivales tels les Capulet et les Montaigu.\nElle partage beaucoup de points communs avec lui :\n   - Ils ne voient jamais un projet dans son intégralité.\n   - Les deux sont des concepts émergeants des années 2010 au sein de l’IT.\n   - Ils sont tous les deux au centre des équipes et servent de liant entre les développeurs.\nMais malgré tout, tout les sépare !\n\nCependant, les choses ont changé et les meurs ont évolué.\n\nUn jour, alors que notre Devops tentait en vain de convaincre sa hiérarchie, de désespoir, il se tourna vers UX et pria pour son assistance.  Ce qu’il vit alors l’enchanta et il compris … Ses faiblesses étaient ses forces et il pouvait lui apporter autant.\nSon idéation était semblable à son automatisation.\nQuand il lui parlait de Scale, elle comprenait même si ce n’était pas la même chose (analytics scale) et leurs objectifs étaient beaucoup trop semblables pour que ce soit une coincidence …\n\nVenez voir l’histoire d’amour la plus improbable des ces 10 dernières années !",
       "type": "talk",
       "track": "discovery",
       "category": "discovery",
@@ -1016,7 +1011,7 @@
     {
       "id": "2107",
       "title": "DDD & Event Sourcing à la rescousse pour implémenter la GDPR ?",
-      "description": "La General Data Protection Regulation (GDPR) est le nouveau dispositif légal pour la protection des données en Europe, qui entrera en vigueur le 25 mai 2018.\nDurant ce retour d'expérience, nous introduirons les grands principes de ce dispositif, tels que le consentement explicite, la portabilité de la donnée, etc. Nous présenterons également les notions d'anonymisation, de pseudonymisation, et de durée de rétention des données, ainsi que d'autres standards nécessaires pour se conformer à la nouvelle réglementation. \nUne fois le problème présenté, nous vous montrerons comment le Domain Driven Design et les patterns compatibles, tel qu'Event Sourcing nous ont aidés à appréhender les changements les plus importants pour les SI, résultant de l'application de la GDPR.",
+      "description": "La General Data Protection Regulation (GDPR) est le nouveau dispositif légal pour la protection des données en Europe, qui entrera en vigueur le 25 mai 2018.\nDurant ce retour d'expérience, nous introduirons les grands principes de ce dispositif, tels que le consentement explicite, la portabilité de la donnée, etc. Nous présenterons également les notions d'anonymisation, de pseudonymisation, et de durée de rétention des données, ainsi que d'autres standards nécessaires pour se conformer à la nouvelle réglementation.\nUne fois le problème présenté, nous vous montrerons comment le Domain Driven Design et les patterns compatibles, tel qu'Event Sourcing nous ont aidés à appréhender les changements les plus importants pour les SI, résultant de l'application de la GDPR.",
       "type": "talk",
       "track": "cloud",
       "category": "cloud",
@@ -1042,7 +1037,6 @@
         "Cloud"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Yufeng_Guo.png",
-      "short_bio": "Yufeng is a Developer Advocate for the Google Cloud Platform",
       "social_links": [
         {
           "network": "twitter",
@@ -1055,13 +1049,12 @@
       "name": "Patrick Chanezon",
       "company": "Docker",
       "country": "USA",
-      "bio": "Patrick Chanezon is Chief Developer Advocate at Docker Inc. He helps to build Docker, the world’s leading software container platform, for developers and sysadmins. Software developer and storyteller, he spent 10 years building platforms at Netscape & Sun, then 10 years evangelizing platforms at Google, VMware & Microsoft. His main professional interest is in building and kickstarting the network effect for these wondrous two-sided markets called Platforms. He has worked on platforms for Portals, Ads, Commerce, Social, Web, Distributed Apps, and Cloud. ",
+      "bio": "Patrick Chanezon is Chief Developer Advocate at Docker Inc. He helps to build Docker, the world’s leading software container platform, for developers and sysadmins. Software developer and storyteller, he spent 10 years building platforms at Netscape & Sun, then 10 years evangelizing platforms at Google, VMware & Microsoft. His main professional interest is in building and kickstarting the network effect for these wondrous two-sided markets called Platforms. He has worked on platforms for Portals, Ads, Commerce, Social, Web, Distributed Apps, and Cloud.",
       "tags": [
         "Docker",
         "Cloud"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Patrick_Chanezon.jpg",
-      "short_bio": "Chief Developer Advocate, Docker Inc",
       "social_links": [
         {
           "network": "twitter",
@@ -1080,7 +1073,6 @@
         "Mobile"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Chet_Haase.png",
-      "short_bio": "Chet leads the Android UI Toolkit team at Google",
       "social_links": [
         {
           "network": "twitter",
@@ -1103,7 +1095,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Francois_Teychene.jpg",
-      "short_bio": "Devops la journée, JUG Leader le soir sur Montpellier, j'aime parler et discuter de developpements et surtout de Docker",
       "social_links": [
         {
           "network": "twitter",
@@ -1131,7 +1122,6 @@
         "Web"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Emmanuel_DEMEY.jpg",
-      "short_bio": "Consultant et Formateur Web chez Zenika Lille depuis avril 2015",
       "social_links": [
         {
           "network": "twitter",
@@ -1155,7 +1145,6 @@
         "GAE"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Girard_Didier.jpg",
-      "short_bio": "Cloud Rider / GDE @Google / VP Engineering @Sfeir / PhD Machine Learning @EnsDeLyon",
       "social_links": [
         {
           "network": "twitter",
@@ -1174,7 +1163,6 @@
         "Cloud"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Christophe_Jollivet.jpg",
-      "short_bio": "Agitateur technique chez Apside",
       "social_links": [
         {
           "network": "twitter",
@@ -1191,14 +1179,13 @@
       "name": "Sébastien Pertus",
       "company": "Microsoft",
       "country": "France",
-      "bio": "**Evangéliste technique** chez **Microsoft France**, **Sébastien** est en charge d'accompagner les communautés de développeurs autour des technologies innovantes de Microsoft.  \nEn charge de tout ce qui touche au développement autour du développement **Web Front** avec **TypeScript** et **Angular**, **Azure** et **NodeJS** côté **Backend**, et enfin la donnée autour de **SQL Server** et **MySQL**.  \nGrand passionné de techno, Sébastien s’intéresse à la partie **Microsoft Open Source**, allant du monde Java chez Microsoft, .Net Core sur Mac ou encore Visual Studio Code !",
+      "bio": "Evangéliste technique chez Microsoft France, Sébastien est en charge d'accompagner les communautés de développeurs autour des technologies innovantes de Microsoft.\nEn charge de tout ce qui touche au développement autour du développement Web Front avec TypeScript et Angular, Azure et NodeJS côté Backend, et enfin la donnée autour de SQL Server et MySQL.\nGrand passionné de techno, Sébastien s’intéresse à la partie Microsoft Open Source, allant du monde Java chez Microsoft, .Net Core sur Mac ou encore Visual Studio Code !",
       "tags": [
         "Typescript",
         "NodeJS",
         "Web"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Sébastien_Pertus.jpg",
-      "short_bio": "**Evangéliste technique** chez **Microsoft France**",
       "social_links": [
         {
           "network": "twitter",
@@ -1222,7 +1209,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/michel_Rousseau.jpeg",
-      "short_bio": "Passionné par le design et l'UX, je travaille chez Microsoft",
       "social_links": [
         {
           "network": "twitter",
@@ -1242,7 +1228,6 @@
         "Cloud"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/JULIEN_CORIOLAND.jpg",
-      "short_bio": "Julien Corioland est développeur et speaker",
       "social_links": [
         {
           "network": "twitter",
@@ -1265,7 +1250,6 @@
         "Blockchain"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/benjamin_fontaine.jpg",
-      "short_bio": "Développeur fullstack JEE et web",
       "social_links": [
         {
           "network": "twitter",
@@ -1288,7 +1272,6 @@
         "Cloud"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Eric_Briand.jpg",
-      "short_bio": "Développeur touche à tout depuis plus de 10 ans",
       "social_links": [
         {
           "network": "twitter",
@@ -1311,7 +1294,6 @@
         "Web"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/cyril_balit.jpeg",
-      "short_bio": "Cyril Balit est CTO Front chez SFEIR et Goole Developer Expert sur les technologies Web",
       "social_links": [
         {
           "network": "twitter",
@@ -1334,7 +1316,6 @@
         "Web"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Fabien_JUIF.jpg",
-      "short_bio": "Fabien JUIF a baigné dans l’informatique depuis son adolescence",
       "social_links": [
         {
           "network": "twitter",
@@ -1353,7 +1334,6 @@
     {
       "id": "852",
       "name": "Gautier Mechling",
-      "company": "Unknown",
       "country": "France",
       "bio": "Il y a fort longtemps, Gautier rencontra Jeff Sutherland, un vieux monsieur, qui lui apprit à faire des avions en papier. Depuis, il est Scrum master certifié (enfin c'est ce qu'il croit)",
       "tags": [
@@ -1361,7 +1341,6 @@
         "IoT"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Gautier_Mechling.jpg",
-      "short_bio": "Il y a fort longtemps, Gautier rencontra Jeff Sutherland, un vieux monsieur, qui lui apprit à faire des avions en papier",
       "social_links": [
         {
           "network": "twitter",
@@ -1382,13 +1361,12 @@
       "name": "Guillaume Lours",
       "company": "Saagie",
       "country": "France",
-      "bio": "Developpeur Senior à Saagie, touchant aussi bien au backend qu'au front  \nCo-fondateur des conferences Lean Kanban France et Codeurs en Seine  \nRed Coat à Devoxx France",
+      "bio": "Developpeur Senior à Saagie, touchant aussi bien au backend qu'au front\nCo-fondateur des conferences Lean Kanban France et Codeurs en Seine\nRed Coat à Devoxx France",
       "tags": [
         "Scala",
         "Cloud"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Guillaume_LOURS.jpg",
-      "short_bio": "Developpeur Senior à Saagie",
       "social_links": [
         {
           "network": "twitter",
@@ -1412,7 +1390,6 @@
         "Cloud"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Guillaume_Laforge.jpeg",
-      "short_bio": "Le jour, Guillaume Laforge est Developer Advocate chez Google",
       "social_links": [
         {
           "network": "twitter",
@@ -1439,7 +1416,6 @@
         "Mobile"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Jeremie_Martinez.jpg",
-      "short_bio": "Jérémie travaille aujourd'hui chez TrustBK",
       "social_links": [
         {
           "network": "twitter",
@@ -1458,7 +1434,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Houssem_BELHADJ AHMED.jpg",
-      "short_bio": "Développeur",
       "social_links": [
         {
           "network": "twitter",
@@ -1481,7 +1456,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Mickael_Jeanroy.jpg",
-      "short_bio": "Développeur le jour, open-source addict la nuit",
       "social_links": [
         {
           "network": "twitter",
@@ -1501,7 +1475,6 @@
         "Web"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Raphael_Goetter.jpg",
-      "short_bio": "Intégrateur du Dimanche, dompteur de CSS et tripoteur de HTML",
       "social_links": [
         {
           "network": "twitter",
@@ -1518,12 +1491,11 @@
       "name": "Manon Gruaz",
       "company": "ARCBEES",
       "country": "Canada",
-      "bio": "Manon est stratège/designer de Marque et d’interfaces chez Arcbees.\nAventurière de la Marque, elle met l’émotion et le sens au coeur de tous ses travaux. \nElle cherche sans relâche le sens profond dans toutes les choses dans la vie, et définit son travail comme « être à l'intérieur des cerveaux des utilisateurs ». \nGeekette curieuse et entourée au quotidien de développeurs de génie, c’est tout naturellement qu’elle a fusionné son obsession pour la Marque avec son envoûtement par les technologies, tout particulièrement l’intelligence artificielle. \nVoyageuse invétérée et enthousiaste de défis impossibles, elle essaye d’évangéliser chaque développeur et tout autre être vivant qu’elle croise à la Marque et son importance à travers sa précédente conférence : Marc, marque et Marques. C’est avec un humour parfois douteux qu’elle l’a déjà présenté au devFest de Nantes, au GWTcon de Florence et aux soirées UX à Québec. Son mot préféré est Authentique. Née française, élevée en tant que citoyenne du monde, elle est maintenant sarcastique et romantique par choix.",
+      "bio": "Manon est stratège/designer de Marque et d’interfaces chez Arcbees.\nAventurière de la Marque, elle met l’émotion et le sens au coeur de tous ses travaux.\nElle cherche sans relâche le sens profond dans toutes les choses dans la vie, et définit son travail comme « être à l'intérieur des cerveaux des utilisateurs ».\nGeekette curieuse et entourée au quotidien de développeurs de génie, c’est tout naturellement qu’elle a fusionné son obsession pour la Marque avec son envoûtement par les technologies, tout particulièrement l’intelligence artificielle.\nVoyageuse invétérée et enthousiaste de défis impossibles, elle essaye d’évangéliser chaque développeur et tout autre être vivant qu’elle croise à la Marque et son importance à travers sa précédente conférence : Marc, marque et Marques. C’est avec un humour parfois douteux qu’elle l’a déjà présenté au devFest de Nantes, au GWTcon de Florence et aux soirées UX à Québec. Son mot préféré est Authentique. Née française, élevée en tant que citoyenne du monde, elle est maintenant sarcastique et romantique par choix.",
       "tags": [
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/manon_gruaz.jpg",
-      "short_bio": "Manon est stratège/designer de Marque et d’interfaces chez Arcbees",
       "social_links": [
         {
           "network": "twitter",
@@ -1543,7 +1515,6 @@
         "Cloud"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Wassim_Chegham.jpg",
-      "short_bio": "Wassim (aka manekinekko on Twitter/Github) is a Developer Advocate",
       "social_links": [
         {
           "network": "twitter",
@@ -1567,7 +1538,6 @@
         "Mobile"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Sylvain_LEQUEUX.jpg",
-      "short_bio": "Sylvain a 7 ans d'expérience en développement d'applicatif backend, principalement Java",
       "social_links": [
         {
           "network": "twitter",
@@ -1586,7 +1556,6 @@
         "Cloud"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Jeff_Abrahamson.jpg",
-      "short_bio": "Jeff Abrahamson (ré)invente l'analyse de livres électroniques chez Jellybooks",
       "social_links": [
         {
           "network": "twitter",
@@ -1613,7 +1582,6 @@
         "Web"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Sara_HARKOUSSE.jpg",
-      "short_bio": "Sara Harkousse is a Technical Lead, front-end Web developer at Dassault Systèmes",
       "social_links": [
         {
           "network": "twitter",
@@ -1636,7 +1604,6 @@
         "Web"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Vincent_PIARD.jpg",
-      "short_bio": "Biberonné aux joies du Cobol, engraissé aux compotes Php, gavé de Java, sustenté aux sucreries C#, repu au Flex et finalement dernièrement nourri en intraveineuse de JS, je me délecte en ce moment d'IOT",
       "social_links": [
         {
           "network": "twitter",
@@ -1653,14 +1620,13 @@
       "name": "Guillaume Nicolas",
       "company": "SQLI",
       "country": "France",
-      "bio": "Depuis longtemps adepte des nouvelles technologies, j'ai découvert récemment le concept de blockchain. Depuis ce jour, je travail au quotidien sur la formalisation des concepts associés, en développant des cas d'usages destinés au grand public. \nJe suis également lead developer des projets open-source Ethereum-[java/android] et diffuse régulièrement mes compétences à travers différents médias (vidéo et articles).\nLa mobilité, l'IoT et les nouveaux modes d'intéraction, sont égalements des sujets qui me passionnent. Mon souhait est de fusionner tout ces sujets pour faire émerger de nouveaux usages.",
+      "bio": "Depuis longtemps adepte des nouvelles technologies, j'ai découvert récemment le concept de blockchain. Depuis ce jour, je travail au quotidien sur la formalisation des concepts associés, en développant des cas d'usages destinés au grand public.\nJe suis également lead developer des projets open-source Ethereum-[java/android] et diffuse régulièrement mes compétences à travers différents médias (vidéo et articles).\nLa mobilité, l'IoT et les nouveaux modes d'intéraction, sont égalements des sujets qui me passionnent. Mon souhait est de fusionner tout ces sujets pour faire émerger de nouveaux usages.",
       "tags": [
         "Blockchain",
         "Android",
         "Mobile"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Guillaume_NICOLAS.jpg",
-      "short_bio": "Depuis longtemps adepte des nouvelles technologies, j'ai découvert récemment le concept de blockchain",
       "social_links": [
         {
           "network": "twitter",
@@ -1684,7 +1650,6 @@
         "Mobile"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Yoann_Benoit.jpeg",
-      "short_bio": "Yoann est Data Scientist chez Xebia",
       "social_links": [
         {
           "network": "twitter",
@@ -1707,7 +1672,6 @@
         "Cloud"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Aline_Deschamps.jpg",
-      "short_bio": "Data Détective au grand cœur, j’aime jouer avec la donnée et tenter de découvrir tous ses secrets bien cachés",
       "social_links": [
         {
           "network": "twitter",
@@ -1730,7 +1694,6 @@
         "Cloud"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/MICKAEL_DEBONNAIRE.jpg",
-      "short_bio": "Lead Developer chez Apside Top à Tours",
       "social_links": [
         {
           "network": "twitter",
@@ -1747,13 +1710,12 @@
       "name": "Alexis Jacomy",
       "company": "Matlo",
       "country": "France",
-      "bio": "Je suis développeur spécialisé dans la visualisation de données sur le web. Passioné par la cartographie des réseaux, j'ai contribué à [Gephi](https://gephi.org/) et développé [sigma.js](http://sigmajs.org/), moteur JavaScript d'affichage de graphes.\n\nJe coordonne aujourd'hui à Nantes le développement de [Matlo](https://matlo.com), une plateforme web d'exploration de données.",
+      "bio": "Je suis développeur spécialisé dans la visualisation de données sur le web. Passioné par la cartographie des réseaux, j'ai contribué à Gephi et développé sigma.js, moteur JavaScript d'affichage de graphes.\n\nJe coordonne aujourd'hui à Nantes le développement de Matlo, une plateforme web d'exploration de données.",
       "tags": [
         "Web",
         "Dataviz"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Alexis_Jacomy.jpg",
-      "short_bio": "Je suis développeur spécialisé dans la visualisation de données sur le web",
       "social_links": [
         {
           "network": "twitter",
@@ -1776,7 +1738,6 @@
         "Web"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Delphine_Millet.jpg",
-      "short_bio": "Attirée à la fois par le design et la programmation, c’est tout naturellement que je me suis orientée vers le développement front-end",
       "social_links": [
         {
           "network": "twitter",
@@ -1800,7 +1761,6 @@
         "Mobile"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/QIAN_JIN.jpg",
-      "short_bio": "Android developer, Pythonista, IoT maker",
       "social_links": [
         {
           "network": "twitter",
@@ -1824,7 +1784,6 @@
         "W3C"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Alexandre_Morgaut.png",
-      "short_bio": "Alexandre Morgaut is a Senior Web Architect who contributed to different Web Standards and Web Project developments",
       "social_links": [
         {
           "network": "twitter",
@@ -1851,7 +1810,6 @@
         "SDK"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Zasadnyy_Vitaliy.jpg",
-      "short_bio": "Vitaliy’s background includes mobile application and game development",
       "social_links": [
         {
           "network": "twitter",
@@ -1868,13 +1826,12 @@
       "name": "Fabien Rassinier",
       "company": "Talend",
       "country": "France",
-      "bio": "Développeur front-end chez Talend où il travaille essentiellement avec Angular et React. \nIl prend un malin plaisir à faire des code reviews HTML et CSS sur des sujets de sémantique, de qualité et d'accessibilité.",
+      "bio": "Développeur front-end chez Talend où il travaille essentiellement avec Angular et React.\nIl prend un malin plaisir à faire des code reviews HTML et CSS sur des sujets de sémantique, de qualité et d'accessibilité.",
       "tags": [
         "CSS",
         "Web"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Fabien_RASSINIER.jpg",
-      "short_bio": "Développeur front-end chez Talend où il travaille essentiellement avec Angular et React",
       "social_links": [
         {
           "network": "twitter",
@@ -1901,7 +1858,6 @@
         "Web"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Franck_Abgrall.jpg",
-      "short_bio": "Consultant et formateur à Zenika Nantes, Franck est un fan incontesté de JavaScript et de son écosystème",
       "social_links": [
         {
           "network": "twitter",
@@ -1918,14 +1874,13 @@
       "name": "Etienne Caron-Petit-Pas",
       "company": "Shopify",
       "country": "Canada",
-      "bio": "Etienne is a software developer who’s worked on all tiers (server, web, mobile and embedded) of large scale software platforms. He is now a Mobile Dev Lead for Shopify, and is part of Google's Developer Expert program. \n\nEtienne got his start in programming in the mid-'80s obsessing over C64 demos, and went on to organize the NAID 95/96 demoparties. 3D animation, procedural content generation and VR are some of his hobbies, and he loves to introduce other developers to this fascinating field. He also regularly volunteers his time towards mentoring startups, developers and students in the mobile space. As part of the Montreal Android GDG, he organises meet-ups, hackathons, and gives regular talks on Android and VR-related subjects.\n\nPreviously, Etienne worked on projects ranging from high-availability stock trading software platforms, all the way to large scale municipal bike sharing systems (London’s cycle Hire amongst others). He lives in Montreal with his wife and daughter, and speaks French and English fluently.",
+      "bio": "Etienne is a software developer who’s worked on all tiers (server, web, mobile and embedded) of large scale software platforms. He is now a Mobile Dev Lead for Shopify, and is part of Google's Developer Expert program.\n\nEtienne got his start in programming in the mid-'80s obsessing over C64 demos, and went on to organize the NAID 95/96 demoparties. 3D animation, procedural content generation and VR are some of his hobbies, and he loves to introduce other developers to this fascinating field. He also regularly volunteers his time towards mentoring startups, developers and students in the mobile space. As part of the Montreal Android GDG, he organises meet-ups, hackathons, and gives regular talks on Android and VR-related subjects.\n\nPreviously, Etienne worked on projects ranging from high-availability stock trading software platforms, all the way to large scale municipal bike sharing systems (London’s cycle Hire amongst others). He lives in Montreal with his wife and daughter, and speaks French and English fluently.",
       "tags": [
         "Tango",
         "Android",
         "Mobile"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Etienne_Caron-Petit-Pas.jpg",
-      "short_bio": "Etienne is a software developer who’s worked on all tiers (server, web, mobile and embedded) of large scale software platforms",
       "social_links": [
         {
           "network": "twitter",
@@ -1948,7 +1903,6 @@
         "Mobile"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Pierre-yves_Baloche.jpg",
-      "short_bio": "Workwise, i'm a solution architect in trendy areas like IOT, ChatBots and most of all, applications for Pepper The Robot (and relatives ;), but as soon as I'm out, beside putting on my super-dad costume at home, I just love to hack around with Raspberry Pi modules and makers toys like 3D printing",
       "social_links": [
         {
           "network": "twitter",
@@ -1965,13 +1919,12 @@
       "name": "Ouadie lahdioui",
       "company": "SOAT",
       "country": "France",
-      "bio": "Développeur passionné par les challenges techniques de toutes sortes, Ouadie intervient en tant que consultant IT chez SOAT sur des missions diverses et variées, il s’est construit d'une forte expérience dans écosystèmes Java et JavaScript ainsi qu'une conviction sur les pratiques agiles et l'artisanat logiciel. Il accompagne aujourd’hui ses clients dans la mise en place des ChatBots et les techniques de l'intelligence artificielle, il contribue régulièrement au projet open source [Botkit](https://github.com/howdyai/botkit/graphs/contributors).",
+      "bio": "Développeur passionné par les challenges techniques de toutes sortes, Ouadie intervient en tant que consultant IT chez SOAT sur des missions diverses et variées, il s’est construit d'une forte expérience dans écosystèmes Java et JavaScript ainsi qu'une conviction sur les pratiques agiles et l'artisanat logiciel. Il accompagne aujourd’hui ses clients dans la mise en place des ChatBots et les techniques de l'intelligence artificielle, il contribue régulièrement au projet open source Botkit.",
       "tags": [
         "Alexa",
         "Cloud"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Ouadie_lahdioui.png",
-      "short_bio": "Développeur passionné par les challenges techniques de toutes sortes, Ouadie intervient en tant que consultant IT chez SOAT sur des missions diverses et variées, il s’est construit d'une forte expérience dans écosystèmes Java et JavaScript ainsi qu'une conviction sur les pratiques agiles et l'artisanat logiciel",
       "social_links": [
         {
           "network": "twitter",
@@ -1994,7 +1947,6 @@
         "Web"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Grégory_Bévan.jpg",
-      "short_bio": "Développeur passionné depuis 14 ans, Grégory est aujourd'hui consultant/formateur chez Zenika Nantes pour mettre à profit son expérience du monde de l'édition de logiciels Web",
       "social_links": [
         {
           "network": "twitter",
@@ -2016,7 +1968,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Peggy_AUFFRAY.jpg",
-      "short_bio": "Directeur de projets Innovation à U GIE IRIS\n\nParticipant au développement de la stratégie d’innovation, je pilote le “FabLab” interne où les collaborateurs de toute l’entreprise se croisent, développent des projets et s’acculturent aux technologies émergentes mais aussi aux nouvelles façons de faire (créativité, intelligence collective, facilitation…)",
       "social_links": [
         {
           "network": "twitter",
@@ -2040,7 +1991,6 @@
         "Mobile"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/James_Williams.jpg",
-      "short_bio": "James Williams works as the Android Curriculum Lead at Udacity where he shapes the development of Android content for the company",
       "social_links": [
         {
           "network": "twitter",
@@ -2067,7 +2017,6 @@
         "Mobile"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Steven_Watremez.jpg",
-      "short_bio": "Steven Watremez est développeur d’application mobile Android et iOS à Niji Rennes",
       "social_links": [
         {
           "network": "twitter",
@@ -2094,7 +2043,6 @@
         "Mobile"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/David_Fournier.jpeg",
-      "short_bio": "After a PhD in Computer Science, David Fournier started working for a quantitative optimization software company, making Java applications and softwares to optimize energy consumptions of cities, reduce delays in trains or decrease the number of operations on super tankers",
       "social_links": [
         {
           "network": "github",
@@ -2112,7 +2060,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Pierre_Salmon.png",
-      "short_bio": "Ingénieur passionné de jeux de société et de technologie ancestral comme le C++",
       "social_links": [
         {
           "network": "github",
@@ -2130,7 +2077,6 @@
         "Cloud"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Charles-Axel_Dein.jpg",
-      "short_bio": "Charles-Axel is an Engineering Manager at Uber and currently leads its Payments Onboarding Platform",
       "social_links": [
         {
           "network": "github",
@@ -2150,7 +2096,6 @@
         "Cloud"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Simona_Cotin.jpg",
-      "short_bio": "Communities power Simona up and that’s why she is co-organising the Javascript London meetup",
       "social_links": [
         {
           "network": "twitter",
@@ -2176,7 +2121,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Sébastien_CHARRIER.jpeg",
-      "short_bio": "Sébastien Charrier est développeur, entrepreneur, musicien et papa",
       "social_links": [
         {
           "network": "twitter",
@@ -2198,7 +2142,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Erwan_Richard.jpg",
-      "short_bio": "Développeur PHP depuis 2006",
       "social_links": [
         {
           "network": "twitter",
@@ -2221,7 +2164,6 @@
         "MicroServices"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Alex_Van Boxel.jpg",
-      "short_bio": "Alex is a Google Developer Expert Cloud, polyglot, technology enthusiast and works as Big Data Architect at Vente-Exclusive",
       "social_links": [
         {
           "network": "twitter",
@@ -2247,7 +2189,6 @@
         "Web"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Uri_Uri Shaked.jpg",
-      "short_bio": "Uri Shaked is a Google Developer Expert for Web Technologies",
       "social_links": [
         {
           "network": "twitter",
@@ -2268,13 +2209,12 @@
       "name": "Maxence Labusquiere",
       "company": "Zenika",
       "country": "France",
-      "bio": "Consultant-Formateur chez Zenika ayant travaillé dans de nombreux secteurs comme les banques (BNP), l'énergie (ENEDIS), l'industrie (KUKA) et les télécom (SFR). \nDevops convaincu,  développeur Java, extrêmement curieux.",
+      "bio": "Consultant-Formateur chez Zenika ayant travaillé dans de nombreux secteurs comme les banques (BNP), l'énergie (ENEDIS), l'industrie (KUKA) et les télécom (SFR).\nDevops convaincu,  développeur Java, extrêmement curieux.",
       "tags": [
         "Kuka",
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Maxence_Labusquiere.jpg",
-      "short_bio": "Consultant-Formateur chez Zenika ayant travaillé dans de nombreux secteurs comme les banques (BNP), l'énergie (ENEDIS), l'industrie (KUKA) et les télécom (SFR)",
       "social_links": [
         {
           "network": "twitter",
@@ -2290,7 +2230,6 @@
       "id": "2591",
       "name": "Cyril Mottier",
       "country": "France",
-      "company": "Unknown",
       "bio": "Cyril has been leading and managing several mobile teams in the past. He is an expert in Android & mobile in general. Passionate about technology and design, Cyril is an avid lover of Android and a multi-skilled engineer. His motto: “Do less, but do it insanely great”",
       "tags": [
         "Android",
@@ -2298,7 +2237,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Cyril_Mottier.jpeg",
-      "short_bio": "Cyril has been leading and managing several mobile teams in the past",
       "social_links": [
         {
           "network": "twitter",
@@ -2317,7 +2255,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Mathieu_Calba.jpg",
-      "short_bio": "Mathieu est Lead Android Developer chez LumApps et GDG lead à Lyon avec le GDG Lyon Android",
       "social_links": [
         {
           "network": "twitter",
@@ -2344,7 +2281,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Hubert_SABLONNIÈRE.jpg",
-      "short_bio": "Hubert est passionné par le Web",
       "social_links": [
         {
           "network": "twitter",
@@ -2361,14 +2297,13 @@
       "name": "Rachel Andrew",
       "company": "edgeofmyseat.com",
       "country": "England",
-      "bio": "Rachel Andrew is a front and back-end web developer, author and speaker. Her books include the recent [Get Ready for CSS Grid Layout](https://abookapart.com/products/get-ready-for-css-grid-layout) and she is a regular contributor to a number of publications both on and offline. Rachel is co-founder of the CMS [Perch](https://grabaperch.com), a Google Developer Expert and an Invited Expert to the CSS Working Group. She writes about business and technology on her own site at [rachelandrew.co.uk](https://rachelandrew.co.uk).",
+      "bio": "Rachel Andrew is a front and back-end web developer, author and speaker. Her books include the recent Get Ready for CSS Grid Layout and she is a regular contributor to a number of publications both on and offline. Rachel is co-founder of the CMS Perch, a Google Developer Expert and an Invited Expert to the CSS Working Group. She writes about business and technology on her own site at rachelandrew.co.uk.",
       "tags": [
         "CSS",
         "HTML5",
         "Web"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Rachel_Andrew.jpg",
-      "short_bio": "Rachel Andrew is a front and back-end web developer, author and speaker",
       "social_links": [
         {
           "network": "twitter",
@@ -2396,7 +2331,6 @@
         "Web"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Audrey_Garreau.jpg",
-      "short_bio": "Audrey est Intégratrice Web senior",
       "social_links": [
         {
           "network": "twitter",
@@ -2415,7 +2349,6 @@
         "Web"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Hugo_Mougard.jpg",
-      "short_bio": "Hugo Mougard était doctorant à l’Université de Nantes puis ingénieur R&D dans une startup de Deep Learning avant de monter sa startup en analyse de texte",
       "social_links": [
         {
           "network": "github",
@@ -2434,7 +2367,6 @@
         "Cloud"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Pierre-Yves_Aillet.jpg",
-      "short_bio": "Je travaille dans l’informatique depuis 15 ans sur des technologies variées allant de PHP à Java en passant par Javascript",
       "social_links": [
         {
           "network": "twitter",
@@ -2457,7 +2389,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Remi_Roche.jpg",
-      "short_bio": "Diplômé de l’ECE, HEC Paris et NYU Stern, Rémi est passionné de trading des crypto monnaies",
       "social_links": []
     },
     {
@@ -2465,13 +2396,12 @@
       "name": "Sébastien Ravoux",
       "company": "Onepoint",
       "country": "France",
-      "bio": "Leader Expertises & Innovations @ Onepoint Atlantique\n17 ans d'expériences dans les technos du web et autres\nJ'anime des équipes d'experts transverses pour développer l'innovation, l'industrialisation, la capitalisation sur des projets de toutes tailles. \nMon cœur technologique est historiquement positionné sur les solutions Microsoft (.Net, Azure, SharePoint, ASP.NET), mais de plus en plus vers l'open source, l'IoT, les Réalités Virtuelles/Mixtes.",
+      "bio": "Leader Expertises & Innovations @ Onepoint Atlantique\n17 ans d'expériences dans les technos du web et autres\nJ'anime des équipes d'experts transverses pour développer l'innovation, l'industrialisation, la capitalisation sur des projets de toutes tailles.\nMon cœur technologique est historiquement positionné sur les solutions Microsoft (.Net, Azure, SharePoint, ASP.NET), mais de plus en plus vers l'open source, l'IoT, les Réalités Virtuelles/Mixtes.",
       "tags": [
         "HoloLens",
         "Mobile"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/SEBASTIEN_RAVOUX.jpg",
-      "short_bio": "Leader Expertises & Innovations @ Onepoint Atlantique\n17 ans d'expériences dans les technos du web et autres\nJ'anime des équipes d'experts transverses pour développer l'innovation, l'industrialisation, la capitalisation sur des projets de toutes tailles",
       "social_links": [
         {
           "network": "twitter",
@@ -2495,7 +2425,6 @@
         "Mobile"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Nicolas_Roard.jpg",
-      "short_bio": "Nicolas worked over the years on various projects at Google, from the HTML5 support in Android Browser, implementing the webview hardware acceleration in Honeycomb, or writing a scalable and non-destructive photo editor in JB/KitKat",
       "social_links": [
         {
           "network": "twitter",
@@ -2518,7 +2447,6 @@
         "Mobile"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Romain_Guy.jpg",
-      "short_bio": "In this session you will discover why your application doesn't look the same across multiple devices and why your designer's mock looks different on your computer",
       "social_links": [
         {
           "network": "twitter",
@@ -2546,7 +2474,6 @@
         "Kubernetes"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Derek_Derek Parker.jpg",
-      "short_bio": "Derek is a Software Engineer at CoreOS hacking on Kubernetes and distributed systems related software",
       "social_links": [
         {
           "network": "twitter",
@@ -2562,14 +2489,12 @@
       "id": "2681",
       "name": "Guillaume Chau",
       "country": "France",
-      "company": "Unknown",
-      "bio": "Membre de la Core Team de Vue.js, Guillaume est le créateur d'intégrations avec Meteor ([vue-meteor](https://github.com/Akryum/vue-meteor/)) et Apollo GraphQL ([vue-apollo](https://github.com/Akryum/vue-apollo)) afin d'aider les développeurs à créer des applications Vue avec une forte intéractivité et du temps-réel. Il a également créé l'application vue-curated permettant de trouver les bonnes librairies pour développer une application, et il contribue à l'écosystème avec des outils comme [vue-virtual-scroller](https://github.com/Akryum/vue-virtual-scroller) et [vue-supply](https://github.com/Akryum/vue-supply).",
+      "bio": "Membre de la Core Team de Vue.js, Guillaume est le créateur d'intégrations avec Meteor (vue-meteor) et Apollo GraphQL (vue-apollo) afin d'aider les développeurs à créer des applications Vue avec une forte intéractivité et du temps-réel. Il a également créé l'application vue-curated permettant de trouver les bonnes librairies pour développer une application, et il contribue à l'écosystème avec des outils comme vue-virtual-scroller et vue-supply.",
       "tags": [
         "VueJS",
         "Web"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Guillaume_Chau.jpg",
-      "short_bio": "Membre de la Core Team de Vue",
       "social_links": [
         {
           "network": "twitter",
@@ -2592,7 +2517,6 @@
         "Mobile"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Miguel_MATHE.jpg",
-      "short_bio": "Expert sur les technologies Microsoft depuis plus de 10 ans, je me passionne actuellement pour tous les nouveaux types d'interfaces (AR, VR, MR, Robotique) et plus particulièrement sur l'émergence de la réalité mixte grâce au casque Hololens de Microsoft",
       "social_links": [
         {
           "network": "twitter",
@@ -2612,7 +2536,6 @@
         "Mobile"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Stephane_Kermabon.jpg",
-      "short_bio": "Développeur depuis plus de 20 ans dans le monde Java ou j'ai connue toutes les versions du langage je reste curieux de ce qui tourne autour du Java, que ce soit le front avec Angular et React, ou des autres langages",
       "social_links": [
         {
           "network": "twitter",
@@ -2635,7 +2558,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Olivier_Godement.jpg",
-      "short_bio": "Olivier Godement est en charge des opérations et du développement de Stripe auprès des startups en France et en Europe du Sud",
       "social_links": [
         {
           "network": "twitter",
@@ -2654,7 +2576,6 @@
         "Web"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Alexandra_Etienne.jpg",
-      "short_bio": "AR/VR Evangelist who loves open source! Co- creator of AR",
       "social_links": [
         {
           "network": "twitter",
@@ -2672,7 +2593,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Anthony_GORSON.jpg",
-      "short_bio": "Ingénieur consultant au CHU de Nantes depuis plus d'une année, ayant travaillé dans des secteurs fonctionnellement complexes comme la sécurité informatique en milieu bancaire, j'apporte mon expertise au CHU afin de développer des solutions innovantes pour le futur hôpital numérique",
       "social_links": []
     },
     {
@@ -2686,7 +2606,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Mélanie_Bats.jpg",
-      "short_bio": "I am Mélanie Bats and I work as a software developer at Obeo",
       "social_links": [
         {
           "network": "twitter",
@@ -2713,7 +2632,6 @@
         "Web"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Jerome_Etienne.jpg",
-      "short_bio": "Creator of AR.js",
       "social_links": [
         {
           "network": "twitter",
@@ -2739,7 +2657,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com",
-      "short_bio": "Lead Developper pour le CHU Nantes",
       "social_links": []
     },
     {
@@ -2754,7 +2671,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Estelle_Landry.jpg",
-      "short_bio": "Passionnée d'UX et PO à ces heures perdues",
       "social_links": [
         {
           "network": "google+",
@@ -2773,7 +2689,6 @@
         "Cloud"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Jérôme_Avoustin.png",
-      "short_bio": "Software craftsman, fan d'eXtreme Programming, de DDD et de rugby",
       "social_links": [
         {
           "network": "twitter",
@@ -2796,7 +2711,6 @@
         "Cloud"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Mathieu_Humbert.jpeg",
-      "short_bio": "Tech lead @Accenture & développeur passionné depuis plus de 10 ans",
       "social_links": [
         {
           "network": "twitter",
@@ -2818,7 +2732,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Philippe_Charriere.jpg",
-      "short_bio": "Tech Evangelist + CSO @Clever_Cloud",
       "social_links": [
         {
           "network": "twitter",
@@ -2840,7 +2753,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Anais_Vivion.jpg",
-      "short_bio": "Directrice Générale et Associée BeApp",
       "social_links": [
         {
           "network": "twitter",
@@ -2858,7 +2770,6 @@
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Thomas_Gx.jpg",
-      "short_bio": "Thomas Gx est le fondateur de CommitStrip",
       "social_links": [
         {
           "network": "twitter",
@@ -2878,7 +2789,6 @@
         "Cloud"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Asim_Hussain.png",
-      "short_bio": "Cloud Developer Advocate",
       "social_links": [
         {
           "network": "twitter",
