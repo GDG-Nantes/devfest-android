@@ -5,25 +5,26 @@ import android.arch.lifecycle.AndroidViewModel
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import android.support.v4.util.ArraySet
-import com.gdgnantes.devfest.android.model.Session
 
 
 class FiltersViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val _filters: MutableLiveData<Set<Session.Track>> = MutableLiveData()
+    private val _filters: MutableLiveData<Set<Filter>> = MutableLiveData()
 
     init {
         _filters.value = emptySet()
     }
 
-    fun isFilter(track: Session.Track) = track in _filters.value ?: emptySet()
+    fun isFilter(filter: Filter) = filter in _filters.value ?: emptySet()
 
-    fun toggleFilter(track: Session.Track) {
+    fun hasFilters() = !(_filters.value?.isEmpty() ?: true)
+
+    fun toggleFilter(filter: Filter) {
         val newFilters = ArraySet(_filters.value)
-        if (isFilter(track)) {
-            newFilters.remove(track)
+        if (isFilter(filter)) {
+            newFilters.remove(filter)
         } else {
-            newFilters.add(track)
+            newFilters.add(filter)
         }
         _filters.value = newFilters
     }
@@ -32,9 +33,7 @@ class FiltersViewModel(application: Application) : AndroidViewModel(application)
         _filters.value = emptySet()
     }
 
-    fun hasFilters() = !(_filters.value?.isEmpty() ?: true)
-
-    val filters: LiveData<Set<Session.Track>>
+    val filters: LiveData<Set<Filter>>
         get() = _filters
 
 }

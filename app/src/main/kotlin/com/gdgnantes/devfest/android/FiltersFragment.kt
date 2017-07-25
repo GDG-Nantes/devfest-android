@@ -14,7 +14,9 @@ import android.widget.TextView
 import com.gdgnantes.devfest.android.app.BaseFragment
 import com.gdgnantes.devfest.android.model.Session
 import com.gdgnantes.devfest.android.view.inflate
+import com.gdgnantes.devfest.android.viewmodel.BookmarkFilter
 import com.gdgnantes.devfest.android.viewmodel.FiltersViewModel
+import com.gdgnantes.devfest.android.viewmodel.TrackFilter
 
 class FiltersFragment : BaseFragment() {
 
@@ -82,38 +84,44 @@ class FiltersFragment : BaseFragment() {
 
     private inner class FiltersAdapter : RecyclerView.Adapter<FiltersHolder>() {
 
-        val tracks = Session.Track.values()
+        val filters = listOf(
+                BookmarkFilter,
+                TrackFilter.get(Session.Track.Cloud),
+                TrackFilter.get(Session.Track.Discovery),
+                TrackFilter.get(Session.Track.Mobile),
+                TrackFilter.get(Session.Track.Web))
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FiltersHolder =
                 FiltersHolder(parent.inflate(viewType, false))
 
-        override fun getItemViewType(position: Int): Int = when (position) {
-            0 -> R.layout.list_item_filter_bookmarks
+        override fun getItemViewType(position: Int): Int = when (filters[position]) {
+            is BookmarkFilter -> R.layout.list_item_filter_bookmarks
             else -> R.layout.list_item_filter_track
         }
 
-        override fun getItemCount(): Int = tracks.size + 1
+        override fun getItemCount(): Int = filters.size
 
         override fun onBindViewHolder(holder: FiltersHolder, position: Int) {
-            if (position == 0) {
-                // TODO
-            } else {
-                val track = tracks[position - 1]
+            val filter = filters[position]
+            if (filter is TrackFilter) {
+                val track = filter.track
                 with(holder.title) {
                     text = track.getName(context)
                     setTextColor(track.foregroundColor)
                     setBackgroundColor(track.backgroundColor)
                 }
-                holder.checkBox.isChecked = filtersModel.isFilter(track)
             }
+            holder.checkBox.isChecked = filtersModel.isFilter(filters[position])
         }
     }
 
     val onItemClickListener = View.OnClickListener { view ->
         recyclerView?.let { rv ->
             val position = rv.getChildLayoutPosition(view)
-            if (position != RecyclerView.NO_POSITION && position != 0) {
-                filtersModel.toggleFilter(Session.Track.values()[position - 1])
+            if (position != RecyclerView.NO_POSITION) {
+                filtersAdapter?.let {
+                    filtersModel.toggleFilter(it.filters[position])
+                }
                 (rv.findViewHolderForLayoutPosition(position) as FiltersHolder).checkBox.toggle()
                 updateClearMenuItem()
             }

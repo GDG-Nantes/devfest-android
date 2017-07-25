@@ -12,8 +12,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.gdgnantes.devfest.android.app.BaseFragment
 import com.gdgnantes.devfest.android.format.text.DateTimeFormatter
-import com.gdgnantes.devfest.android.model.Session
 import com.gdgnantes.devfest.android.view.bind
+import com.gdgnantes.devfest.android.viewmodel.Filter
 import com.gdgnantes.devfest.android.viewmodel.FiltersViewModel
 import com.gdgnantes.devfest.android.viewmodel.SessionsViewModel
 import java.util.*
@@ -74,8 +74,8 @@ class SessionsFragment : BaseFragment() {
         recyclerView.visibility = if (isEmpty) View.GONE else View.VISIBLE
     }
 
-    private inner class FiltersObserver : Observer<Set<Session.Track>> {
-        override fun onChanged(filters: Set<Session.Track>?) {
+    private inner class FiltersObserver : Observer<Set<Filter>> {
+        override fun onChanged(filters: Set<Filter>?) {
             adapter.filters = filters ?: emptySet()
         }
     }
@@ -100,7 +100,7 @@ class SessionsFragment : BaseFragment() {
         private var _items: List<SessionsViewModel.Data> = emptyList()
         private var originalItems: List<SessionsViewModel.Data> = emptyList()
 
-        var filters: Set<Session.Track> = emptySet()
+        var filters: Set<Filter> = emptySet()
             set(filters) {
                 field = filters
                 updateItems()
@@ -149,7 +149,10 @@ class SessionsFragment : BaseFragment() {
             if (filters.isEmpty()) {
                 _items = originalItems
             } else {
-                _items = originalItems.filter { it.session.track in filters }
+                _items = originalItems.
+                        filter { (session) ->
+                            filters.all { it.accept(context, session) }
+                        }
             }
             notifyDataSetChanged()
             updateAdapters()
