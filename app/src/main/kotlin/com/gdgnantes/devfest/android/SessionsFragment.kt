@@ -12,8 +12,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.gdgnantes.devfest.android.app.BaseFragment
 import com.gdgnantes.devfest.android.format.text.DateTimeFormatter
-import com.gdgnantes.devfest.android.model.Session
 import com.gdgnantes.devfest.android.view.bind
+import com.gdgnantes.devfest.android.viewmodel.Filter
 import com.gdgnantes.devfest.android.viewmodel.FiltersViewModel
 import com.gdgnantes.devfest.android.viewmodel.SessionsViewModel
 import java.util.*
@@ -22,6 +22,7 @@ import java.util.*
 class SessionsFragment : BaseFragment() {
 
     private lateinit var recyclerView: RecyclerView
+    private lateinit var emptyView: View
     private lateinit var adapter: SessionsAdapter
 
     companion object {
@@ -56,7 +57,9 @@ class SessionsFragment : BaseFragment() {
 
         adapter = SessionsAdapter(context)
 
-        recyclerView = view.findViewById<RecyclerView>(android.R.id.list)
+        emptyView = view.findViewById(R.id.empty_view)
+
+        recyclerView = view.findViewById(android.R.id.list)
         recyclerView.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
         recyclerView.adapter = adapter
     }
@@ -65,8 +68,14 @@ class SessionsFragment : BaseFragment() {
         recyclerView.smoothScrollToPosition(0)
     }
 
-    private inner class FiltersObserver : Observer<Set<Session.Track>> {
-        override fun onChanged(filters: Set<Session.Track>?) {
+    private fun updateAdapters() {
+        val isEmpty = adapter.items.isEmpty()
+        emptyView.visibility = if (isEmpty) View.VISIBLE else View.GONE
+        recyclerView.visibility = if (isEmpty) View.GONE else View.VISIBLE
+    }
+
+    private inner class FiltersObserver : Observer<Set<Filter>> {
+        override fun onChanged(filters: Set<Filter>?) {
             adapter.filters = filters ?: emptySet()
         }
     }
@@ -91,7 +100,7 @@ class SessionsFragment : BaseFragment() {
         private var _items: List<SessionsViewModel.Data> = emptyList()
         private var originalItems: List<SessionsViewModel.Data> = emptyList()
 
-        var filters: Set<Session.Track> = emptySet()
+        var filters: Set<Filter> = emptySet()
             set(filters) {
                 field = filters
                 updateItems()
@@ -140,9 +149,13 @@ class SessionsFragment : BaseFragment() {
             if (filters.isEmpty()) {
                 _items = originalItems
             } else {
-                _items = originalItems.filter { it.session.track in filters }
+                _items = originalItems.
+                        filter { (session) ->
+                            filters.all { it.accept(context, session) }
+                        }
             }
             notifyDataSetChanged()
+            updateAdapters()
         }
 
         private fun getSectionId(position: Int): Int {

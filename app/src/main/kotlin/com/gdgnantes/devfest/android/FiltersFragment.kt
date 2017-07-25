@@ -14,7 +14,9 @@ import android.widget.TextView
 import com.gdgnantes.devfest.android.app.BaseFragment
 import com.gdgnantes.devfest.android.model.Session
 import com.gdgnantes.devfest.android.view.inflate
+import com.gdgnantes.devfest.android.viewmodel.BookmarkFilter
 import com.gdgnantes.devfest.android.viewmodel.FiltersViewModel
+import com.gdgnantes.devfest.android.viewmodel.TrackFilter
 
 class FiltersFragment : BaseFragment() {
 
@@ -82,21 +84,34 @@ class FiltersFragment : BaseFragment() {
 
     private inner class FiltersAdapter : RecyclerView.Adapter<FiltersHolder>() {
 
-        val tracks = Session.Track.values()
+        val filters = listOf(
+                BookmarkFilter,
+                TrackFilter.get(Session.Track.Cloud),
+                TrackFilter.get(Session.Track.Discovery),
+                TrackFilter.get(Session.Track.Mobile),
+                TrackFilter.get(Session.Track.Web))
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FiltersHolder =
-                FiltersHolder(parent.inflate(R.layout.list_item_filter, false))
+                FiltersHolder(parent.inflate(viewType, false))
 
-        override fun getItemCount(): Int = tracks.size
+        override fun getItemViewType(position: Int): Int = when (filters[position]) {
+            is BookmarkFilter -> R.layout.list_item_filter_bookmarks
+            else -> R.layout.list_item_filter_track
+        }
+
+        override fun getItemCount(): Int = filters.size
 
         override fun onBindViewHolder(holder: FiltersHolder, position: Int) {
-            val track = tracks[position]
-            with(holder.title) {
-                text = track.getName(context)
-                setTextColor(track.foregroundColor)
-                setBackgroundColor(track.backgroundColor)
+            val filter = filters[position]
+            if (filter is TrackFilter) {
+                val track = filter.track
+                with(holder.title) {
+                    text = track.getName(context)
+                    setTextColor(track.foregroundColor)
+                    setBackgroundColor(track.backgroundColor)
+                }
             }
-            holder.checkBox.isChecked = filtersModel.isFilter(track)
+            holder.checkBox.isChecked = filtersModel.isFilter(filters[position])
         }
     }
 
@@ -104,7 +119,9 @@ class FiltersFragment : BaseFragment() {
         recyclerView?.let { rv ->
             val position = rv.getChildLayoutPosition(view)
             if (position != RecyclerView.NO_POSITION) {
-                filtersModel.toggleFilter(Session.Track.values()[position])
+                filtersAdapter?.let {
+                    filtersModel.toggleFilter(it.filters[position])
+                }
                 (rv.findViewHolderForLayoutPosition(position) as FiltersHolder).checkBox.toggle()
                 updateClearMenuItem()
             }
