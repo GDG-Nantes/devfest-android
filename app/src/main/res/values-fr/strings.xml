@@ -23,6 +23,7 @@
     <string name="session_info_room">Salle %1$s</string>
     <string name="session_language_inEnglish">En anglais</string>
     <string name="session_language_inFrench">En français</string>
+    <string name="session_noSessionFound">Aucune session trouvée</string>
     <string name="session_subtitle">Salle %1$s</string>
     <string name="session_title">Détails de la session</string>
 

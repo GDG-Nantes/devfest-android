@@ -22,6 +22,7 @@ import java.util.*
 class SessionsFragment : BaseFragment() {
 
     private lateinit var recyclerView: RecyclerView
+    private lateinit var emptyView: View
     private lateinit var adapter: SessionsAdapter
 
     companion object {
@@ -56,13 +57,21 @@ class SessionsFragment : BaseFragment() {
 
         adapter = SessionsAdapter(context)
 
-        recyclerView = view.findViewById<RecyclerView>(android.R.id.list)
+        emptyView = view.findViewById(R.id.empty_view)
+
+        recyclerView = view.findViewById(android.R.id.list)
         recyclerView.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
         recyclerView.adapter = adapter
     }
 
     fun scrollToTop() {
         recyclerView.smoothScrollToPosition(0)
+    }
+
+    private fun updateAdapters() {
+        val isEmpty = adapter.items.isEmpty()
+        emptyView.visibility = if (isEmpty) View.VISIBLE else View.GONE
+        recyclerView.visibility = if (isEmpty) View.GONE else View.VISIBLE
     }
 
     private inner class FiltersObserver : Observer<Set<Session.Track>> {
@@ -143,6 +152,7 @@ class SessionsFragment : BaseFragment() {
                 _items = originalItems.filter { it.session.track in filters }
             }
             notifyDataSetChanged()
+            updateAdapters()
         }
 
         private fun getSectionId(position: Int): Int {
