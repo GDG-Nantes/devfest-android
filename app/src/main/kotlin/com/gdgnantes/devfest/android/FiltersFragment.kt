@@ -85,26 +85,35 @@ class FiltersFragment : BaseFragment() {
         val tracks = Session.Track.values()
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FiltersHolder =
-                FiltersHolder(parent.inflate(R.layout.list_item_filter, false))
+                FiltersHolder(parent.inflate(viewType, false))
 
-        override fun getItemCount(): Int = tracks.size
+        override fun getItemViewType(position: Int): Int = when (position) {
+            0 -> R.layout.list_item_filter_bookmarks
+            else -> R.layout.list_item_filter_track
+        }
+
+        override fun getItemCount(): Int = tracks.size + 1
 
         override fun onBindViewHolder(holder: FiltersHolder, position: Int) {
-            val track = tracks[position]
-            with(holder.title) {
-                text = track.getName(context)
-                setTextColor(track.foregroundColor)
-                setBackgroundColor(track.backgroundColor)
+            if (position == 0) {
+                // TODO
+            } else {
+                val track = tracks[position - 1]
+                with(holder.title) {
+                    text = track.getName(context)
+                    setTextColor(track.foregroundColor)
+                    setBackgroundColor(track.backgroundColor)
+                }
+                holder.checkBox.isChecked = filtersModel.isFilter(track)
             }
-            holder.checkBox.isChecked = filtersModel.isFilter(track)
         }
     }
 
     val onItemClickListener = View.OnClickListener { view ->
         recyclerView?.let { rv ->
             val position = rv.getChildLayoutPosition(view)
-            if (position != RecyclerView.NO_POSITION) {
-                filtersModel.toggleFilter(Session.Track.values()[position])
+            if (position != RecyclerView.NO_POSITION && position != 0) {
+                filtersModel.toggleFilter(Session.Track.values()[position - 1])
                 (rv.findViewHolderForLayoutPosition(position) as FiltersHolder).checkBox.toggle()
                 updateClearMenuItem()
             }
