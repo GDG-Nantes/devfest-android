@@ -17,6 +17,7 @@
 
     <style name="PreviewTheme.DevFestNantes.Home">
         <item name="android:actionBarSize">104dp</item>
+        <item name="android:windowBackground">@color/cloud</item>
         <item name="runtimeTheme">@style/Theme.DevFestNantes.Home</item>
     </style>
 

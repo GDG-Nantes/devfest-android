@@ -46,7 +46,6 @@ class MainActivity : BaseActivity() {
         viewPager = findViewById(R.id.view_pager)
         viewPager.adapter = adapter
         viewPager.pageMargin = resources.getDimensionPixelSize(R.dimen.spacing_medium)
-        viewPager.setPageMarginDrawable(R.drawable.spacer_medium_cloud)
 
         drawerLayout = findViewById(R.id.drawer_layout)
 
