@@ -13,7 +13,7 @@ object ThemeUtils {
     fun ensureRuntimeTheme(context: Context) {
         context.theme.resolveAttribute(R.attr.runtimeTheme, typedValue, true)
         require(typedValue.resourceId > 0) {
-            "runtimeTheme not defined in the preview theme"
+            "runtimeTheme is not defined in the preview theme"
         }
         context.setTheme(typedValue.resourceId)
     }
