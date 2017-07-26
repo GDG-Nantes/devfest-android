@@ -70,7 +70,7 @@ class MainActivity : BaseActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.action_filter -> openFilters()
+            R.id.action_filter -> openFiltersDrawer()
             R.id.action_about -> startActivity(AboutActivity.newIntent(this))
             R.id.action_show_licenses -> startActivity(LicensesActivity.newIntent(this))
             else -> return super.onOptionsItemSelected(item)
@@ -78,7 +78,7 @@ class MainActivity : BaseActivity() {
         return true
     }
 
-    private fun openFilters() {
+    private fun openFiltersDrawer() {
         drawerLayout.openDrawer(Gravity.RIGHT)
     }
 
