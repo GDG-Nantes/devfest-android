@@ -65,9 +65,8 @@ class SessionFragment : BaseFragment() {
         rootView = view.findViewById(R.id.root)
         titleView = view.findViewById(R.id.title)
 
-        bookmarkButton = view.findViewById<FloatingActionButton>(R.id.btn_bookmark).apply {
-            setOnClickListener { toggleFavorite() }
-        }
+        bookmarkButton = view.findViewById(R.id.btn_bookmark)
+        bookmarkButton!!.setOnClickListener { toggleFavorite() }
 
         view.findViewById<ScrollView>(R.id.scroll_view).onScrollChangeListener = { _, _, _ ->
             updateTitle()
@@ -83,6 +82,13 @@ class SessionFragment : BaseFragment() {
             title = it!!.session.title
             displaySession(it, view!!)
         })
+    }
+
+    override fun onDestroyView() {
+        rootView = null
+        titleView = null
+        bookmarkButton = null
+        super.onDestroyView()
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -192,7 +198,7 @@ class SessionFragment : BaseFragment() {
     }
 
     private fun updateBookmark() {
-        bookmarkButton?.apply {
+        bookmarkButton!!.apply {
             val favoriteManager = BookmarkManager.from(context)
             if (favoriteManager.isBookmarked(sessionId)) {
                 setImageResource(R.drawable.ic_action_unbookmark)
@@ -203,8 +209,8 @@ class SessionFragment : BaseFragment() {
     }
 
     private fun updateTitle() {
-        titleView?.getDrawingRect(tempRect)
-        rootView?.offsetDescendantRectToMyCoords(titleView, tempRect)
+        titleView!!.getDrawingRect(tempRect)
+        rootView!!.offsetDescendantRectToMyCoords(titleView, tempRect)
 
         val oldDisplayingTitle = displayingTitle
         val dimension = if (displayingTitle) tempRect.top else tempRect.bottom

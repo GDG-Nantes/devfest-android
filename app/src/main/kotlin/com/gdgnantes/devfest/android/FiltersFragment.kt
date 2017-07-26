@@ -61,10 +61,16 @@ class FiltersFragment : BaseFragment() {
 
         filtersAdapter = FiltersAdapter()
 
-        recyclerView = view.findViewById<RecyclerView>(android.R.id.list).apply {
+        recyclerView = view.findViewById(android.R.id.list)
+        recyclerView!!.apply {
             addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
             adapter = filtersAdapter
         }
+    }
+
+    override fun onDestroyView() {
+        recyclerView = null
+        super.onDestroyView()
     }
 
     private fun updateClearMenuItem() {
@@ -116,13 +122,13 @@ class FiltersFragment : BaseFragment() {
     }
 
     val onItemClickListener = View.OnClickListener { view ->
-        recyclerView?.let { rv ->
-            val position = rv.getChildLayoutPosition(view)
+        recyclerView!!.apply {
+            val position = getChildLayoutPosition(view)
             if (position != RecyclerView.NO_POSITION) {
                 filtersAdapter?.let {
                     filtersModel.toggleFilter(it.filters[position])
                 }
-                (rv.findViewHolderForLayoutPosition(position) as FiltersHolder).checkBox.toggle()
+                (findViewHolderForLayoutPosition(position) as FiltersHolder).checkBox.toggle()
                 updateClearMenuItem()
             }
         }
