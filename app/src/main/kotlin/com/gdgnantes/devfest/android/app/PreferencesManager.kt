@@ -2,6 +2,7 @@ package com.gdgnantes.devfest.android.app
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.gdgnantes.devfest.android.AppConfig
 import com.gdgnantes.devfest.android.content.SharedPreferencesOpenHelper
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
@@ -27,12 +28,14 @@ class PreferencesManager private constructor(context: Context) {
             companion object {
                 const val SELECTED_TAB = "prefs.selectedTab"
                 const val BOOKMARKS = "prefs.bookmarks"
+                const val SCHEDULE_ETAG = "prefs.scheduleETag"
             }
         }
     }
 
     var selectedTab: String? by openHelper.sharedPreferences.string(Keys.SELECTED_TAB)
     var bookmarks: Set<String> by openHelper.sharedPreferences.stringSet(Keys.BOOKMARKS)
+    var scheduleETag: String? by openHelper.sharedPreferences.string(Keys.SCHEDULE_ETAG)
 
     private class PreferencesOpenHelper(context: Context) : SharedPreferencesOpenHelper(context, NAME, VERSION) {
 

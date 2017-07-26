@@ -68,6 +68,8 @@ dependencies {
     implementation "com.google.firebase:firebase-crash:$firebaseVersion"
 
     implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlinVersion"
 

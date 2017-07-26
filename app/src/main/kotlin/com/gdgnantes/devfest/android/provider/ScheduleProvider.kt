@@ -129,7 +129,10 @@ class ScheduleProvider : SQLiteContentProvider() {
                 ScheduleContract.Sessions.buildUri(values.getAsString(ScheduleContract.Sessions.SESSION_ID))
             }
             SESSIONS_SPEAKERS -> {
-                TODO("Deal with SESSIONS_SPEAKERS insert")
+                insert(uri, db, values, ScheduleDatabase.Tables.SESSIONS_SPEAKERS)
+                ScheduleContract.SessionsSpeakers.buildUri(
+                        values.getAsString(ScheduleContract.SessionsSpeakers.SESSION_SPEAKER_SESSION_ID),
+                        values.getAsString(ScheduleContract.SessionsSpeakers.SESSION_SPEAKER_SPEAKER_ID))
             }
             SPEAKERS -> {
                 insert(uri, db, values, ScheduleDatabase.Tables.SPEAKERS)
@@ -256,6 +259,7 @@ class ScheduleProvider : SQLiteContentProvider() {
             SESSIONS -> builder.table(ScheduleDatabase.Tables.SESSIONS)
             SESSIONS_ID -> builder.table(ScheduleDatabase.Tables.SESSIONS)
                     .where("${ScheduleContract.Sessions.SESSION_ID} = ?", ScheduleContract.Sessions.getId(uri))
+            SESSIONS_SPEAKERS -> builder.table(ScheduleDatabase.Tables.SESSIONS_SPEAKERS)
             SPEAKERS -> builder.table(ScheduleDatabase.Tables.SPEAKERS)
             SPEAKERS_ID -> builder.table(ScheduleDatabase.Tables.SPEAKERS)
                     .where("${ScheduleContract.Speakers.SPEAKER_ID} = ?", ScheduleContract.Speakers.getId(uri))
