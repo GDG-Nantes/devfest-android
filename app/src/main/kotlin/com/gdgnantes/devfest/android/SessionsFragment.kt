@@ -21,18 +21,19 @@ import java.util.*
 
 class SessionsFragment : BaseFragment() {
 
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var emptyView: View
-    private lateinit var adapter: SessionsAdapter
-
     companion object {
-        private const val ARG_DATE = "arg:date"
 
+        private const val ARG_DATE = "arg:date"
         fun newInstance(date: String): SessionsFragment = SessionsFragment().apply {
             arguments = Bundle()
             arguments.putString(ARG_DATE, date)
         }
+
     }
+    
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var emptyView: View
+    private lateinit var adapter: SessionsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
