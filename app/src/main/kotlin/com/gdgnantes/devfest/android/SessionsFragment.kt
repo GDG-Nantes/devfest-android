@@ -152,7 +152,7 @@ class SessionsFragment : BaseFragment() {
             } else {
                 _items = originalItems.
                         filter { (session) ->
-                            filters.all { it.accept(context, session) }
+                            filters.any { it.accept(context, session) }
                         }
             }
             notifyDataSetChanged()
