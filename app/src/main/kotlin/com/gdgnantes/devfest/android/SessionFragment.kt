@@ -39,9 +39,10 @@ class SessionFragment : BaseFragment() {
     private val tempRect = Rect()
 
     private lateinit var sessionId: String
-    private lateinit var bookmarkButton: FloatingActionButton
+
     private var rootView: ViewGroup? = null
     private var titleView: TextView? = null
+    private var bookmarkButton: FloatingActionButton? = null
 
     private var title: String? = null
     private var displayingTitle: Boolean = false
@@ -64,8 +65,9 @@ class SessionFragment : BaseFragment() {
         rootView = view.findViewById(R.id.root)
         titleView = view.findViewById(R.id.title)
 
-        bookmarkButton = view.findViewById<FloatingActionButton>(R.id.btn_bookmark)
-        bookmarkButton.setOnClickListener { toggleFavorite() }
+        bookmarkButton = view.findViewById<FloatingActionButton>(R.id.btn_bookmark).apply {
+            setOnClickListener { toggleFavorite() }
+        }
 
         view.findViewById<ScrollView>(R.id.scroll_view).onScrollChangeListener = { _, _, _ ->
             updateTitle()
@@ -135,7 +137,9 @@ class SessionFragment : BaseFragment() {
             }
         }
 
-        bookmarkButton.visibility = if (model.session.type == Session.Type.Break) View.GONE else View.VISIBLE
+        bookmarkButton?.apply {
+            visibility = if (model.session.type == Session.Type.Break) View.GONE else View.VISIBLE
+        }
 
         displaySpeakers(model.speakers, view)
     }
@@ -188,11 +192,13 @@ class SessionFragment : BaseFragment() {
     }
 
     private fun updateBookmark() {
-        val favoriteManager = BookmarkManager.from(context)
-        if (favoriteManager.isBookmarked(sessionId)) {
-            bookmarkButton.setImageResource(R.drawable.ic_action_unbookmark)
-        } else {
-            bookmarkButton.setImageResource(R.drawable.ic_action_bookmark)
+        bookmarkButton?.apply {
+            val favoriteManager = BookmarkManager.from(context)
+            if (favoriteManager.isBookmarked(sessionId)) {
+                setImageResource(R.drawable.ic_action_unbookmark)
+            } else {
+                setImageResource(R.drawable.ic_action_bookmark)
+            }
         }
     }
 
