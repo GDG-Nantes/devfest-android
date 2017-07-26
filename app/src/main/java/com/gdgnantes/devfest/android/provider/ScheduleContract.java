@@ -74,7 +74,7 @@ public final class ScheduleContract {
         }
 
         public static String getId(Uri uri) {
-            return getItemUri(uri);
+            return getItemId(uri);
         }
 
     }
@@ -99,7 +99,7 @@ public final class ScheduleContract {
         }
 
         public static String getId(Uri uri) {
-            return getItemUri(uri);
+            return getItemId(uri);
         }
 
     }
@@ -141,7 +141,7 @@ public final class ScheduleContract {
         }
 
         public static String getId(Uri uri) {
-            return getItemUri(uri);
+            return getItemId(uri);
         }
 
     }
@@ -152,7 +152,7 @@ public final class ScheduleContract {
                 .build();
     }
 
-    private static String getItemUri(Uri uri) {
+    private static String getItemId(Uri uri) {
         return uri.getPathSegments().get(1);
     }
 
