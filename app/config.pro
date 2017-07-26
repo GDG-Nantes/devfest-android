@@ -4,3 +4,4 @@
 
 -include rules/lifecycle.pro
 -include rules/picasso.pro
+-include rules/retrofit.pro
