@@ -30,10 +30,10 @@ class SessionsFragment : BaseFragment() {
         }
 
     }
-    
+
     private lateinit var recyclerView: RecyclerView
     private lateinit var emptyView: View
-    private lateinit var adapter: SessionsAdapter
+    private lateinit var sessionsAdapter: SessionsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,10 +41,10 @@ class SessionsFragment : BaseFragment() {
         val date = arguments.getString(ARG_DATE)
         val model = ViewModelProviders.of(this).get(SessionsViewModel::class.java)
         model.getSessions(date).observe(this, Observer {
-            adapter.items = it!!
+            sessionsAdapter.items = it!!
         })
         BookmarkManager.from(context).getLiveData().observe(this, Observer {
-            adapter.notifyDataSetChanged()
+            sessionsAdapter.notifyDataSetChanged()
         })
         ViewModelProviders.of(activity).get(FiltersViewModel::class.java).filters.observe(this, FiltersObserver())
     }
@@ -56,13 +56,13 @@ class SessionsFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        adapter = SessionsAdapter(context)
+        sessionsAdapter = SessionsAdapter(context)
 
         emptyView = view.findViewById(R.id.empty_view)
 
         recyclerView = view.findViewById(android.R.id.list)
         recyclerView.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
-        recyclerView.adapter = adapter
+        recyclerView.adapter = sessionsAdapter
     }
 
     fun scrollToTop() {
@@ -70,14 +70,14 @@ class SessionsFragment : BaseFragment() {
     }
 
     private fun updateAdapters() {
-        val isEmpty = adapter.items.isEmpty()
+        val isEmpty = sessionsAdapter.items.isEmpty()
         emptyView.visibility = if (isEmpty) View.VISIBLE else View.GONE
         recyclerView.visibility = if (isEmpty) View.GONE else View.VISIBLE
     }
 
     private inner class FiltersObserver : Observer<Set<Filter>> {
         override fun onChanged(filters: Set<Filter>?) {
-            adapter.filters = filters ?: emptySet()
+            sessionsAdapter.filters = filters ?: emptySet()
         }
     }
 
@@ -168,7 +168,7 @@ class SessionsFragment : BaseFragment() {
     val onItemClickListener = View.OnClickListener { view ->
         val position = recyclerView.getChildLayoutPosition(view)
         if (position != RecyclerView.NO_POSITION) {
-            startActivity(SessionActivity.newIntent(context, adapter.items[position].session.id))
+            startActivity(SessionActivity.newIntent(context, sessionsAdapter.items[position].session.id))
         }
     }
 
