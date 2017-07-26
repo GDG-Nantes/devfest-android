@@ -1,7 +1,5 @@
 <resources>
 
-    <string name="app_name">DevFest Nantes</string>
-
     <string name="filter">Filter</string>
     <string name="share">Share</string>
     <string name="agenda">Timetable</string>
