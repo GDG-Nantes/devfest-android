@@ -115,14 +115,11 @@ public final class ScheduleContract {
         public static final String CONTENT_TYPE = PREFIX_VND_DIR + "sessions_speakers";
         public static final String CONTENT_ITEM_TYPE = PREFIX_VND_ITEM + "sessions_speakers";
 
-        public static Uri buildUri(String speakerId) {
-            // HACK Cyril
-            return CONTENT_URI;
-        }
-
-        public static String getId(Uri uri) {
-            // HACK Cyril
-            return "hello_hack";
+        public static Uri buildUri(String sessionId, String speakerId) {
+            return CONTENT_URI.buildUpon()
+                    .appendPath(sessionId)
+                    .appendPath(speakerId)
+                    .build();
         }
 
     }
