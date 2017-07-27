@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.gdgnantes.devfest.android.app.BaseFragment
+import com.gdgnantes.devfest.android.features.base.app.BaseFragment
 
 class AboutFragment : BaseFragment() {
 

@@ -3,7 +3,7 @@ package com.gdgnantes.devfest.android
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.gdgnantes.devfest.android.app.BaseActivity
+import com.gdgnantes.devfest.android.features.base.app.BaseActivity
 
 class LicensesActivity : BaseActivity() {
 

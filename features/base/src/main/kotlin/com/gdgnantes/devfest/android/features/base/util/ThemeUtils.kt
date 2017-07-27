@@ -1,9 +1,9 @@
-package com.gdgnantes.devfest.android.util
+package com.gdgnantes.devfest.android.features.base.util
 
 import android.content.Context
 import android.support.annotation.MainThread
 import android.util.TypedValue
-import com.gdgnantes.devfest.android.R
+import com.gdgnantes.devfest.android.features.base.R
 
 object ThemeUtils {
 

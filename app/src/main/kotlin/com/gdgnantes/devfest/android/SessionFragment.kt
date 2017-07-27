@@ -12,8 +12,8 @@ import android.view.*
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
-import com.gdgnantes.devfest.android.app.BaseFragment
 import com.gdgnantes.devfest.android.app.startActivitySafely
+import com.gdgnantes.devfest.android.features.base.app.BaseFragment
 import com.gdgnantes.devfest.android.format.text.DateTimeFormatter
 import com.gdgnantes.devfest.android.graphics.RoundedTransformation
 import com.gdgnantes.devfest.android.model.Session

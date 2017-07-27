@@ -6,7 +6,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.ActionBar
 import android.widget.TextSwitcher
-import com.gdgnantes.devfest.android.app.BaseActivity
+import com.gdgnantes.devfest.android.features.base.app.BaseActivity
 
 
 class SessionActivity : BaseActivity() {

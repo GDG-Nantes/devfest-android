@@ -10,7 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.gdgnantes.devfest.android.app.BaseFragment
+import com.gdgnantes.devfest.android.features.base.app.BaseFragment
 import com.gdgnantes.devfest.android.format.text.DateTimeFormatter
 import com.gdgnantes.devfest.android.model.isInFuture
 import com.gdgnantes.devfest.android.model.isInProgress
