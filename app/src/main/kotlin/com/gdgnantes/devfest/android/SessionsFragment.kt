@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.gdgnantes.devfest.android.app.BaseFragment
 import com.gdgnantes.devfest.android.format.text.DateTimeFormatter
+import com.gdgnantes.devfest.android.model.isPast
 import com.gdgnantes.devfest.android.view.bind
 import com.gdgnantes.devfest.android.viewmodel.Filter
 import com.gdgnantes.devfest.android.viewmodel.FiltersViewModel
@@ -140,6 +141,12 @@ class SessionsFragment : BaseFragment() {
             } else {
                 holder.favoriteIndicator.visibility = View.GONE
             }
+
+            val alpha = if (item.session.isPast()) 0.5f else 1f
+
+            holder.title.alpha = alpha
+            holder.subtitle.alpha = alpha
+            holder.favoriteIndicator.alpha = alpha
         }
 
         override fun getItemCount(): Int = items.size
