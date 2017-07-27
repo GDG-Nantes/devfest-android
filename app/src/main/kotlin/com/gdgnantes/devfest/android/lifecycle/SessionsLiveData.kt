@@ -15,6 +15,7 @@ class SessionsLiveData(private val context: Context,
         // Account for the event timezone or express everything in the users timezone ?
         const val SELECTION = "date(${ScheduleContract.Sessions.SESSION_START_TIMESTAMP}, 'unixepoch') = ?"
         const val ORDER = "${ScheduleContract.Sessions.SESSION_START_TIMESTAMP} ASC, " +
+                "${ScheduleContract.Sessions.SESSION_END_TIMESTAMP} ASC, " +
                 "${ScheduleContract.Sessions.SESSION_ROOM_ID} ASC"
     }
 
