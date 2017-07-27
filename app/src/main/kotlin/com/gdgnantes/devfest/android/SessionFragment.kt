@@ -44,7 +44,7 @@ class SessionFragment : BaseFragment() {
     private var titleView: TextView? = null
     private var bookmarkButton: FloatingActionButton? = null
 
-    private var title: String? = null
+    private var model: SessionViewModel? = null
     private var displayingTitle: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -77,11 +77,13 @@ class SessionFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val data = ViewModelProviders.of(this).get(SessionViewModel::class.java)
-        data.getSession(sessionId).observe(this, Observer {
-            title = it!!.session.title
-            displaySession(it, view!!)
-        })
+        model = ViewModelProviders.of(this).get(SessionViewModel::class.java)
+        model!!.apply {
+            init(sessionId)
+            session.observe(this@SessionFragment, Observer {
+                displaySession(it!!, view!!)
+            })
+        }
     }
 
     override fun onDestroyView() {
@@ -102,6 +104,7 @@ class SessionFragment : BaseFragment() {
     }
 
     private fun shareSession(): Boolean {
+        val title = model!!.sessionTitle
         if (!title.isNullOrEmpty()) {
             ShareCompat.IntentBuilder.from(activity)
                     .setType("text/plain")
@@ -212,6 +215,7 @@ class SessionFragment : BaseFragment() {
         titleView!!.getDrawingRect(tempRect)
         rootView!!.offsetDescendantRectToMyCoords(titleView, tempRect)
 
+        val title = model!!.sessionTitle
         val oldDisplayingTitle = displayingTitle
         val dimension = if (displayingTitle) tempRect.top else tempRect.bottom
 

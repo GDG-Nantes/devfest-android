@@ -38,11 +38,12 @@ class SessionsFragment : BaseFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val date = arguments.getString(ARG_DATE)
         val model = ViewModelProviders.of(this).get(SessionsViewModel::class.java)
-        model.getSessions(date).observe(this, Observer {
+        model.init(arguments.getString(ARG_DATE))
+        model.sessions.observe(this, Observer {
             sessionsAdapter.items = it!!
         })
+
         BookmarkManager.from(context).getLiveData().observe(this, Observer {
             sessionsAdapter.notifyDataSetChanged()
         })
