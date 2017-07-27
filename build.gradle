@@ -14,7 +14,7 @@ buildscript {
 }
 
 ext {
-    archLibVersion = '1.0.0-alpha6'
+    archLibVersion = '1.0.0-alpha7'
     firebaseVersion = '11.0.2'
     retrofitVersion = '2.3.0'
     supportLibVersion = '26.0.0'
