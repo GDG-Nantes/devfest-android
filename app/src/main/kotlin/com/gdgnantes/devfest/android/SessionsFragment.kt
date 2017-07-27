@@ -12,6 +12,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.gdgnantes.devfest.android.app.BaseFragment
 import com.gdgnantes.devfest.android.format.text.DateTimeFormatter
+import com.gdgnantes.devfest.android.model.isInFuture
+import com.gdgnantes.devfest.android.model.isInProgress
+import com.gdgnantes.devfest.android.model.isPast
 import com.gdgnantes.devfest.android.view.bind
 import com.gdgnantes.devfest.android.viewmodel.Filter
 import com.gdgnantes.devfest.android.viewmodel.FiltersViewModel
@@ -35,6 +38,8 @@ class SessionsFragment : BaseFragment() {
     private lateinit var emptyView: View
     private lateinit var sessionsAdapter: SessionsAdapter
 
+    private var needAutoScroll = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -42,6 +47,7 @@ class SessionsFragment : BaseFragment() {
         model.init(arguments.getString(ARG_DATE))
         model.sessions.observe(this, Observer {
             sessionsAdapter.items = it!!
+            scrollToNow()
         })
 
         BookmarkManager.from(context).getLiveData().observe(this, Observer {
@@ -67,8 +73,26 @@ class SessionsFragment : BaseFragment() {
         recyclerView.adapter = sessionsAdapter
     }
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        needAutoScroll = savedInstanceState == null
+    }
+
     fun scrollToTop() {
         recyclerView.smoothScrollToPosition(0)
+    }
+
+    private fun scrollToNow() {
+        if (needAutoScroll) {
+            val now = Date()
+            val position = sessionsAdapter.items.indexOfFirst {
+                it.session.isInFuture(now) || it.session.isInProgress(now)
+            }
+            if (position > 0) {
+                recyclerView.scrollToPosition(position)
+            }
+            needAutoScroll = false
+        }
     }
 
     private fun updateAdapters() {
@@ -140,6 +164,12 @@ class SessionsFragment : BaseFragment() {
             } else {
                 holder.favoriteIndicator.visibility = View.GONE
             }
+
+            val alpha = if (item.session.isPast()) 0.5f else 1f
+
+            holder.title.alpha = alpha
+            holder.subtitle.alpha = alpha
+            holder.favoriteIndicator.alpha = alpha
         }
 
         override fun getItemCount(): Int = items.size

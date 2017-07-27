@@ -92,6 +92,12 @@ fun Session.toContentValues() = ContentValues().apply {
     put(ScheduleContract.Sessions.SESSION_TYPE, type?.apiValue)
 }
 
+fun Session.isInFuture(now: Date = Date()) = startTimestamp.after(now)
+
+fun Session.isPast(now: Date = Date()) = endTimestamp.before(now)
+
+fun Session.isInProgress(now: Date = Date()) = startTimestamp.before(now) && endTimestamp.after(now)
+
 fun Cursor.toSession() = Session(
         id = getStringOrThrow(ScheduleContract.Sessions.SESSION_ID)!!,
         description = getStringOrThrow(ScheduleContract.Sessions.SESSION_DESCRIPTION),
