@@ -17,6 +17,7 @@
         android:paddingRight="@dimen/spacing_medium"
         android:paddingTop="@dimen/spacing_small"
         android:textAppearance="@style/TextAppearance.ListItem.Title"
+        android:textColor="@color/stratus"
         tools:text="17:20" />
 
     <LinearLayout
