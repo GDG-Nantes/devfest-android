@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.database.sqlite.SQLiteQueryBuilder
 import android.net.Uri
+import android.os.SystemClock
 import android.util.Log
 import com.gdgnantes.devfest.android.content.SQLiteContentProvider
 import com.gdgnantes.devfest.android.database.SelectionBuilder
@@ -22,6 +23,7 @@ class ScheduleProvider : SQLiteContentProvider() {
 
         private const val LOG_METHOD_ENABLED = false
         private const val DEBUG_LOG_QUERIES = false
+        private const val DEBUG_SLOW_DOWN_QUERIES = false
 
         private const val FIRST = 100
 
@@ -196,6 +198,11 @@ class ScheduleProvider : SQLiteContentProvider() {
                 c.setNotificationUri(resolver, ScheduleContract.CONTENT_URI)
             }
         }
+
+        if (DEBUG_SLOW_DOWN_QUERIES) {
+            SystemClock.sleep(3000L)
+        }
+
         return c
     }
 
