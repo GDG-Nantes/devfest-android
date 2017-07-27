@@ -51,7 +51,7 @@ class SessionsFragment : BaseFragment() {
         })
 
         BookmarkManager.from(context).getLiveData().observe(this, Observer {
-            sessionsAdapter.notifyDataSetChanged()
+            sessionsAdapter.updateItems()
         })
 
         ViewModelProviders.of(activity).get(FiltersViewModel::class.java).filters.observe(this, FiltersObserver())
@@ -178,7 +178,7 @@ class SessionsFragment : BaseFragment() {
             return SessionViewHolder(LayoutInflater.from(context).inflate(R.layout.list_item_session, parent, false))
         }
 
-        private fun updateItems() {
+        fun updateItems() {
             if (filters.isEmpty()) {
                 _items = originalItems
             } else {
