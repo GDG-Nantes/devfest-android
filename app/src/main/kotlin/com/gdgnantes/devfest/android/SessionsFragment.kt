@@ -47,6 +47,7 @@ class SessionsFragment : BaseFragment() {
         BookmarkManager.from(context).getLiveData().observe(this, Observer {
             sessionsAdapter.notifyDataSetChanged()
         })
+
         ViewModelProviders.of(activity).get(FiltersViewModel::class.java).filters.observe(this, FiltersObserver())
     }
 

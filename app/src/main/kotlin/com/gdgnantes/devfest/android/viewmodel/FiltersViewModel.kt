@@ -11,10 +11,6 @@ class FiltersViewModel(application: Application) : AndroidViewModel(application)
 
     private val _filters: MutableLiveData<Set<Filter>> = MutableLiveData()
 
-    init {
-        _filters.value = emptySet()
-    }
-
     fun isFilter(filter: Filter) = filter in _filters.value ?: emptySet()
 
     fun hasFilters() = !(_filters.value?.isEmpty() ?: true)
