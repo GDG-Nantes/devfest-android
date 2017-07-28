@@ -1,5 +1,4 @@
-apply plugin: 'com.android.feature'
-apply plugin: 'kotlin-android'
+apply plugin: 'com.android.instantapp'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
@@ -11,12 +10,10 @@ android {
         versionCode rootProject.versionCode
         versionName rootProject.versionName
     }
-
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
-    }
 }
 
 dependencies {
-    implementation project(':features:base')
+    implementation project(":features:base")
+    implementation project(":features:about")
+    implementation project(":features:licenses")
 }

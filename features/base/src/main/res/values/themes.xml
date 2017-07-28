@@ -18,6 +18,15 @@
         <item name="toolbarStyle">@style/Widget.Toolbar</item>
     </style>
 
+    <style name="Theme.DevFestNantes.About" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorAccent">@color/candy</item>
+        <item name="colorPrimary">@color/candy</item>
+        <item name="colorPrimaryDark">@color/cherry</item>
+
+        <item name="android:colorBackground">?attr/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
     <style name="Theme.DevFestNantes.Home">
         <item name="android:colorBackground">@color/cloud</item>
 
