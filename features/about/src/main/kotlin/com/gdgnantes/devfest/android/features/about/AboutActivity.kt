@@ -1,4 +1,4 @@
-package com.gdgnantes.devfest.android
+package com.gdgnantes.devfest.android.features.about
 
 import android.content.Context
 import android.content.Intent

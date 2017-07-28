@@ -25,13 +25,4 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.DevFestNantes.About" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorAccent">@color/candy</item>
-        <item name="colorPrimary">@color/candy</item>
-        <item name="colorPrimaryDark">@color/cherry</item>
-
-        <item name="android:colorBackground">?attr/colorPrimary</item>
-        <item name="android:textColorPrimary">@color/white</item>
-    </style>
-
 </resources>

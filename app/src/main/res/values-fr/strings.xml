@@ -10,10 +10,6 @@
     <string name="share_title">Rejoins moi au DevFest Nantes !</string>
     <string name="share_text">Jette un coup d’œil à la session \"%1$s\" au DevFest Nantes #DevFestNantes.</string>
 
-    <string name="about_moto">Be a Coder. Be a Hero!</string>
-    <string name="about_design_and_develop">Design &amp; development</string>
-    <string name="about_me">Cyril Mottier</string>
-
     <string name="filters_clearAll">Supprimer tout</string>
     <string name="filters_myBookmarks">Mes favoris</string>
     <string name="filters_title">Filtres</string>
