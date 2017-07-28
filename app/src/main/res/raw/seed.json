@@ -410,7 +410,7 @@
     },
     {
       "id": "1847",
-      "title": "Retours sur l’aventure Capitaine Train",
+      "title": "Retours sur l’aventure Capitaine Train",
       "description": "L’aventure Capitaine Train débute en 2010. L’objectif est simple et clair : offrir une alternative crédible à la vente de billet de train en Europe. Aujourd’hui, Capitaine Train, rachetée en 2016 et renommée entre temps « Trainline », vend plusieurs millions de billets chaque année.\n\nConstruire l’application Android a requis évidemment beaucoup de travail et de rigueur. Durant cette présentation nous détaillerons chacun des aspects qui ont permis à l’app Android Capitaine Train d’apporter régulièrement de nouvelles fonctionnalités, de respecter nos critères de qualité tout en répondant aux attentes des utilisateurs. Nous aborderons notamment l’organisation interne de l’équipe, le recrutement, les processus de développement et de mise en production, l’approche produit, le design, etc.",
       "type": "talk",
       "track": "discovery",
@@ -1179,7 +1179,7 @@
       "name": "Sébastien Pertus",
       "company": "Microsoft",
       "country": "France",
-      "bio": "Evangéliste technique chez Microsoft France, Sébastien est en charge d'accompagner les communautés de développeurs autour des technologies innovantes de Microsoft.\nEn charge de tout ce qui touche au développement autour du développement Web Front avec TypeScript et Angular, Azure et NodeJS côté Backend, et enfin la donnée autour de SQL Server et MySQL.\nGrand passionné de techno, Sébastien s’intéresse à la partie Microsoft Open Source, allant du monde Java chez Microsoft, .Net Core sur Mac ou encore Visual Studio Code !",
+      "bio": "Evangéliste technique chez Microsoft France, Sébastien est en charge d'accompagner les communautés de développeurs autour des technologies innovantes de Microsoft.\nEn charge de tout ce qui touche au développement autour du développement Web Front avec TypeScript et Angular, Azure et NodeJS côté Backend, et enfin la donnée autour de SQL Server et MySQL.\nGrand passionné de techno, Sébastien s’intéresse à la partie Microsoft Open Source, allant du monde Java chez Microsoft, .Net Core sur Mac ou encore Visual Studio Code !",
       "tags": [
         "Typescript",
         "NodeJS",
@@ -1208,7 +1208,7 @@
         "UX",
         "Discovery"
       ],
-      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/michel_Rousseau.jpeg",
+      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/michel_Rousseau.jpg",
       "social_links": [
         {
           "network": "twitter",
@@ -1218,24 +1218,28 @@
     },
     {
       "id": "551",
-      "name": "Julien Corioland",
+      "name": "Pascal Sauliere",
       "company": "Microsoft",
       "country": "France",
-      "bio": "Julien Corioland est développeur et speaker. Après avoir passé 6 ans à travailler en tant que consultant sur des technologies Web et Cloud, il a rejoint Microsoft France en tant qu’évangéliste technique où il accompagne les développeurs dans la prise en main de la plateforme applicative Microsoft Azure et dans la mise en place d’architectures modernes pensées pour le cloud. Retrouvez le sur Twitter @jcorioland ou sur son blog https://aka.ms/jcorioland",
+      "bio": "Evangéliste technique chez Microsoft France, Pascal accompagne les clients et communautés sur le cloud et DevOps, avec un penchant pour les architectures, l'automatisation, la sécurité et les solutions open source. A ses heures perdus il anime ITcast, le podcast de l'IT.",
       "tags": [
-        "Docker",
-        "Kubernetes",
-        "Cloud"
+        "Devops",
+        "Cloud",
+        "Azure"
       ],
-      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/JULIEN_CORIOLAND.jpg",
+      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Pascal_Sauliere.jpg",
       "social_links": [
         {
           "network": "twitter",
-          "url": "https://twitter.com/jcorioland"
+          "url": "https://twitter.com/psauliere"
         },
         {
           "network": "github",
-          "url": "https://github.com/jcorioland"
+          "url": "https://github.com/pascals-msft"
+        },
+        {
+          "network": "website",
+          "url": "http://itcast.io"
         }
       ]
     },
@@ -1293,7 +1297,7 @@
         "Angular",
         "Web"
       ],
-      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/cyril_balit.jpeg",
+      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/cyril_balit.jpg",
       "social_links": [
         {
           "network": "twitter",
@@ -1389,7 +1393,7 @@
         "Assistant",
         "Cloud"
       ],
-      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Guillaume_Laforge.jpeg",
+      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Guillaume_Laforge.jpg",
       "social_links": [
         {
           "network": "twitter",
@@ -1491,7 +1495,7 @@
       "name": "Manon Gruaz",
       "company": "ARCBEES",
       "country": "Canada",
-      "bio": "Manon est stratège/designer de Marque et d’interfaces chez Arcbees.\nAventurière de la Marque, elle met l’émotion et le sens au coeur de tous ses travaux.\nElle cherche sans relâche le sens profond dans toutes les choses dans la vie, et définit son travail comme « être à l'intérieur des cerveaux des utilisateurs ».\nGeekette curieuse et entourée au quotidien de développeurs de génie, c’est tout naturellement qu’elle a fusionné son obsession pour la Marque avec son envoûtement par les technologies, tout particulièrement l’intelligence artificielle.\nVoyageuse invétérée et enthousiaste de défis impossibles, elle essaye d’évangéliser chaque développeur et tout autre être vivant qu’elle croise à la Marque et son importance à travers sa précédente conférence : Marc, marque et Marques. C’est avec un humour parfois douteux qu’elle l’a déjà présenté au devFest de Nantes, au GWTcon de Florence et aux soirées UX à Québec. Son mot préféré est Authentique. Née française, élevée en tant que citoyenne du monde, elle est maintenant sarcastique et romantique par choix.",
+      "bio": "Manon est stratège/designer de Marque et d’interfaces chez Arcbees.\nAventurière de la Marque, elle met l’émotion et le sens au coeur de tous ses travaux.\nElle cherche sans relâche le sens profond dans toutes les choses dans la vie, et définit son travail comme « être à l'intérieur des cerveaux des utilisateurs ».\nGeekette curieuse et entourée au quotidien de développeurs de génie, c’est tout naturellement qu’elle a fusionné son obsession pour la Marque avec son envoûtement par les technologies, tout particulièrement l’intelligence artificielle.\nVoyageuse invétérée et enthousiaste de défis impossibles, elle essaye d’évangéliser chaque développeur et tout autre être vivant qu’elle croise à la Marque et son importance à travers sa précédente conférence : Marc, marque et Marques. C’est avec un humour parfois douteux qu’elle l’a déjà présenté au devFest de Nantes, au GWTcon de Florence et aux soirées UX à Québec. Son mot préféré est Authentique. Née française, élevée en tant que citoyenne du monde, elle est maintenant sarcastique et romantique par choix.",
       "tags": [
         "Discovery"
       ],
@@ -1649,7 +1653,7 @@
         "Android",
         "Mobile"
       ],
-      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Yoann_Benoit.jpeg",
+      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Yoann_Benoit.jpg",
       "social_links": [
         {
           "network": "twitter",
@@ -2042,7 +2046,7 @@
         "Android",
         "Mobile"
       ],
-      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/David_Fournier.jpeg",
+      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/David_Fournier.jpg",
       "social_links": [
         {
           "network": "github",
@@ -2120,7 +2124,7 @@
       "tags": [
         "Discovery"
       ],
-      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Sébastien_CHARRIER.jpeg",
+      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Sébastien_CHARRIER.jpg",
       "social_links": [
         {
           "network": "twitter",
@@ -2236,7 +2240,7 @@
         "Mobile",
         "Discovery"
       ],
-      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Cyril_Mottier.jpeg",
+      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Cyril_Mottier.jpg",
       "social_links": [
         {
           "network": "twitter",
@@ -2710,7 +2714,7 @@
         "Apis",
         "Cloud"
       ],
-      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Mathieu_Humbert.jpeg",
+      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Mathieu_Humbert.jpg",
       "social_links": [
         {
           "network": "twitter",
