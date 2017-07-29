@@ -36,6 +36,7 @@ class SessionFragment : BaseFragment() {
         }
     }
 
+    private val bookmarkManager: BookmarkManager by lazy { BookmarkManager.from(context) }
     private val tempRect = Rect()
 
     private lateinit var sessionId: String
@@ -191,19 +192,17 @@ class SessionFragment : BaseFragment() {
     }
 
     private fun toggleFavorite() {
-        val favoriteManager = BookmarkManager.from(context)
-        if (favoriteManager.isBookmarked(sessionId)) {
-            favoriteManager.unbookmark(sessionId)
+        if (bookmarkManager.isBookmarked(sessionId)) {
+            bookmarkManager.unbookmark(sessionId)
         } else {
-            favoriteManager.bookmark(sessionId)
+            bookmarkManager.bookmark(sessionId)
         }
         updateBookmark()
     }
 
     private fun updateBookmark() {
         bookmarkButton!!.apply {
-            val favoriteManager = BookmarkManager.from(context)
-            if (favoriteManager.isBookmarked(sessionId)) {
+            if (bookmarkManager.isBookmarked(sessionId)) {
                 setImageResource(R.drawable.ic_action_unbookmark)
             } else {
                 setImageResource(R.drawable.ic_action_bookmark)

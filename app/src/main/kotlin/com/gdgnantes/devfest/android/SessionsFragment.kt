@@ -34,11 +34,14 @@ class SessionsFragment : BaseFragment() {
 
     }
 
+    private val bookmarkManager: BookmarkManager by lazy { BookmarkManager.from(context) }
+
     private lateinit var recyclerView: RecyclerView
     private lateinit var emptyView: View
     private lateinit var sessionsAdapter: SessionsAdapter
 
     private var needAutoScroll = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,7 +53,7 @@ class SessionsFragment : BaseFragment() {
             scrollToNow()
         })
 
-        BookmarkManager.from(context).getLiveData().observe(this, Observer {
+        bookmarkManager.getLiveData().observe(this, Observer {
             sessionsAdapter.updateItems()
         })
 
@@ -121,7 +124,6 @@ class SessionsFragment : BaseFragment() {
     private inner class SessionsAdapter(
             val context: Context) : RecyclerView.Adapter<SessionViewHolder>() {
 
-        private val favoritesManager = BookmarkManager.from(context)
         private val tmpCalendar = Calendar.getInstance()
 
         private var _items: List<SessionsViewModel.Data> = emptyList()
@@ -159,7 +161,7 @@ class SessionsFragment : BaseFragment() {
                 holder.subtitle.visibility = View.GONE
             }
 
-            if (favoritesManager.isBookmarked(item.session.id)) {
+            if (bookmarkManager.isBookmarked(item.session.id)) {
                 holder.favoriteIndicator.visibility = View.VISIBLE
             } else {
                 holder.favoriteIndicator.visibility = View.GONE
