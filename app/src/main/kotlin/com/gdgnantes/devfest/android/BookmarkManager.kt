@@ -3,9 +3,11 @@ package com.gdgnantes.devfest.android
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import android.content.Context
+import android.support.annotation.MainThread
 import com.gdgnantes.devfest.android.app.PreferencesManager
 import com.gdgnantes.devfest.android.content.RemindersManager
 
+@MainThread
 class BookmarkManager private constructor(private val context: Context) {
 
     private val preferencesManager = PreferencesManager.from(context)
@@ -20,12 +22,10 @@ class BookmarkManager private constructor(private val context: Context) {
         private var instance: BookmarkManager? = null
 
         fun from(context: Context): BookmarkManager {
-            synchronized(BookmarkManager::class) {
-                if (instance == null) {
-                    instance = BookmarkManager(context.applicationContext)
-                }
-                return instance!!
+            if (instance == null) {
+                instance = BookmarkManager(context.applicationContext)
             }
+            return instance!!
         }
     }
 

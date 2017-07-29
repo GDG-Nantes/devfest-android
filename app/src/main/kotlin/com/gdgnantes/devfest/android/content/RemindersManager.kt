@@ -11,6 +11,7 @@ import android.util.Log
 import com.gdgnantes.devfest.android.BookmarkManager
 import com.gdgnantes.devfest.android.R
 import com.gdgnantes.devfest.android.SessionActivity
+import com.gdgnantes.devfest.android.app.PreferencesManager
 import com.gdgnantes.devfest.android.database.sqlIn
 import com.gdgnantes.devfest.android.format.text.DateTimeFormatter
 import com.gdgnantes.devfest.android.model.toRoom
@@ -61,7 +62,7 @@ class RemindersManager private constructor(private val context: Context) {
     }
 
     fun updateAlarm() {
-        val bookmarkIds = BookmarkManager.from(context).getLiveData().value ?: emptySet()
+        val bookmarkIds = PreferencesManager.from(context).bookmarks
 
         val cursor = context.contentResolver.query(
                 ScheduleContract.Sessions.CONTENT_URI,
