@@ -13,6 +13,7 @@ import android.view.MenuItem
 import com.gdgnantes.devfest.android.app.PreferencesManager
 import com.gdgnantes.devfest.android.features.about.AboutActivity
 import com.gdgnantes.devfest.android.features.base.app.BaseActivity
+import com.gdgnantes.devfest.android.features.licenses.LicensesActivity
 import com.gdgnantes.devfest.android.format.text.DateTimeFormatter
 import com.gdgnantes.devfest.android.support.app.FragmentStatePagerAdapter
 import java.text.SimpleDateFormat

@@ -5,8 +5,6 @@
     <string name="agenda">Timetable</string>
     <string name="about">About</string>
 
-    <string name="openSourceLicenses">Open-source licenses</string>
-
     <string name="share_title">Join me at DevFest Nantes!</string>
     <string name="share_text">Check out the \"%1$s\" session at DevFest Nantes #DevFestNantes.</string>
 

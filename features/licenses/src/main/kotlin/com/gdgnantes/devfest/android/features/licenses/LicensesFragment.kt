@@ -1,8 +1,8 @@
-package com.gdgnantes.devfest.android
+package com.gdgnantes.devfest.android.features.licenses
 
 import android.os.Bundle
 import android.view.View
-import com.gdgnantes.devfest.android.webkit.WebViewFragment
+import com.gdgnantes.devfest.android.features.base.webkit.WebViewFragment
 
 class LicensesFragment : WebViewFragment() {
 

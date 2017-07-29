@@ -1,3 +1,4 @@
 include ':app',
         ':features:about',
-        ':features:base'
+        ':features:base',
+        ':features:licenses'

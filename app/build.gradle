@@ -57,6 +57,7 @@ dependencies {
 
     implementation project(':features:base')
     implementation project(':features:about')
+    implementation project(':features:licenses')
 
     implementation "com.android.support:design:$rootProject.supportLibVersion"
     implementation "com.android.support:recyclerview-v7:$rootProject.supportLibVersion"
