@@ -42,8 +42,8 @@
     <string name="type_quicky">Quicky</string>
     <string name="type_talk">Talk</string>
 
-    <string name="reminders_channel_description">Les rappels affichent une notification 5 minutes avant le début d’une session mise en favori.</string>
-    <string name="reminders_channel_name">Rappels des sessions favorites</string>
-    <string name="reminders_text">Débute à %1$s en salle %2$s</string>
-
+    <string name="reminders_channel_description">Reminders display a notification 5 minutes before the start of one of your bookmarked session.</string>
+    <string name="reminders_channel_name">Bookmarked sessions reminders</string>
+    <string name="reminders_text">Starting at %1$s in room %2$s</string>
+    
 </resources>
