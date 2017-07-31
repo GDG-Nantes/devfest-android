@@ -1,0 +1,49 @@
+<resources>
+
+    <string name="filter">Filtrer</string>
+    <string name="share">Partager</string>
+    <string name="agenda">Emploi du temps</string>
+    <string name="about">À propos</string>
+
+    <string name="openSourceLicenses">Licences open source</string>
+
+    <string name="share_title">Rejoins moi au DevFest Nantes !</string>
+    <string name="share_text">Jette un coup d’œil à la session \"%1$s\" au DevFest Nantes #DevFestNantes.</string>
+
+    <string name="about_moto">Be a Coder. Be a Hero!</string>
+    <string name="about_design_and_develop">Design &amp; development</string>
+    <string name="about_me">Cyril Mottier</string>
+
+    <string name="filters_clearAll">Supprimer tout</string>
+    <string name="filters_myBookmarks">Mes favoris</string>
+    <string name="filters_title">Filtres</string>
+
+    <string name="session_info_time">%1$s, %2$s - %3$s</string>
+    <string name="session_info_room">Salle %1$s</string>
+    <string name="session_language_inEnglish">En anglais</string>
+    <string name="session_language_inFrench">En français</string>
+    <string name="session_noSessionFound">Aucune session trouvée</string>
+    <string name="session_subtitle">Salle %1$s</string>
+    <string name="session_title">Détails de la session</string>
+
+    <string name="network_twitter">Twitter</string>
+    <string name="network_google_plus">Google+</string>
+    <string name="network_website">Website</string>
+    <string name="network_github">GitHub</string>
+
+    <string name="track_cloud">Cloud</string>
+    <string name="track_discovery">Discovery</string>
+    <string name="track_mobile">Mobile</string>
+    <string name="track_web">Web</string>
+
+    <string name="type_break">Break</string>
+    <string name="type_codelab">Codelab</string>
+    <string name="type_keynote">Keynote</string>
+    <string name="type_quicky">Quicky</string>
+    <string name="type_talk">Talk</string>
+
+    <string name="reminders_channel_description">Les rappels affichent une notification 5 minutes avant le début d’une session mise en favori.</string>
+    <string name="reminders_channel_name">Rappels des sessions favorites</string>
+    <string name="reminders_text">Débute à %1$s en salle %2$s</string>
+
+</resources>

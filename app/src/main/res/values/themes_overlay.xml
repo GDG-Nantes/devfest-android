@@ -1,0 +1,9 @@
+<resources>
+
+    <style name="ThemeOverlay.DevFestNantes.Toolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white_50p</item>
+    </style>
+
+</resources>

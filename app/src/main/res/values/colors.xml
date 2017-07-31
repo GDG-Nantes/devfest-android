@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- -->
+    <!-- App palette -->
+    <!-- -->
+
+    <color name="candy">#d93a2d</color>
+    <color name="cherry">#ae2e24</color>
+
+    <color name="porcelain">#fafafa</color>
+    <color name="white">#ffffff</color>
+    <color name="white_50p">#77ffffff</color>
+
+    <color name="cloud">#f0f0f0</color>
+    <color name="gray_gull">#e7e7e7</color>
+
+    <color name="falcon">#333333</color>
+    <color name="stratus">#999999</color>
+
+</resources>

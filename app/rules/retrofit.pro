@@ -1,0 +1,6 @@
+-keep class retrofit2.** { *; }
+-keep interface retrofit2.** { *; }
+-dontwarn com.google.appengine.api.urlfetch.**
+-dontwarn javax.annotation.**
+-dontwarn org.codehaus.mojo.animal_sniffer.**
+-dontwarn rx.**

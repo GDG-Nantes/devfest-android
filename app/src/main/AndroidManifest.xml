@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gdgnantes.devfest.android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".ScheduleApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/PreviewTheme.DevFestNantes">
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/PreviewTheme.DevFestNantes.Home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="${host}"
+                    android:path="/sessions"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/about"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/PreviewTheme.DevFestNantes.About" />
+
+        <activity
+            android:name=".LicensesActivity"
+            android:label="@string/openSourceLicenses"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".SessionActivity"
+            android:label="@string/session_title"
+            android:parentActivityName=".MainActivity">
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="${host}"
+                    android:pathPrefix="/sessions/"
+                    android:scheme="https" />
+            </intent-filter>
+
+        </activity>
+
+        <provider
+            android:name="com.gdgnantes.devfest.android.provider.ScheduleProvider"
+            android:authorities="${applicationId}.provider.schedule"
+            android:exported="false" />
+
+        <receiver
+            android:name=".content.RemindersReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".SyncService"
+            android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+    </application>
+
+</manifest>
