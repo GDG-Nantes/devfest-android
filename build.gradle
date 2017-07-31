@@ -14,7 +14,7 @@ buildscript {
 }
 
 def versionMajor = 1
-def versionMinor = 0
+def versionMinor = 1
 
 ext {
     archLibVersion = '1.0.0-alpha7'
