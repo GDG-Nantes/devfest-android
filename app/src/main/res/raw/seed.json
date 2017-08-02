@@ -86,7 +86,7 @@
       ],
       "start_timestamp": "2017-10-20T15:10:00+02:00",
       "end_timestamp": "2017-10-20T17:10:00+02:00",
-      "room_id": "0"
+      "room_id": "4"
     },
     {
       "id": "1595",
@@ -207,7 +207,7 @@
       ],
       "start_timestamp": "2017-10-19T14:00:00+02:00",
       "end_timestamp": "2017-10-19T16:00:00+02:00",
-      "room_id": "0"
+      "room_id": "4"
     },
     {
       "id": "1709",
@@ -238,7 +238,7 @@
       ],
       "start_timestamp": "2017-10-20T09:00:00+02:00",
       "end_timestamp": "2017-10-20T11:00:00+02:00",
-      "room_id": "0"
+      "room_id": "4"
     },
     {
       "id": "1737",
@@ -439,7 +439,7 @@
       ],
       "start_timestamp": "2017-10-19T16:20:00+02:00",
       "end_timestamp": "2017-10-19T18:20:00+02:00",
-      "room_id": "0"
+      "room_id": "4"
     },
     {
       "id": "1857",
@@ -733,7 +733,7 @@
       ],
       "start_timestamp": "2017-10-19T10:00:00+02:00",
       "end_timestamp": "2017-10-19T12:00:00+02:00",
-      "room_id": "0"
+      "room_id": "4"
     },
     {
       "id": "1999",
@@ -899,7 +899,7 @@
       ],
       "start_timestamp": "2017-10-20T13:00:00+02:00",
       "end_timestamp": "2017-10-20T15:00:00+02:00",
-      "room_id": "0"
+      "room_id": "4"
     },
     {
       "id": "2061",
@@ -1135,7 +1135,7 @@
     },
     {
       "id": "282",
-      "name": "Girard Didier",
+      "name": "Didier Girard",
       "country": "France",
       "company": "Sfeir",
       "bio": "Cloud Rider / GDE @Google / VP Engineering @Sfeir / PhD Machine Learning @EnsDeLyon",
@@ -1250,8 +1250,8 @@
       "country": "France",
       "bio": "Développeur fullstack JEE et web depuis une petite dizaine d'années et passionné de blockchain depuis quelques années, je suis récemment devenu expert technique blockchain pour Zenika Nantes. Je me suis lancé dans une mission d'évangélisation :) pour faire rayonner la connaissance de cette techno (speaker et co-fondateur du meetup blockchain à Nantes, codelab au devoxx et au devfest) qui est à mon sens l'une des plus révolutionnaires à l'heure actuelle.",
       "tags": [
-        "Discovery",
-        "Blockchain"
+        "Blockchain",
+        "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/benjamin_fontaine.jpg",
       "social_links": [
@@ -1445,7 +1445,7 @@
         },
         {
           "network": "github",
-          "url": "github.com/houssemba"
+          "url": "https://github.com/houssemba"
         }
       ]
     },
@@ -1497,6 +1497,7 @@
       "country": "Canada",
       "bio": "Manon est stratège/designer de Marque et d’interfaces chez Arcbees.\nAventurière de la Marque, elle met l’émotion et le sens au coeur de tous ses travaux.\nElle cherche sans relâche le sens profond dans toutes les choses dans la vie, et définit son travail comme « être à l'intérieur des cerveaux des utilisateurs ».\nGeekette curieuse et entourée au quotidien de développeurs de génie, c’est tout naturellement qu’elle a fusionné son obsession pour la Marque avec son envoûtement par les technologies, tout particulièrement l’intelligence artificielle.\nVoyageuse invétérée et enthousiaste de défis impossibles, elle essaye d’évangéliser chaque développeur et tout autre être vivant qu’elle croise à la Marque et son importance à travers sa précédente conférence : Marc, marque et Marques. C’est avec un humour parfois douteux qu’elle l’a déjà présenté au devFest de Nantes, au GWTcon de Florence et aux soirées UX à Québec. Son mot préféré est Authentique. Née française, élevée en tant que citoyenne du monde, elle est maintenant sarcastique et romantique par choix.",
       "tags": [
+        "Marketing",
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/manon_gruaz.jpg",
@@ -1567,7 +1568,7 @@
         },
         {
           "network": "google+",
-          "url": "google.com/+JeffAbrahamson"
+          "url": "https://google.com/+JeffAbrahamson"
         },
         {
           "network": "github",
@@ -1805,13 +1806,14 @@
     },
     {
       "id": "2226",
-      "name": "Zasadnyy Vitaliy",
+      "name": "Vitaliy Zasadnyy",
       "company": "GetSocial",
       "country": "Ukraine",
       "bio": "Vitaliy’s background includes mobile application and game development. Nowadays, he is leading the development of the next generation in-app marketing tools at GetSocial. He is a frequent speaker at world class tech conferences and TEDx. Founder of the Google Developers Group Lviv.",
       "tags": [
         "Discovery",
-        "SDK"
+        "Games",
+        "Mobile SDK"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Zasadnyy_Vitaliy.jpg",
       "social_links": [
@@ -1979,7 +1981,7 @@
         },
         {
           "network": "google+",
-          "url": "google.com/+PeggyAuffray"
+          "url": "https://google.com/+PeggyAuffray"
         }
       ]
     },
@@ -2002,11 +2004,11 @@
         },
         {
           "network": "google+",
-          "url": "google.com/+JamesWilliams"
+          "url": "https://google.com/+JamesWilliams"
         },
         {
           "network": "github",
-          "url": "github.com/jwill"
+          "url": "https://github.com/jwill"
         }
       ]
     },
@@ -2319,7 +2321,7 @@
         },
         {
           "network": "github",
-          "url": "github.com/rachelandrew"
+          "url": "https://github.com/rachelandrew"
         }
       ]
     },
@@ -2348,9 +2350,7 @@
       "country": "France",
       "bio": "Hugo Mougard était doctorant à l’Université de Nantes puis ingénieur R&D dans une startup de Deep Learning avant de monter sa startup en analyse de texte. Dans son temps libre, il est formateur au sein de ML Week.",
       "tags": [
-        "GraphQL",
-        "VueJS",
-        "Web"
+        "Machine Learning"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Hugo_Mougard.jpg",
       "social_links": [
@@ -2387,9 +2387,9 @@
       "name": "Rémi Roche",
       "company": "ROCHER",
       "country": "France",
-      "bio": "Diplômé de l’ECE, HEC Paris et NYU Stern, Rémi est passionné de trading des crypto monnaies. Il accompagne les entreprises soucieuses de réussir leur transformation digitale vers la blockchain. Auteur du livre \"Optimiser sa vie avec le mind map\", il contribue également au développement de l'association Yes Group France.",
+      "bio": "Diplômé de l’ECE, HEC Paris et NYU Stern, Rémi est passionné de trading des crypto monnaies. Il accompagne les entreprises soucieuses de réussir leur transformation digitale (big data, blockchain). Co-auteur du livre \"Mind Mapping Pour être efficace au travail et dans les études\", il contribue également au développement de l'association Yes Group France.",
       "tags": [
-        "Crypto",
+        "Blockchain",
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Remi_Roche.jpg",
@@ -2436,7 +2436,7 @@
         },
         {
           "network": "google+",
-          "url": "plus.google.com/+NicolasRoard"
+          "url": "https://plus.google.com/+NicolasRoard"
         }
       ]
     },
@@ -2606,7 +2606,7 @@
       "country": "France",
       "bio": "I am Mélanie Bats and I work as a software developer at Obeo. In my daily work, I am mainly focused on the development of modeling tools based on Eclipse with Sirius like UML Designer. I am also committer for 2 Eclipse projects: EEF and Sirius. In my free time I am interested in Arduino stuff and contribute some Eclipse plugins for cross compilation like the Buildroot Eclipse plugin. I am also a free software activist who has organized and participated in free software events in the Toulouse area.",
       "tags": [
-        "Open Stack",
+        "Eclipse",
         "Discovery"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/M%C3%A9lanie_Bats.jpg",
@@ -2666,7 +2666,7 @@
     {
       "id": "2759",
       "name": "Estelle Landry",
-      "company": "TABMO",
+      "company": "TabMo",
       "country": "France",
       "bio": "Passionnée d'UX et PO à ces heures perdues",
       "tags": [
