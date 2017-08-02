@@ -13,6 +13,7 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import com.gdgnantes.devfest.android.app.BaseFragment
+import com.gdgnantes.devfest.android.app.startActivitySafely
 import com.gdgnantes.devfest.android.format.text.DateTimeFormatter
 import com.gdgnantes.devfest.android.graphics.RoundedTransformation
 import com.gdgnantes.devfest.android.model.Session
@@ -183,7 +184,7 @@ class SessionFragment : BaseFragment() {
                     socialLinkView.setImageDrawable(SocialNetwork.getIcon(socialLink.network, context))
                     socialLinkView.contentDescription = SocialNetwork.getName(socialLink.network, context)
                     socialLinkView.setOnClickListener {
-                        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(socialLink.url))
+                        startActivitySafely(Intent(Intent.ACTION_VIEW, Uri.parse(socialLink.url))
                                 .addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT))
                     }
 
