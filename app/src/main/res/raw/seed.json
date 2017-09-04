@@ -13,8 +13,14 @@
       "id": "1",
       "title": "Opening keynote",
       "titleMobile": "Opening keynote",
+      "description": "MadMapper est un programme de mapping vidéo co-produit par 1024 architecture et GarageCube. Pour développer leur projet et installation architecturale, urbaine et digitale, 1024 s’est très vite confronté au manque crucial d’outil informatique leur permettant de réaliser leurs idées… Ils se sont ainsi rapproché de la société GarageCube, créateur du logiciel de Vjing Modul8 ainsi que du Mapping Festival à Genève pour imaginer ensemble cet outil précieux: MadMapper est ainsi né de cette rencontre et collaboration, un logiciel fait par des artistes, pour des artistes. Au travers de la présentation de différents projets réalisés par 1024 et de l’évolution constante du logiciel MadMapper, nous vous raconterons l’histoire de la relation croisée sous-jacente entre installation artistique numérique et outil informatique.",
       "type": "keynote",
-      "speakers_ids": [],
+      "track": "discovery",
+      "category": "discovery",
+      "language": "fr",
+      "speakers_ids": [
+        "5005"
+      ],
       "start_timestamp": "2017-10-19T09:00:00+02:00",
       "end_timestamp": "2017-10-19T09:50:00+02:00",
       "room_id": "0"
@@ -32,7 +38,7 @@
     {
       "id": "3",
       "title": "After Party",
-      "description": "Cette année l’After Party est organisée par notre partenaire U GIE IRIS (Système U). Elle aura lieu sur place à la Cité des Congrès (dans la Grande Galerie) à partir de 18h30 le Jeudi 19 Octobre. Retrouvons-nous autour d'un apéro pour discuter des événements de la 1ère journée et faire du networking. A l'affiche, des démos, des découvertes, de la musique...Venez nombreux !!",
+      "description": "Cette année l’After Party est organisée par notre partenaire U GIE-IRIS (Système U).\n\nElle aura lieu sur place à la Cité des Congrès (dans la Grande Galerie) à partir de 18h30 le Jeudi 19 Octobre.\nRetrouvons-nous autour d'un apéro pour discuter des événements de la 1ère journée et faire du networking. A l'affiche, des démos, des découvertes, de la musique...\nVenez nombreux !!",
       "type": "break",
       "speakers_ids": [],
       "start_timestamp": "2017-10-19T18:30:00+02:00",
@@ -145,9 +151,9 @@
       "speakers_ids": [
         "1173"
       ],
-      "start_timestamp": "2017-10-20T16:50:00+02:00",
-      "end_timestamp": "2017-10-20T17:10:00+02:00",
-      "room_id": "0"
+      "start_timestamp": "2017-10-19T17:50:00+02:00",
+      "end_timestamp": "2017-10-19T18:10:00+02:00",
+      "room_id": "1"
     },
     {
       "id": "1641",
@@ -251,8 +257,8 @@
       "speakers_ids": [
         "2519"
       ],
-      "start_timestamp": "2017-10-20T10:10:00+02:00",
-      "end_timestamp": "2017-10-20T11:00:00+02:00",
+      "start_timestamp": "2017-10-20T15:10:00+02:00",
+      "end_timestamp": "2017-10-20T16:00:00+02:00",
       "room_id": "2"
     },
     {
@@ -341,9 +347,9 @@
       "speakers_ids": [
         "2559"
       ],
-      "start_timestamp": "2017-10-19T17:50:00+02:00",
-      "end_timestamp": "2017-10-19T18:10:00+02:00",
-      "room_id": "1"
+      "start_timestamp": "2017-10-20T16:50:00+02:00",
+      "end_timestamp": "2017-10-20T17:10:00+02:00",
+      "room_id": "0"
     },
     {
       "id": "1833",
@@ -499,13 +505,13 @@
         "2631",
         "571"
       ],
-      "start_timestamp": "2017-10-19T10:00:00+02:00",
-      "end_timestamp": "2017-10-19T10:50:00+02:00",
+      "start_timestamp": "2017-10-19T15:10:00+02:00",
+      "end_timestamp": "2017-10-19T16:00:00+02:00",
       "room_id": "2"
     },
     {
       "id": "1874",
-      "title": "Trader les crypto monnaies",
+      "title": "Trader bitcoin et les autres crypto monnaies",
       "description": "Les crypto monnaies sont un phénomène de société encore peu connu. Cependant, les récentes levées de fond de plusieurs centaines de millions d'euros démontrent l'intérêt grandissant du public. Nombreux sont ceux qui essaient de trader ces nouveaux actifs.\nMais, la masse d'information à traiter est importante. Et les centaines de crypto monnaies disponibles sur plusieurs places boursières rendent difficile la possibilité de saisir le maximum d'opportunités. Je vous propose au cours de cette présentation de comprendre comment faciliter votre trading à l'aide de la collecte d'information sur le web et l'algotrading...",
       "type": "quicky",
       "track": "cloud",
@@ -880,10 +886,11 @@
       "category": "discovery",
       "language": "fr",
       "speakers_ids": [
-        "2587"
+        "2587",
+        "2765"
       ],
-      "start_timestamp": "2017-10-20T15:10:00+02:00",
-      "end_timestamp": "2017-10-20T16:00:00+02:00",
+      "start_timestamp": "2017-10-20T10:10:00+02:00",
+      "end_timestamp": "2017-10-20T11:00:00+02:00",
       "room_id": "2"
     },
     {
@@ -910,7 +917,8 @@
       "category": "discovery",
       "language": "fr",
       "speakers_ids": [
-        "2742"
+        "2742",
+        "5004"
       ],
       "start_timestamp": "2017-10-19T17:20:00+02:00",
       "end_timestamp": "2017-10-19T17:40:00+02:00",
@@ -1020,8 +1028,8 @@
         "2760",
         "911"
       ],
-      "start_timestamp": "2017-10-19T15:10:00+02:00",
-      "end_timestamp": "2017-10-19T16:00:00+02:00",
+      "start_timestamp": "2017-10-19T10:00:00+02:00",
+      "end_timestamp": "2017-10-19T10:50:00+02:00",
       "room_id": "2"
     }
   ],
@@ -2727,6 +2735,28 @@
       ]
     },
     {
+      "id": "2765",
+      "name": "Christian Verbrugge",
+      "company": "KUKA",
+      "country": "France",
+      "bio": "Diplômé de l’ENSAM, il est aujourd’hui Directeur Conseil & Innovation chez KUKA groupe International de 12.000 Personnes. A travers ses différentes expériences à l’étranger (Chine, Etats-Unis, Allemagne, Japon), Christian a acquis des compétences dans le développement de stratégies marketing et commerciales à l’international. Son esprit créatif et innovant l’a amené à bâtir un lieu d’échange et de vie autour de l’industrie 4.0 : le Techlab 4.0. Dans ce lieu se mélange l’esprit Startup, l’Education et l’envie de Collaborer.",
+      "tags": [
+        "Kuka",
+        "Discovery"
+      ],
+      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Christian_VERBRUGGE.jpg",
+      "social_links": [
+        {
+          "network": "twitter",
+          "url": "https://twitter.com/C_Verbrugge"
+        },
+        {
+          "network": "linkedin",
+          "url": "https://www.linkedin.com/in/christian-verbrugge-3672807/"
+        }
+      ]
+    },
+    {
       "id": "5000",
       "name": "Philippe Charrière",
       "company": "Clever Cloud",
@@ -2799,6 +2829,38 @@
           "url": "https://twitter.com/jawache"
         }
       ]
+    },
+    {
+      "id": "5004",
+      "name": "Stéphane Bégaudeau",
+      "company": "Obeo",
+      "country": "France",
+      "bio": "Stéphane Bégaudeau is currently working as an Eclipse Modeling consultant at Obeo, a strategic member of the Eclipse Foundation. He is involved in multiple open source projects of the Eclipse Foundation such as Acceleo, EEF and Eclipse Sirius. He also likes to work with web technologies like React and Angular and share his passion for open source in various conferences like EclipseCon.",
+      "tags": [
+        "Eclipse",
+        "Discovery"
+      ],
+      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Stephane_Begaudeau.jpg",
+      "social_links": [
+        {
+          "network": "twitter",
+          "url": "https://twitter.com/sbegaudeau"
+        },
+        {
+          "network": "github",
+          "url": "https://github.com/sbegaudeau"
+        }
+      ]
+    },
+    {
+      "id": "5005",
+      "name": "Pier Schneider",
+      "company": "1024 architecture",
+      "country": "France",
+      "bio": "1024 architecture conçoit des installations architecturales et audiovisuelles transversales qui soulignent l’interaction entre high-technology et low-technology, corps et espace, son et visuel, art et architecture. Constamment à la recherche de nouvelles propositions, 1024 crée ses propres outils techniques et technologiques afin de repousser toujours plus loin les limites de la création. Pour chaque projet, 1024 invente et met en place un logiciel spécifique qui permet d’exploiter au mieux le dispositif créatif et de metre en relation et interaction, l’espace physique, sonore, et visuel.",
+      "tags": [],
+      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/pier_schneider.jpg",
+      "social_links": []
     }
   ],
   "rooms": [
