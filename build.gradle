@@ -14,6 +14,8 @@ ext {
     firebaseVersion = '11.4.0'
     retrofitVersion = '2.3.0'
     supportLibVersion = '26.1.0'
+
+    manifestPlaceholders = ['host': 'devfest.gdgnantes.com']
 }
 
 keystoreProperties.load(new FileInputStream(rootProject.file("keystore.properties")))

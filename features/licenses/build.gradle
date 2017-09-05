@@ -10,6 +10,8 @@ android {
         targetSdkVersion rootProject.targetSdkVersion
         versionCode rootProject.versionCode
         versionName rootProject.versionName
+
+        manifestPlaceholders = rootProject.manifestPlaceholders
     }
 
     sourceSets {
