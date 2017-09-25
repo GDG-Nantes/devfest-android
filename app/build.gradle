@@ -1,35 +1,35 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
-def keystoreProperties = new Properties()
-keystoreProperties.load(new FileInputStream(rootProject.file("keystore.properties")))
-
 android {
-    compileSdkVersion 26
-    buildToolsVersion "25.0.3"
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
     defaultConfig {
         applicationId "com.gdgnantes.devfest.android"
-        minSdkVersion 21
-        targetSdkVersion 26
-        versionCode rootProject.ext.versionCode
-        versionName rootProject.ext.versionName
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        manifestPlaceholders = ['host': 'devfest.gdgnantes.com']
+        manifestPlaceholders rootProject.manifestPlaceholders
         vectorDrawables.useSupportLibrary = true
     }
+
     signingConfigs {
         debug {
             storeFile file('../distribution/signing/debug.keystore')
         }
         release {
             storeFile file('../distribution/signing/release.keystore')
-            storePassword keystoreProperties['storePassword']
-            keyAlias keystoreProperties['keyAlias']
-            keyPassword keystoreProperties['keyPassword']
+            storePassword rootProject.keystoreProperties['storePassword']
+            keyAlias rootProject.keystoreProperties['keyAlias']
+            keyPassword rootProject.keystoreProperties['keyPassword']
         }
     }
+
     buildTypes {
         debug {
             applicationIdSuffix '.debug'
@@ -43,6 +43,7 @@ android {
             proguardFile 'config.pro'
         }
     }
+
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
@@ -54,27 +55,23 @@ dependencies {
     })
 
 
-    implementation "android.arch.lifecycle:extensions:$archLibVersion"
-    implementation "android.arch.lifecycle:runtime:$archLibVersion"
+    implementation project(':features:base')
+    implementation project(':features:about')
+    implementation project(':features:licenses')
 
-    implementation "com.android.support:appcompat-v7:$supportLibVersion"
-    implementation "com.android.support:design:$supportLibVersion"
-    implementation "com.android.support:recyclerview-v7:$supportLibVersion"
-    implementation "com.android.support:support-annotations:$supportLibVersion"
-    implementation "com.android.support:support-v4:$supportLibVersion"
+    implementation "com.android.support:design:$rootProject.supportLibVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibVersion"
 
     implementation 'com.google.code.gson:gson:2.8.0'
 
-    implementation "com.google.firebase:firebase-crash:$firebaseVersion"
+    implementation "com.google.firebase:firebase-crash:$rootProject.firebaseVersion"
 
     implementation 'com.squareup.picasso:picasso:2.5.2'
-    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
-
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlinVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
 
 
-    kapt "android.arch.lifecycle:compiler:$archLibVersion"
+    kapt "android.arch.lifecycle:compiler:$rootProject.archLibVersion"
 
 
     testImplementation 'junit:junit:4.12'

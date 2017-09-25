@@ -1,0 +1,19 @@
+apply plugin: 'com.android.instantapp'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
+    }
+}
+
+dependencies {
+    implementation project(":features:base")
+    implementation project(":features:about")
+    implementation project(":features:licenses")
+}

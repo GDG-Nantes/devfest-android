@@ -1,12 +1,12 @@
-package com.gdgnantes.devfest.android.webkit
+package com.gdgnantes.devfest.android.features.base.webkit
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
-import com.gdgnantes.devfest.android.R
-import com.gdgnantes.devfest.android.app.BaseFragment
+import com.gdgnantes.devfest.android.features.base.R
+import com.gdgnantes.devfest.android.features.base.app.BaseFragment
 import com.gdgnantes.devfest.android.view.removeFromParent
 
 open class WebViewFragment : BaseFragment() {

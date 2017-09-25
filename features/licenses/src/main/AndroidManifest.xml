@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gdgnantes.devfest.android.features.licenses">
+
+    <application>
+
+        <activity
+            android:name=".LicensesActivity"
+            android:label="@string/openSourceLicenses">
+
+            <intent-filter android:autoVerify="true">
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data
+                    android:host="${host}"
+                    android:path="/licenses" />
+            </intent-filter>
+
+        </activity>
+
+    </application>
+
+</manifest>

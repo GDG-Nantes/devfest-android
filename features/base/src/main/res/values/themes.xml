@@ -1,0 +1,37 @@
+<resources>
+
+    <style name="Theme.DevFestNantes" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorAccent">@color/candy</item>
+        <item name="colorPrimary">@color/candy</item>
+        <item name="colorPrimaryDark">@color/cherry</item>
+
+        <item name="android:colorBackground">@color/porcelain</item>
+        <item name="android:textColorPrimary">@color/falcon</item>
+        <item name="android:textColorSecondary">@color/stratus</item>
+
+        <item name="android:listDivider">@drawable/divider_medium</item>
+
+        <item name="actionBarPopupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="actionBarStyle">@style/Widget.ActionBar</item>
+
+        <item name="toolbarStyle">@style/Widget.Toolbar</item>
+    </style>
+
+    <style name="Theme.DevFestNantes.About" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorAccent">@color/candy</item>
+        <item name="colorPrimary">@color/candy</item>
+        <item name="colorPrimaryDark">@color/cherry</item>
+
+        <item name="android:colorBackground">?attr/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
+    <style name="Theme.DevFestNantes.Home">
+        <item name="android:colorBackground">@color/cloud</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>

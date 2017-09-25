@@ -1,9 +1,9 @@
-package com.gdgnantes.devfest.android.app
+package com.gdgnantes.devfest.android.features.base.app
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
-import com.gdgnantes.devfest.android.util.ThemeUtils
+import com.gdgnantes.devfest.android.features.base.util.ThemeUtils
 
 abstract class BaseActivity : AppCompatActivity() {
 
