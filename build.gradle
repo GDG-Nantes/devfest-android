@@ -16,6 +16,9 @@ ext {
     supportLibVersion = '26.1.0'
 
     manifestPlaceholders = ['host': 'devfest.gdgnantes.com']
+
+    signingStoreFileDebug = file('./distribution/signing/debug.keystore')
+    signingStoreFileRelease = file('./distribution/signing/release.keystore')
 }
 
 keystoreProperties.load(new FileInputStream(rootProject.file("keystore.properties")))
