@@ -26,24 +26,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
+                <data android:scheme="http" />
+                <data android:scheme="https" />
                 <data
                     android:host="${host}"
-                    android:path="/sessions"
-                    android:scheme="https" />
+                    android:path="/sessions" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".AboutActivity"
-            android:label="@string/about"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/PreviewTheme.DevFestNantes.About" />
-
-        <activity
-            android:name=".LicensesActivity"
-            android:label="@string/openSourceLicenses"
-            android:parentActivityName=".MainActivity" />
-
+        
         <activity
             android:name=".SessionActivity"
             android:label="@string/session_title"
@@ -55,10 +45,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
+                <data android:scheme="http" />
+                <data android:scheme="https" />
                 <data
                     android:host="${host}"
-                    android:pathPrefix="/sessions/"
-                    android:scheme="https" />
+                    android:pathPrefix="/sessions/" />
             </intent-filter>
 
         </activity>

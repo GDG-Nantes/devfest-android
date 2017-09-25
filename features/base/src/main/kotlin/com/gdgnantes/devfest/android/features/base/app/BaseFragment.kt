@@ -1,4 +1,4 @@
-package com.gdgnantes.devfest.android.app
+package com.gdgnantes.devfest.android.features.base.app
 
 import android.arch.lifecycle.LifecycleFragment
 

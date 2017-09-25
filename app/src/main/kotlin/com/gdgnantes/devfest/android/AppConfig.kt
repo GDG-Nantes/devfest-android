@@ -4,7 +4,7 @@ import java.util.*
 
 object AppConfig {
 
-    val SCHEMES = listOf("https")
+    val SCHEMES = listOf("https", "http")
     val AUTHORITIES = listOf("devfest.gdgnantes.com")
 
     val PATH_SESSIONS = "sessions"

@@ -11,7 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
-import com.gdgnantes.devfest.android.app.BaseFragment
+import com.gdgnantes.devfest.android.features.base.app.BaseFragment
 import com.gdgnantes.devfest.android.model.Session
 import com.gdgnantes.devfest.android.view.inflate
 import com.gdgnantes.devfest.android.viewmodel.BookmarkFilter
