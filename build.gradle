@@ -17,10 +17,10 @@ def versionMajor = 1
 def versionMinor = 1
 
 ext {
-    archLibVersion = '1.0.0-alpha9'
-    firebaseVersion = '11.2.0'
+    archLibVersion = '1.0.0-beta1'
+    firebaseVersion = '11.4.0'
     retrofitVersion = '2.3.0'
-    supportLibVersion = '26.0.2'
+    supportLibVersion = '26.1.0'
 
     versionCode = versionMajor * 100 + versionMinor
     versionName = "$versionMajor.$versionMinor"
