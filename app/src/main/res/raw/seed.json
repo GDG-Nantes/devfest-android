@@ -126,7 +126,7 @@
     },
     {
       "id": "1629",
-      "title": "Angular (2) et performances",
+      "title": "Angular et performances",
       "description": "Il nous aura fallu attendre 2 ans pour avoir cette nouvelle version du fameux framework de Google. L'objectif est ambitieux: devenir le framework front le plus performant. Nous vous proposons de naviguer sur un projet Angular pour comprendre ce qui le rend plus rapide. Nous parlerons de ce qui est proposé en natif (détection du changement, lazy loading et pre loading, compilation...) mais aussi de ce que vous pouvez mettre en place (compilation AOT, tree shaking, universal...)",
       "type": "talk",
       "track": "web",
@@ -136,9 +136,9 @@
         "699",
         "1222"
       ],
-      "start_timestamp": "2017-10-20T09:00:00+02:00",
-      "end_timestamp": "2017-10-20T09:50:00+02:00",
-      "room_id": "2"
+      "start_timestamp": "2017-10-20T11:20:00+02:00",
+      "end_timestamp": "2017-10-20T12:10:00+02:00",
+      "room_id": "3"
     },
     {
       "id": "1636",
@@ -166,14 +166,14 @@
       "speakers_ids": [
         "1807"
       ],
-      "start_timestamp": "2017-10-20T11:20:00+02:00",
-      "end_timestamp": "2017-10-20T12:10:00+02:00",
-      "room_id": "3"
+      "start_timestamp": "2017-10-20T09:00:00+02:00",
+      "end_timestamp": "2017-10-20T09:50:00+02:00",
+      "room_id": "2"
     },
     {
       "id": "1655",
-      "title": "Découvrir Android Things, et exterminer les reptiliens",
-      "description": "Que vous y croyez ou non, les reptiliens sont partout, et on n'a jamais été vraiment prêt à pouvoir les affronter.\nOn N'ÉTAIT pas prêt... Mais maintenant qu'Android Things est sorti, ils vont moins faire les malins, vous allez voir.\n\nC'est sûr que, lorsqu'on a enfin réussi à faire des applications pour mobile qui déchirent, ça les dérangeait pas trop, eux... Mais maintenant qu'on peut utiliser la puissance d'Android pour créer des objets physiques, on va moins les entendre.\n\nEnsemble, nous allons découvrir Android Things, et voir comment nous pouvons créer une machine se déplaçant, et permettant de détecter les reptiliens (avec des capteurs tactiles, de température, et du machine learning), mais aussi permettant de les exterminer (d'ailleurs si les orgas pouvaient me prêter un lance flamme, ça ferait une super démo).\n\nComment ? Avec un Raspberry Pi, un Arduino, et en découvrant et utilisant toutes les APIs spécifiques à Android Things : gpio, pwm, i2c, spi, uart, permettant d’interagir avec des composants du monde réel (enfin, \"réel\", vous m'avez compris...).\n\nCe talk est d'utilité publique, et pour tout niveau.\nSi ahaha vous pensez qu'on est ahah  dans la conspiration, venez quand même ça peut toujours vous être utile.\nahahah conspiration ahahaha",
+      "title": "Utiliser Android Things pour détecter et exterminer les reptiliens",
+      "description": "Ensemble, nous allons découvrir Android Things, et voir comment nous pouvons créer une machine capable de détecter et d'exterminer les reptiliens, avec des capteurs et du machine learning.\n\nComment ? À l'aide d'un Raspberry Pi, d'un Arduino, et en utilisant les APIs existantes d'Android, couplées aux nouvelles APIs apportées par Android Things nous permettant de communiquer avec des périphériques externes via GPIO, PWM, I²C, et autres.\n\nD'ailleurs, si les orgas pouvaient me prêter un lance-flamme, ça ferait une super démo.",
       "type": "talk",
       "track": "mobile",
       "category": "mobile",
@@ -257,8 +257,8 @@
       "speakers_ids": [
         "2519"
       ],
-      "start_timestamp": "2017-10-20T15:10:00+02:00",
-      "end_timestamp": "2017-10-20T16:00:00+02:00",
+      "start_timestamp": "2017-10-19T14:00:00+02:00",
+      "end_timestamp": "2017-10-19T14:50:00+02:00",
       "room_id": "2"
     },
     {
@@ -385,7 +385,7 @@
     },
     {
       "id": "1837",
-      "title": "Ok Google, is there any presentations about ChatBots?",
+      "title": "Ok Google, is there any presentation about ChatBots?",
       "description": "Ever wanted to build a chatbot? What if you could use a voice assistant to manage your agenda for the conference? Know if there are any presentations on Machine Learning, or Docker, or your favorite programming language? Find out more about a speaker...etc.\n\nIn this session, we will look at how to build our own voice assistant, using Google Cloud's natural speech and voice recognition APIs with API.AI services, and Google Cloud Functions to implement Necessary business logic.\n\nGrab some popcorn and enjoy!",
       "type": "talk",
       "track": "cloud",
@@ -782,8 +782,8 @@
       "speakers_ids": [
         "2719"
       ],
-      "start_timestamp": "2017-10-19T14:00:00+02:00",
-      "end_timestamp": "2017-10-19T14:50:00+02:00",
+      "start_timestamp": "2017-10-20T15:10:00+02:00",
+      "end_timestamp": "2017-10-20T16:00:00+02:00",
       "room_id": "2"
     },
     {
@@ -1300,7 +1300,7 @@
       "name": "Cyril Balit",
       "company": "Sfeir",
       "country": "France",
-      "bio": "Cyril Balit est CTO Front chez SFEIR et Goole Developer Expert sur les technologies Web. Développeur passionné, il construit des Single Page Application en javascript depuis 2003 et tombe amoureux d’Angular en 2013. Il est un membre actif de la communauté web français sur plusieurs sujets comme Angular, Polymer  et les Progressives Web App . Organisateur de conférences et de meetups , speaker et formateur , Cyril aime partager avec les communautés.",
+      "bio": "Cyril Balit est CTO Front chez SFEIR et Google Developer Expert sur les technologies Web. Développeur passionné, il construit des Single Page Application en javascript depuis 2003 et tombe amoureux d’Angular en 2013. Il est un membre actif de la communauté web français sur plusieurs sujets comme Angular, Polymer  et les Progressives Web App . Organisateur de conférences et de meetups , speaker et formateur , Cyril aime partager avec les communautés.",
       "tags": [
         "Angular",
         "Web"
@@ -1347,7 +1347,7 @@
       "id": "852",
       "name": "Gautier Mechling",
       "country": "France",
-      "bio": "Il y a fort longtemps, Gautier rencontra Jeff Sutherland, un vieux monsieur, qui lui apprit à faire des avions en papier. Depuis, il est Scrum master certifié (enfin c'est ce qu'il croit)",
+      "bio": "Développeur Android de jour, et chasseur de reptiliens la nuit. Google Developer Expert IoT.",
       "tags": [
         "Android",
         "IoT"
@@ -1544,7 +1544,7 @@
       "name": "Sylvain Lequeux",
       "company": "Xebia",
       "country": "France",
-      "bio": "Sylvain a 7 ans d'expérience en développement d'applicatif backend, principalement Java. Depuis 2 ans, il s'investit autour des technologies BigData et a rejoint Xebia à ce titre en 2015.\nIl dispense la formation certifiante Cloudera Administrateur et est certifié Cloudera Developper. Sylvain est également passionné par le craftsmanship.",
+      "bio": "Sylvain a 7 ans d'expérience en développement d'applicatif backend, principalement Java. Depuis 2 ans, il s'investit autour des technologies BigData et a rejoint Xebia à ce titre en 2015.\nIl dispense la formation certifiante Cloudera Administrateur et est certifié Cloudera Developer. Sylvain est également passionné par le craftsmanship.",
       "tags": [
         "Tensor Flow",
         "Android",
@@ -1938,7 +1938,7 @@
         "Alexa",
         "Cloud"
       ],
-      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Ouadie_lahdioui.png",
+      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Ouadie_lahdioui.jpg",
       "social_links": [
         {
           "network": "twitter",
@@ -2092,6 +2092,10 @@
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Charles-Axel_Dein.jpg",
       "social_links": [
+        {
+          "network": "twitter",
+          "url": "https://twitter.com/d3in"
+        },
         {
           "network": "github",
           "url": "https://github.com/charlax/"
@@ -2358,7 +2362,8 @@
       "country": "France",
       "bio": "Hugo Mougard était doctorant à l’Université de Nantes puis ingénieur R&D dans une startup de Deep Learning avant de monter sa startup en analyse de texte. Dans son temps libre, il est formateur au sein de ML Week.",
       "tags": [
-        "Machine Learning"
+        "Machine Learning",
+        "Cloud"
       ],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Hugo_Mougard.jpg",
       "social_links": [
@@ -2476,7 +2481,7 @@
     },
     {
       "id": "2671",
-      "name": "Derek Derek Parker",
+      "name": "Derek Parker",
       "company": "CoreOS",
       "country": "USA",
       "bio": "Derek is a Software Engineer at CoreOS hacking on Kubernetes and distributed systems related software. He is the author of Delve, the Go debugger.",
@@ -2664,7 +2669,7 @@
       "name": "Yannick Dautcourt",
       "company": "CHU Nantes",
       "country": "France",
-      "bio": "Lead Developper pour le CHU Nantes, nous mettons en place les solutions innovantes dans le secteur de la santé",
+      "bio": "Lead Developer pour le CHU Nantes, nous mettons en place les solutions innovantes dans le secteur de la santé",
       "tags": [
         "Discovery"
       ],
@@ -2857,7 +2862,7 @@
       "name": "Pier Schneider",
       "company": "1024 architecture",
       "country": "France",
-      "bio": "1024 architecture conçoit des installations architecturales et audiovisuelles transversales qui soulignent l’interaction entre high-technology et low-technology, corps et espace, son et visuel, art et architecture. Constamment à la recherche de nouvelles propositions, 1024 crée ses propres outils techniques et technologiques afin de repousser toujours plus loin les limites de la création. Pour chaque projet, 1024 invente et met en place un logiciel spécifique qui permet d’exploiter au mieux le dispositif créatif et de metre en relation et interaction, l’espace physique, sonore, et visuel.",
+      "bio": "Architecte de formation, artiste de déformation, Pier Schneider est l’un des co fondateur du label créatif 1024 architecture. Il conçoit et produit des dispositifs artistiques ou se mêlent les limites entre espace physique et espace numérique.",
       "tags": [],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/pier_schneider.jpg",
       "social_links": []
