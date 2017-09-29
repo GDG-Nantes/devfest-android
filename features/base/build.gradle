@@ -29,7 +29,7 @@ dependencies {
 
     api "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlinVersion"
 
-    application project(":app")
+    application project(':app')
     feature project(':features:about')
     feature project(':features:licenses')
 }

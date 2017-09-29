@@ -13,7 +13,7 @@ android {
 }
 
 dependencies {
-    implementation project(":features:base")
-    implementation project(":features:about")
-    implementation project(":features:licenses")
+    implementation project(':features:base')
+    implementation project(':features:about')
+    implementation project(':features:licenses')
 }
