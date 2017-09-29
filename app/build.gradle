@@ -16,6 +16,8 @@ android {
 
         manifestPlaceholders rootProject.manifestPlaceholders
         vectorDrawables.useSupportLibrary = true
+
+        resConfigs "en", "fr"
     }
 
     signingConfigs {
