@@ -285,7 +285,8 @@
       "category": "discovery",
       "language": "fr",
       "speakers_ids": [
-        "546"
+        "546",
+        "547"
       ],
       "start_timestamp": "2017-10-20T14:00:00+02:00",
       "end_timestamp": "2017-10-20T14:50:00+02:00",
@@ -648,12 +649,12 @@
     },
     {
       "id": "1937",
-      "title": "Keynote de fermeture",
-      "description": "Description à venir bientôt",
+      "title": "SpeechLess Live @ Nantes",
+      "description": "SpeechLess Live a été créé dans la Silicon Valley et s'exporte maintenant dans le monde il s'agira donc d'une grande première en France. L'objectif est simple : faire s'affronter des speakers dans un exercice d'improvisation ! Cette session est donc avant tout une performance et un bon moyen de se détendre après une journée de conférences techniques.",
       "type": "talk",
       "track": "discovery",
       "category": "discovery",
-      "language": "fr",
+      "language": "en",
       "speakers_ids": [
         "5000",
         "5001",
@@ -703,7 +704,8 @@
       "category": "discovery",
       "language": "fr",
       "speakers_ids": [
-        "2386"
+        "2386",
+        "5006"
       ],
       "start_timestamp": "2017-10-20T16:20:00+02:00",
       "end_timestamp": "2017-10-20T16:40:00+02:00",
@@ -1207,20 +1209,55 @@
     },
     {
       "id": "546",
-      "name": "Michel Rousseau",
-      "company": "Microsoft",
+      "name": "Victor Boquet",
+      "company": "Synergiz",
       "country": "France",
-      "bio": "Passionné par le design et l'UX, je travaille chez Microsoft à propager les messages inhérents à ce domaine auprès des développeurs, des décideurs, des startupeurs. Je suis avant tout un créateur de pixels le jour, en 2D, en 3D, en temps réel, en statique ou en dynamique, et destructeur de pixel la nuit, surtout sur les jeux vidéo à la première personne.",
+      "bio": "Designer UX/UI chez Synergiz, explorateur des nouvelles technologies et de la culture maker et membre fondateur du collectif BBB.",
       "tags": [
         "Design",
         "UX",
         "Discovery"
       ],
-      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/michel_Rousseau.jpg",
+      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Victor_Boquet.png",
       "social_links": [
         {
           "network": "twitter",
-          "url": "https://twitter.com/rousseau_michel"
+          "url": "https://twitter.com/VBoquet"
+        },
+        {
+          "network": "linkedin",
+          "url": "https://www.linkedin.com/in/victor-boquet-485aba84"
+        },
+        {
+          "network": "website",
+          "url": "http://www.victorboquet.com"
+        }
+      ]
+    },
+    {
+      "id": "547",
+      "name": "Benjamin Launay",
+      "company": "Synergiz",
+      "country": "France",
+      "bio": "Designer spécialisé dans l’UX et l’ergonomie, particulièrement sur les interfaces Windows. Il travaille également l'animation et le motion design, deux pratiques complémentaires au design d'applications. Benjamin est UX designer et chef de projet chez Synergiz, une entreprise française spécialisée dans les NUI et le développement d'applications innovantes pour l’écosystème Microsoft.",
+      "tags": [
+        "Design",
+        "UX",
+        "Discovery"
+      ],
+      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Benjamin_Launay.png",
+      "social_links": [
+        {
+          "network": "twitter",
+          "url": "https://twitter.com/AieAieEye"
+        },
+        {
+          "network": "linkedin",
+          "url": "www.linkedin.com/in/benjamin-launay-b74470106"
+        },
+        {
+          "network": "website",
+          "url": "http://www.aieaieeye.com"
         }
       ]
     },
@@ -1908,7 +1945,7 @@
     },
     {
       "id": "2330",
-      "name": "Pierre-yves Baloche",
+      "name": "Pierre-Yves Baloche",
       "company": "Gfi Informatique",
       "country": "France",
       "bio": "Workwise, i'm a solution architect in trendy areas like IOT, ChatBots and most of all, applications for Pepper The Robot (and relatives ;), but as soon as I'm out, beside putting on my super-dad costume at home, I just love to hack around with Raspberry Pi modules and makers toys like 3D printing.",
@@ -1930,7 +1967,7 @@
     },
     {
       "id": "2351",
-      "name": "Ouadie lahdioui",
+      "name": "Ouadie Lahdioui",
       "company": "SOAT",
       "country": "France",
       "bio": "Développeur passionné par les challenges techniques de toutes sortes, Ouadie intervient en tant que consultant IT chez SOAT sur des missions diverses et variées, il s’est construit d'une forte expérience dans écosystèmes Java et JavaScript ainsi qu'une conviction sur les pratiques agiles et l'artisanat logiciel. Il accompagne aujourd’hui ses clients dans la mise en place des ChatBots et les techniques de l'intelligence artificielle, il contribue régulièrement au projet open source Botkit.",
@@ -1964,7 +2001,7 @@
       "social_links": [
         {
           "network": "twitter",
-          "url": "https://twitter.com/gregory_b3van"
+          "url": "https://twitter.com/gr3gory_b3van"
         },
         {
           "network": "github",
@@ -1974,10 +2011,10 @@
     },
     {
       "id": "2386",
-      "name": "Peggy Aufray",
+      "name": "Peggy Auffray",
       "company": "U GIE IRIS",
       "country": "France",
-      "bio": "Directeur de projets Innovation à U GIE IRIS\n\nParticipant au développement de la stratégie d’innovation, je pilote le “FabLab” interne où les collaborateurs de toute l’entreprise se croisent, développent des projets et s’acculturent aux technologies émergentes mais aussi aux nouvelles façons de faire (créativité, intelligence collective, facilitation…). Je coordonne des expérimentations innovantes dans le large terrain de jeux qu’offre le Groupement U.",
+      "bio": "Peggy Auffray est directrice de projets Innovation à U GIE IRIS. Participant au développement de la stratégie d’innovation, elle pilote le “FabLab” interne où les collaborateurs de toute l’entreprise se croisent, développent des projets et s’acculturent aux technologies émergentes mais aussi aux nouvelles façons de faire (créativité, intelligence collective, facilitation…). Elle coordonne des expérimentations innovantes dans le large terrain de jeux qu’offre le Groupement U.",
       "tags": [
         "Discovery"
       ],
@@ -2866,6 +2903,27 @@
       "tags": [],
       "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/pier_schneider.jpg",
       "social_links": []
+    },
+    {
+      "id": "5006",
+      "name": "Pierre Legendre",
+      "company": "U GIE IRIS",
+      "country": "France",
+      "bio": "Pierre est chef de projet expérimenté chez U GIE IRIS, spécialiste du e-commerce alimentaire. Il s'inscrit aujourd'hui dans l'esprit d'innovation d'U GIE IRIS. et a lancé, en 2017, un projet d'assistance à la préparation en Drive dans le cadre du Lab interne. L'esprit collaboratif et d'intrapreneuriat porté par l'équipe a séduit la direction et les salariés. Prochaine étape : convaincre les magasins.",
+      "tags": [
+        "Discovery"
+      ],
+      "photo_url": "https://devfest2017.gdgnantes.com/images/speakers/Pierre_LEGENDRE.jpg",
+      "social_links": [
+        {
+          "network": "twitter",
+          "url": "https://twitter.com/pielegendre"
+        },
+        {
+          "network": "linkedin",
+          "url": "https://www.linkedin.com/in/pierre-legendre-9b2418/"
+        }
+      ]
     }
   ],
   "rooms": [

@@ -11,7 +11,7 @@ object AppConfig {
 
     val ENDPOINT = "https://devfest2017.gdgnantes.com/api/v1/"
 
-    val SEED_ETAG = "W/\"kIeLgl9nKEP3vltt67h29w==\""
+    val SEED_ETAG = "W/\"us8xkJrq9ieWLt+8bxO7fA==\""
 
     val EVENT_DATES = listOf("2017-10-19", "2017-10-20")
     val EVENT_TIMEZONE = TimeZone.getTimeZone("Europe/Paris")
