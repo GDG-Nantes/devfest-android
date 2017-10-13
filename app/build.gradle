@@ -22,10 +22,10 @@ android {
 
     signingConfigs {
         debug {
-            storeFile file('../distribution/signing/debug.keystore')
+            storeFile rootProject.signingStoreFileDebug
         }
         release {
-            storeFile file('../distribution/signing/release.keystore')
+            storeFile rootProject.signingStoreFileRelease
             storePassword rootProject.keystoreProperties['storePassword']
             keyAlias rootProject.keystoreProperties['keyAlias']
             keyPassword rootProject.keystoreProperties['keyPassword']
